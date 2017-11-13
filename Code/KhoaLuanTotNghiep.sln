@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhoaLuanTotNghiep", "KhoaLuanTotNghiep\KhoaLuanTotNghiep.csproj", "{FC9466E6-3272-470A-836F-25F8F7E27C82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraCapture", "..\..\..\..\..\Emgu\emgucv-windesktop 3.3.0.2824\Emgu.CV.Example\CameraCapture\CameraCapture.csproj", "{5F6B97F8-7EA6-4B5D-9A5D-F5581505C303}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFRecognizer", "FisherFaceRecognizer\FFRecognizer.csproj", "{47482596-E47B-473A-B521-2A5DB52308AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForm", "WindowsForm\WindowsForm.csproj", "{01AEEBC6-D08F-4648-8690-4C5C8FCA5BDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{FC9466E6-3272-470A-836F-25F8F7E27C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC9466E6-3272-470A-836F-25F8F7E27C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC9466E6-3272-470A-836F-25F8F7E27C82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F6B97F8-7EA6-4B5D-9A5D-F5581505C303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F6B97F8-7EA6-4B5D-9A5D-F5581505C303}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F6B97F8-7EA6-4B5D-9A5D-F5581505C303}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F6B97F8-7EA6-4B5D-9A5D-F5581505C303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47482596-E47B-473A-B521-2A5DB52308AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47482596-E47B-473A-B521-2A5DB52308AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47482596-E47B-473A-B521-2A5DB52308AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47482596-E47B-473A-B521-2A5DB52308AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AEEBC6-D08F-4648-8690-4C5C8FCA5BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AEEBC6-D08F-4648-8690-4C5C8FCA5BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AEEBC6-D08F-4648-8690-4C5C8FCA5BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AEEBC6-D08F-4648-8690-4C5C8FCA5BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

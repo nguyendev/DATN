@@ -1,63 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Faces_For_Training>
   <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_1059220140.jpg</FILE>
+    <NAME>NguyenIT</NAME>
+    <FILE>face_NguyenIT_1306912744.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_928290049.jpg</FILE>
+    <FILE>face_PERSON1_1339524456.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_1889115765.jpg</FILE>
+    <FILE>face_PERSON1_1850140595.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_735653647.jpg</FILE>
+    <FILE>face_PERSON1_485120899.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_26155158.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_1747391835.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_482832791.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_1784913431.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_168982496.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_1471063136.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_2002615848.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_1927740769.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>PERSON1</NAME>
-    <FILE>face_PERSON1_2040137444.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>Nguyen</NAME>
-    <FILE>face_Nguyen_1626565702.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>Nguyen</NAME>
-    <FILE>face_Nguyen_1796875221.jpg</FILE>
+    <FILE>face_PERSON1_2079947148.jpg</FILE>
   </FACE>
 </Faces_For_Training>

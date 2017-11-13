@@ -192,6 +192,8 @@
             this.Controls.Add(this.image_PICBX);
             this.Name = "TrainingForm";
             this.Text = "Tranning";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrainingForm_FormClosing);
+            this.Load += new System.EventHandler(this.TrainingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.face_PICBX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_PICBX)).EndInit();
             this.ResumeLayout(false);

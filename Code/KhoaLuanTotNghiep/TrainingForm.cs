@@ -351,5 +351,14 @@ namespace KhoaLuanTotNghiep
             Single_btn_Click(null, null);
         }
 
+        private void TrainingForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrainingForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }
