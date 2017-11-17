@@ -40,3 +40,4 @@ C:\Users\NGUYENIT\Source\Repos\KhoaLuanTotNghiep\FisherFaceRecognizer\obj\Debug\
 C:\Users\NGUYENIT\Source\Repos\KhoaLuanTotNghiep\FisherFaceRecognizer\obj\Debug\FFRecognizer.csproj.CoreCompileInputs.cache
 C:\Users\NGUYENIT\Source\Repos\KhoaLuanTotNghiep\FisherFaceRecognizer\obj\Debug\FisherFaceRecognizer.exe
 C:\Users\NGUYENIT\Source\Repos\KhoaLuanTotNghiep\FisherFaceRecognizer\obj\Debug\FisherFaceRecognizer.pdb
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Debug\FisherFaceRecognizer.pdb
