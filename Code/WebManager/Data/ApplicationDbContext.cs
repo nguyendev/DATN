@@ -14,6 +14,10 @@ namespace WebManager.Data
             : base(options)
         {
         }
+        public DbSet<Course> Course { get; set; }
+        public DbSet<Enrollment> Enrollment { get; set; }
+        public DbSet<HistoryLogin> HistoryLogin { get; set; }
+        public DbSet<Image> Image { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -22,5 +26,7 @@ namespace WebManager.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+        
+
     }
 }

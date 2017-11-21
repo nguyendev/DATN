@@ -12,9 +12,10 @@ namespace WebManager.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public long HistoryLoginID { get; set; }
-        public long StudentID { get; set; }
-        public Member Student { get; set; }
+       
         public DateTime DateTime { get; set; }
+        public string StudentID { get; set; }
+        public Member Student { get; set; }
         public MethodLogin MethodLogin { get; set; }
     }
     public enum MethodLogin

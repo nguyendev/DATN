@@ -41,7 +41,7 @@ namespace WebManager
         {
             // Add framework services.
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("VPSConnection")));
 
             services.AddIdentity<Member, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using WebManager.Data;
+using WebManager.Models;
 
 namespace WebManager.Data.Migrations
 {
@@ -15,25 +14,27 @@ namespace WebManager.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.0.0-rc3")
+                .HasAnnotation("ProductVersion", "1.1.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole", b =>
                 {
-                    b.Property<string>("Id");
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
                     b.Property<string>("Name")
-                        .HasAnnotation("MaxLength", 256);
+                        .HasMaxLength(256);
 
                     b.Property<string>("NormalizedName")
-                        .HasAnnotation("MaxLength", 256);
+                        .HasMaxLength(256);
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
+                        .IsUnique()
                         .HasName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles");
@@ -105,8 +106,6 @@ namespace WebManager.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("AspNetUserRoles");
                 });
 
@@ -125,9 +124,109 @@ namespace WebManager.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("WebManager.Models.ApplicationUser", b =>
+            modelBuilder.Entity("WebManager.Models.Course", b =>
                 {
-                    b.Property<string>("Id");
+                    b.Property<int>("CourseID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Active")
+                        .HasMaxLength(1);
+
+                    b.Property<string>("Approved")
+                        .HasMaxLength(1);
+
+                    b.Property<string>("AuthorID");
+
+                    b.Property<DateTime?>("CreateDT");
+
+                    b.Property<DateTime>("ExamTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Note")
+                        .HasMaxLength(200);
+
+                    b.Property<DateTime?>("UpdateDT");
+
+                    b.HasKey("CourseID");
+
+                    b.HasIndex("AuthorID");
+
+                    b.ToTable("Course");
+                });
+
+            modelBuilder.Entity("WebManager.Models.Enrollment", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CourseID");
+
+                    b.Property<string>("StudentID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CourseID");
+
+                    b.HasIndex("StudentID");
+
+                    b.ToTable("Enrollment");
+                });
+
+            modelBuilder.Entity("WebManager.Models.HistoryLogin", b =>
+                {
+                    b.Property<long>("HistoryLoginID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("DateTime");
+
+                    b.Property<int>("MethodLogin");
+
+                    b.Property<string>("StudentID");
+
+                    b.HasKey("HistoryLoginID");
+
+                    b.HasIndex("StudentID");
+
+                    b.ToTable("HistoryLogin");
+                });
+
+            modelBuilder.Entity("WebManager.Models.Image", b =>
+                {
+                    b.Property<long>("ImageID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Pic1");
+
+                    b.Property<string>("Pic10");
+
+                    b.Property<string>("Pic2");
+
+                    b.Property<string>("Pic3");
+
+                    b.Property<string>("Pic4");
+
+                    b.Property<string>("Pic5");
+
+                    b.Property<string>("Pic6");
+
+                    b.Property<string>("Pic7");
+
+                    b.Property<string>("Pic8");
+
+                    b.Property<string>("Pic9");
+
+                    b.HasKey("ImageID");
+
+                    b.ToTable("Image");
+                });
+
+            modelBuilder.Entity("WebManager.Models.Member", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("AccessFailedCount");
 
@@ -135,19 +234,27 @@ namespace WebManager.Data.Migrations
                         .IsConcurrencyToken();
 
                     b.Property<string>("Email")
-                        .HasAnnotation("MaxLength", 256);
+                        .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
+
+                    b.Property<DateTime>("EnrollmentDate");
+
+                    b.Property<string>("FirstMidName");
+
+                    b.Property<long>("ImageID");
+
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasAnnotation("MaxLength", 256);
+                        .HasMaxLength(256);
 
                     b.Property<string>("NormalizedUserName")
-                        .HasAnnotation("MaxLength", 256);
+                        .HasMaxLength(256);
 
                     b.Property<string>("PasswordHash");
 
@@ -160,9 +267,11 @@ namespace WebManager.Data.Migrations
                     b.Property<bool>("TwoFactorEnabled");
 
                     b.Property<string>("UserName")
-                        .HasAnnotation("MaxLength", 256);
+                        .HasMaxLength(256);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ImageID");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -184,7 +293,7 @@ namespace WebManager.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("WebManager.Models.ApplicationUser")
+                    b.HasOne("WebManager.Models.Member")
                         .WithMany("Claims")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -192,7 +301,7 @@ namespace WebManager.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("WebManager.Models.ApplicationUser")
+                    b.HasOne("WebManager.Models.Member")
                         .WithMany("Logins")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -205,9 +314,43 @@ namespace WebManager.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("WebManager.Models.ApplicationUser")
+                    b.HasOne("WebManager.Models.Member")
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WebManager.Models.Course", b =>
+                {
+                    b.HasOne("WebManager.Models.Member", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorID");
+                });
+
+            modelBuilder.Entity("WebManager.Models.Enrollment", b =>
+                {
+                    b.HasOne("WebManager.Models.Course", "Course")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebManager.Models.Member", "Student")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("StudentID");
+                });
+
+            modelBuilder.Entity("WebManager.Models.HistoryLogin", b =>
+                {
+                    b.HasOne("WebManager.Models.Member", "Student")
+                        .WithMany("HistoryLogins")
+                        .HasForeignKey("StudentID");
+                });
+
+            modelBuilder.Entity("WebManager.Models.Member", b =>
+                {
+                    b.HasOne("WebManager.Models.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
         }

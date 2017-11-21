@@ -107,6 +107,13 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "Android.dll" comes first in this list. */
 		"Android.dll",
+		"ZedGraph.dll",
+		"System.Configuration.dll",
+		"System.Windows.Forms.dll",
+		"System.Drawing.dll",
+		"Accessibility.dll",
+		"System.Deployment.dll",
+		"System.Runtime.Serialization.Formatters.Soap.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
