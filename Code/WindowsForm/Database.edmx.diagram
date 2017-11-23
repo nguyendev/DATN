@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="977d9354b9a740f2bdf4f39536b811c4" Name="Diagram1">
+        <EntityTypeShape EntityType="admin_thitoeicModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetRoleClaim" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetRole" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserClaim" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserLogin" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUser" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserToken" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Course" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Enrollment" Width="1.5" PointX="10.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.HistoryLogin" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Image" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUserClaims_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUserLogins_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUsers_Image_ImageID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Course_AspNetUsers_AuthorID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_AspNetUsers_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_HistoryLogin_AspNetUsers_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_Course_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

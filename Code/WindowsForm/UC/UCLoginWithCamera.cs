@@ -47,6 +47,15 @@ namespace WindowsForm.UC
             Application.Idle += new EventHandler(FrameGrabber_Standard);
         }
 
+        private void btnLoginWithPass_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Dock = DockStyle.Fill;
+            UCLoginWithCamera.Instance.BringToFront();
+
+        }
+
         //Process Frame
         void FrameGrabber_Standard(object sender, EventArgs e)
         {

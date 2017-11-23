@@ -1,0 +1,6 @@
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp2.0\Models.deps.json
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp2.0\Models.dll
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp2.0\Models.csprojResolveAssemblyReference.cache
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp2.0\Models.csproj.CoreCompileInputs.cache
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp2.0\Models.AssemblyInfoInputs.cache
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp2.0\Models.AssemblyInfo.cs

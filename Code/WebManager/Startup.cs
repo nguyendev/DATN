@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebManager.Data;
 using WebManager.Models;
 using WebManager.Services;
+using DataAccess;
 
 namespace WebManager
 {

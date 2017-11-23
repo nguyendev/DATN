@@ -1,0 +1,9 @@
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\Models.csprojResolveAssemblyReference.cache
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\Models.csproj.CoreCompileInputs.cache
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\Models.AssemblyInfoInputs.cache
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\Models.AssemblyInfo.cs
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.deps.json
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.dll
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.pdb
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.dll
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.pdb

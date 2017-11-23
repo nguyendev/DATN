@@ -10,3 +10,5 @@ D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.AssemblyInfo.c
 D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.dll
 D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.pdb
 D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+D:\GitHub\DATN\Code\WebManager\bin\Debug\netcoreapp1.1\DataAccess.dll
+D:\GitHub\DATN\Code\WebManager\bin\Debug\netcoreapp1.1\DataAccess.pdb

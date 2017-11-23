@@ -28,30 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLoginWithPass = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.image_PICBX = new System.Windows.Forms.PictureBox();
             this.labal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.image_PICBX)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLoginWithPass
-            // 
-            this.btnLoginWithPass.Location = new System.Drawing.Point(17, 275);
-            this.btnLoginWithPass.Name = "btnLoginWithPass";
-            this.btnLoginWithPass.Size = new System.Drawing.Size(129, 23);
-            this.btnLoginWithPass.TabIndex = 1;
-            this.btnLoginWithPass.Text = "Sử dụng mật khẩu";
-            this.btnLoginWithPass.UseVisualStyleBackColor = true;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(152, 275);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(124, 23);
-            this.btnRegister.TabIndex = 2;
-            this.btnRegister.Text = "Đăng ký mới";
-            this.btnRegister.UseVisualStyleBackColor = true;
             // 
             // image_PICBX
             // 
@@ -82,11 +62,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labal);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLoginWithPass);
             this.Controls.Add(this.image_PICBX);
             this.Name = "UCLoginWithCamera";
-            this.Size = new System.Drawing.Size(290, 310);
+            this.Size = new System.Drawing.Size(290, 268);
             ((System.ComponentModel.ISupportInitialize)(this.image_PICBX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,8 +74,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox image_PICBX;
-        private System.Windows.Forms.Button btnLoginWithPass;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label labal;
     }
 }
