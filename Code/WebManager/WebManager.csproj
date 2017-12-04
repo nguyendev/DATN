@@ -35,4 +35,9 @@
     <ProjectReference Include="..\Models\DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\WebManager\Data\" />
+    <Folder Include="Areas\WebManager\Views\Dashboard\" />
+  </ItemGroup>
+
 </Project>

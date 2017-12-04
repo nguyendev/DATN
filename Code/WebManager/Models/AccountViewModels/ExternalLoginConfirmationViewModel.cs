@@ -8,6 +8,7 @@ namespace WebManager.Models.AccountViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {
+        public string UserName { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }

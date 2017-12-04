@@ -9,17 +9,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using WebManager.Models;
-using WebManager.Models.AccountViewModels;
-using WebManager.Services;
+using Microsoft.AspNetCore.Http;
 using DataAccess;
+using WebManager.Services;
+using WebManager.Models.AccountViewModels;
+using Microsoft.EntityFrameworkCore;
 
-namespace WebManager.Controllers
+namespace WebManager.Areas.Admin.Controllers
 {
-    [Authorize]
+    [Area("webmanager")]
+    
     public class AccountController : Controller
     {
         private readonly UserManager<Member> _userManager;
+        private readonly ApplicationDbContext _context;
         private readonly SignInManager<Member> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
@@ -27,6 +30,7 @@ namespace WebManager.Controllers
         private readonly string _externalCookieScheme;
 
         public AccountController(
+            ApplicationDbContext context,
             UserManager<Member> userManager,
             SignInManager<Member> signInManager,
             IOptions<IdentityCookieOptions> identityCookieOptions,
@@ -34,6 +38,7 @@ namespace WebManager.Controllers
             ISmsSender smsSender,
             ILoggerFactory loggerFactory)
         {
+            _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
             _externalCookieScheme = identityCookieOptions.Value.ExternalCookieAuthenticationScheme;
@@ -46,6 +51,7 @@ namespace WebManager.Controllers
         // GET: /Account/Login
         [HttpGet]
         [AllowAnonymous]
+        [Route("/quan-ly-web/dang-nhap")]
         public async Task<IActionResult> Login(string returnUrl = null)
         {
             // Clear the existing external cookie to ensure a clean login process
@@ -60,6 +66,7 @@ namespace WebManager.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("/quan-ly-web/dang-nhap")]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -67,15 +74,16 @@ namespace WebManager.Controllers
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
+
                     return RedirectToLocal(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
                 {
-                    return RedirectToAction(nameof(SendCode), new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    return RedirectToAction(nameof(SendCode), new { ReturnUrl = returnUrl, ReMemberMe = model.RememberMe });
                 }
                 if (result.IsLockedOut)
                 {
@@ -97,6 +105,7 @@ namespace WebManager.Controllers
         // GET: /Account/Register
         [HttpGet]
         [AllowAnonymous]
+        [Route("/quan-ly-web/dang-ky")]
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -108,6 +117,7 @@ namespace WebManager.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("/quan-ly-web/dang-ky")]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -117,7 +127,7 @@ namespace WebManager.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
+                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
                     // Send an email with this link
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     //var callbackUrl = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
@@ -137,12 +147,12 @@ namespace WebManager.Controllers
         //
         // POST: /Account/Logout
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [Route("/quan-ly-web/dang-xuat")]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation(4, "User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction("Index", "Dashboard");
         }
 
         //
@@ -150,6 +160,7 @@ namespace WebManager.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("/webmanager/Account/ExternalLogin")]
         public IActionResult ExternalLogin(string provider, string returnUrl = null)
         {
             // Request a redirect to the external login provider.
@@ -161,6 +172,7 @@ namespace WebManager.Controllers
         //
         // GET: /Account/ExternalLoginCallback
         [HttpGet]
+        [Route("/webmanager/Account/ExternalLoginCallback")]
         [AllowAnonymous]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
         {
@@ -172,7 +184,7 @@ namespace WebManager.Controllers
             var info = await _signInManager.GetExternalLoginInfoAsync();
             if (info == null)
             {
-                return RedirectToAction(nameof(Login));
+                return RedirectToLocal("");
             }
 
             // Sign in the user with this external login provider if the user already has a login.
@@ -180,7 +192,10 @@ namespace WebManager.Controllers
             if (result.Succeeded)
             {
                 _logger.LogInformation(5, "User logged in with {Name} provider.", info.LoginProvider);
-                return RedirectToLocal(returnUrl);
+                string currentUrl = HttpContext.Session.GetString("currentUrl");
+                if (String.IsNullOrEmpty(currentUrl))
+                    return RedirectToLocal("");
+                return RedirectToLocal(currentUrl);
             }
             if (result.RequiresTwoFactor)
             {
@@ -195,8 +210,33 @@ namespace WebManager.Controllers
                 // If the user does not have an account, then ask the user to create an account.
                 ViewData["ReturnUrl"] = returnUrl;
                 ViewData["LoginProvider"] = info.LoginProvider;
+
                 var email = info.Principal.FindFirstValue(ClaimTypes.Email);
-                return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = email });
+                var fullName = info.Principal.FindFirstValue(ClaimTypes.Name);
+                //var info = await _signInManager.GetExternalLoginInfoAsync();
+                var identifier = info.Principal.FindFirstValue(ClaimTypes.NameIdentifier);
+                var dateOfBirth = info.Principal.FindFirstValue(ClaimTypes.DateOfBirth);
+                var facebook = $"https://www.facebook.com/{identifier}/";
+                var pictureSmall = $"https://graph.facebook.com/{identifier}/picture?width=128&height=128";
+                var pictureBig = $"https://graph.facebook.com/{identifier}/picture?width=160&height=160";
+                var picture65x65 = $"https://graph.facebook.com/{identifier}/picture?width=65&height=65";
+                info = await _signInManager.GetExternalLoginInfoAsync();
+                var user = new Member { IsDeleted = false,CreateDT = DateTime.Now, UserName = email,Slug = StringExtensions.ConvertToUnSign3(fullName) + "-"+StringExtensions.RandomNumber(2),  Email = email };
+                var createResult = await _userManager.CreateAsync(user);
+                if (createResult.Succeeded)
+                {
+                    createResult = await _userManager.AddLoginAsync(user, info);
+                    if (createResult.Succeeded)
+                    {
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        _logger.LogInformation(6, "User created an account using {Name} provider.", info.LoginProvider);
+                        string currentUrl = HttpContext.Session.GetString("currentUrl");
+                        if (String.IsNullOrEmpty(currentUrl))
+                            return RedirectToLocal("") ;
+                        return RedirectToLocal(currentUrl);
+                    }
+                }
+                return RedirectToLocal("");
             }
         }
 
@@ -204,6 +244,7 @@ namespace WebManager.Controllers
         // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
         [AllowAnonymous]
+        [Route("/webmanager/Account/ExternalLoginConfirmation")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl = null)
         {
@@ -215,7 +256,8 @@ namespace WebManager.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new Member { UserName = model.Email, Email = model.Email };
+                var sessionLogin = HttpContext.Session.GetObjectFromJson<ExternalLoginConfirmationViewModel>("ExternalLogin");
+                var user = new Member { UserName = model.UserName, Email = model.Email};
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -277,7 +319,7 @@ namespace WebManager.Controllers
                     return View("ForgotPasswordConfirmation");
                 }
 
-                // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
+                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
                 // Send an email with this link
                 //var code = await _userManager.GeneratePasswordResetTokenAsync(user);
                 //var callbackUrl = Url.Action(nameof(ResetPassword), "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
@@ -347,7 +389,7 @@ namespace WebManager.Controllers
         // GET: /Account/SendCode
         [HttpGet]
         [AllowAnonymous]
-        public async Task<ActionResult> SendCode(string returnUrl = null, bool rememberMe = false)
+        public async Task<ActionResult> SendCode(string returnUrl = null, bool reMemberMe = false)
         {
             var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
             if (user == null)
@@ -356,7 +398,7 @@ namespace WebManager.Controllers
             }
             var userFactors = await _userManager.GetValidTwoFactorProvidersAsync(user);
             var factorOptions = userFactors.Select(purpose => new SelectListItem { Text = purpose, Value = purpose }).ToList();
-            return View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe });
+            return View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl });
         }
 
         //
@@ -394,14 +436,14 @@ namespace WebManager.Controllers
                 await _smsSender.SendSmsAsync(await _userManager.GetPhoneNumberAsync(user), message);
             }
 
-            return RedirectToAction(nameof(VerifyCode), new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
+            return RedirectToAction(nameof(VerifyCode), new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl });
         }
 
         //
         // GET: /Account/VerifyCode
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> VerifyCode(string provider, bool rememberMe, string returnUrl = null)
+        public async Task<IActionResult> VerifyCode(string provider, bool reMemberMe, string returnUrl = null)
         {
             // Require that the user has already logged in via username/password or external login
             var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
@@ -409,7 +451,7 @@ namespace WebManager.Controllers
             {
                 return View("Error");
             }
-            return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
+            return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl});
         }
 
         //
@@ -427,7 +469,7 @@ namespace WebManager.Controllers
             // The following code protects for brute force attacks against the two factor codes.
             // If a user enters incorrect codes for a specified amount of time then the user account
             // will be locked out for a specified amount of time.
-            var result = await _signInManager.TwoFactorSignInAsync(model.Provider, model.Code, model.RememberMe, model.RememberBrowser);
+            var result = await _signInManager.TwoFactorSignInAsync(model.Provider, model.Code, false,false);
             if (result.Succeeded)
             {
                 return RedirectToLocal(model.ReturnUrl);
@@ -445,11 +487,38 @@ namespace WebManager.Controllers
         }
 
         //
-        // GET: /Account/AccessDenied
+        // GET /Account/AccessDenied
         [HttpGet]
         public IActionResult AccessDenied()
         {
             return View();
+        }
+        [HttpGet]
+        [Route("quan-ly-web/dang-ky/buoc-1")]
+        public IActionResult RegisterSimple()
+        {
+            return View();
+        }
+        [HttpGet]
+        [Route("quan-ly-web/dang-ky/buoc-2")]
+        public async Task<IActionResult> RegisterSimple(RegisterSimpleViewModel model, string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            if (ModelState.IsValid)
+            {
+                var user = new Member { UserName = model.UserName };
+                var result = await _userManager.CreateAsync(user);
+
+                if (result.Succeeded)
+                {
+                    string code =( await _context.Users.SingleOrDefaultAsync(m => m.UserName == user.UserName)).Code;
+                    return RedirectToAction("CompleteRegisterSimple",code);
+                }                
+                AddErrors(result);
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
         }
 
         #region Helpers
@@ -470,7 +539,7 @@ namespace WebManager.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction("Index", "Dashboard");
             }
         }
 

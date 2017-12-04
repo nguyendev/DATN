@@ -9,6 +9,11 @@ namespace WebManager.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Số chứng minh nhân dân")]
+        [DataType(DataType.PhoneNumber)]
+        public string UserName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

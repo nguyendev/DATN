@@ -18,7 +18,7 @@ namespace DataAccess.Data.Migrations
 
             modelBuilder.Entity("DataAccess.Course", b =>
                 {
-                    b.Property<int>("CourseID")
+                    b.Property<long>("CourseID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Active")
@@ -49,18 +49,39 @@ namespace DataAccess.Data.Migrations
                     b.ToTable("Course");
                 });
 
+            modelBuilder.Entity("DataAccess.CourseRoom", b =>
+                {
+                    b.Property<int>("CourseID");
+
+                    b.Property<int>("RoomID");
+
+                    b.Property<long?>("CourseID1");
+
+                    b.HasKey("CourseID", "RoomID");
+
+                    b.HasIndex("CourseID1");
+
+                    b.HasIndex("RoomID");
+
+                    b.ToTable("CourseRoom");
+                });
+
             modelBuilder.Entity("DataAccess.Enrollment", b =>
                 {
                     b.Property<long>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CourseID");
+                    b.Property<long>("CourseID");
+
+                    b.Property<int?>("RoomID");
 
                     b.Property<string>("StudentID");
 
                     b.HasKey("ID");
 
                     b.HasIndex("CourseID");
+
+                    b.HasIndex("RoomID");
 
                     b.HasIndex("StudentID");
 
@@ -122,21 +143,19 @@ namespace DataAccess.Data.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("Code");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
+
+                    b.Property<DateTime?>("CreateDT");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<DateTime>("EnrollmentDate");
-
-                    b.Property<string>("FirstMidName");
-
-                    b.Property<long?>("ImageID");
-
-                    b.Property<string>("LastName");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -156,14 +175,14 @@ namespace DataAccess.Data.Migrations
 
                     b.Property<string>("SecurityStamp");
 
+                    b.Property<string>("Slug");
+
                     b.Property<bool>("TwoFactorEnabled");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ImageID");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -173,6 +192,20 @@ namespace DataAccess.Data.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("DataAccess.Room", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Capacity");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Room");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole", b =>
@@ -289,12 +322,28 @@ namespace DataAccess.Data.Migrations
                         .HasForeignKey("AuthorID");
                 });
 
+            modelBuilder.Entity("DataAccess.CourseRoom", b =>
+                {
+                    b.HasOne("DataAccess.Course", "Course")
+                        .WithMany("ListRoom")
+                        .HasForeignKey("CourseID1");
+
+                    b.HasOne("DataAccess.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("DataAccess.Enrollment", b =>
                 {
                     b.HasOne("DataAccess.Course", "Course")
-                        .WithMany("Enrollments")
+                        .WithMany()
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataAccess.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomID");
 
                     b.HasOne("DataAccess.Member", "Student")
                         .WithMany("Enrollments")
@@ -306,13 +355,6 @@ namespace DataAccess.Data.Migrations
                     b.HasOne("DataAccess.Member", "Student")
                         .WithMany("HistoryLogins")
                         .HasForeignKey("StudentID");
-                });
-
-            modelBuilder.Entity("DataAccess.Member", b =>
-                {
-                    b.HasOne("DataAccess.Image", "Image")
-                        .WithMany()
-                        .HasForeignKey("ImageID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

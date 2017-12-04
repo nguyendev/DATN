@@ -11,10 +11,11 @@ namespace DataAccess
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int CourseID { get; set; }
+        public long CourseID { get; set; }
         public string Name { get; set; }
+        public List<CourseRoom> ListRoom { get; set; }
         public DateTime ExamTime{get;set;}
-        public ICollection<Enrollment> Enrollments { get; set; }
+        //public List<Enrollment> Enrollments { get; set; }
 
     }
 }

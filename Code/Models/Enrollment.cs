@@ -13,8 +13,10 @@ namespace DataAccess
         [Key]
         public long ID { get; set; }
         public string StudentID { get; set; }
+        public int? RoomID { get; set; }
+        public Room Room { get; set; }
         public Member Student { get; set; }
-        public int CourseID { get; set; }
+        public long CourseID { get; set; }
         public Course Course { get; set; }
     }
 }

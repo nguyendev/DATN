@@ -27,7 +27,7 @@ namespace WebManager.Controllers
         [HttpPost()]
         public async Task<bool> LoginAsync(LoginViewModel model)
         {
-            var result = await _signInManager.PasswordSignInAsync(model.Email,model.Password, model.RememberMe, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(model.UserName,model.Password, model.RememberMe, lockoutOnFailure: false);
             bool loginSuccess = result.Succeeded == true ? loginSuccess = true : loginSuccess = false;
 
             return loginSuccess;

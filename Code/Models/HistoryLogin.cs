@@ -12,7 +12,6 @@ namespace DataAccess
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public long HistoryLoginID { get; set; }
-       
         public DateTime DateTime { get; set; }
         public string StudentID { get; set; }
         public Member Student { get; set; }

@@ -7,14 +7,14 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using WebManager.Models;
-using WebManager.Models.ManageViewModels;
-using WebManager.Services;
 using DataAccess;
+using WebManager.Services;
+using WebManager.Models.ManageViewModels;
 
-namespace WebManager.Controllers
+namespace HopAmNhacThanh.Areas.Admin.Controllers
 {
-    [Authorize]
+    [Area("webmanager")]
+    [Authorize(Roles = "Admin, Manager")]
     public class ManageController : Controller
     {
         private readonly UserManager<Member> _userManager;
@@ -43,6 +43,7 @@ namespace WebManager.Controllers
         //
         // GET: /Manage/Index
         [HttpGet]
+        [Route("/quan-ly-web/tai-khoan")]
         public async Task<IActionResult> Index(ManageMessageId? message = null)
         {
             ViewData["StatusMessage"] =
@@ -65,7 +66,7 @@ namespace WebManager.Controllers
                 PhoneNumber = await _userManager.GetPhoneNumberAsync(user),
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
-                BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
+                //BrowserReApplicationUsered = await _signInManager.IsTwoFactorClientReApplicationUseredAsync(user)
             };
             return View(model);
         }
@@ -293,7 +294,7 @@ namespace WebManager.Controllers
             }
             var userLogins = await _userManager.GetLoginsAsync(user);
             var otherLogins = _signInManager.GetExternalAuthenticationSchemes().Where(auth => userLogins.All(ul => auth.AuthenticationScheme != ul.LoginProvider)).ToList();
-            ViewData["ShowRemoveButton"] = user.PasswordHash != null || userLogins.Count > 1;
+            ViewData["ShowRemoveButton"] = user.PasswordHash != null || userLogins.Count() > 1;
             return View(new ManageLoginsViewModel
             {
                 CurrentLogins = userLogins,

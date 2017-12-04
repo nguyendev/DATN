@@ -18,7 +18,23 @@ namespace WebManager
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
                 .Build();
+            //using (var scope = host.Services.CreateScope())
+            //{
+            //    var services = scope.ServiceProvider;
 
+            //    try
+            //    {
+            //        // Requires using RazorPagesMovie.Models;
+            //        SeedData.FinalCategory(services);
+            //        SeedData.FinalStyle(services);
+            //        SeedData.FinalAlbum(services);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        var logger = services.GetRequiredService<ILogger<Program>>();
+            //        logger.LogError(ex.Message, "An error occurred seeding the DB.");
+            //    }
+            //}
             host.Run();
         }
     }

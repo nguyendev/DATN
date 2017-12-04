@@ -11,22 +11,21 @@ namespace DataAccess
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int ContactId { get; set; }
+        public long ContactId { get; set; }
 
         // user ID from AspNetUser table
         public string OwnerID { get; set; }
         public Member Owner { get; set; }
-
-        public string Name { get; set; }
+        public string FirstMidName { get; set; }
+        public string LastName { get; set; }
+        public long? ImageID { get; set; }
+        public Image Image { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         [DataType(DataType.PhoneNumber)]
-        public string PhoneNumber { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-
+        public DateTime? DateofBirth { get; set; }
         public ContactStatus Status { get; set; }
     }
 
