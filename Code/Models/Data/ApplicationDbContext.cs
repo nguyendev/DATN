@@ -13,6 +13,7 @@ namespace DataAccess
             : base(options)
         {
         }
+        public DbSet<Contact> Contact { get; set; }
         public DbSet<Course> Course { get; set; }
         public DbSet<Enrollment> Enrollment { get; set; }
         public DbSet<HistoryLogin> HistoryLogin { get; set; }

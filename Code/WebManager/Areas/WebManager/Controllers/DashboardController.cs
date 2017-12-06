@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WebManager.Areas.WebManager.Controllers
 {
     [Area("webmanager")]
-    //[Authorize(Roles = "Admin, Manager")]
+    [Authorize(Roles = "Admin, Manager")]
     public class DashboardController : Controller
     {
         [Route("quan-ly-web")]

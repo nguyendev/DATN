@@ -14,6 +14,7 @@ using DataAccess;
 using WebManager.Services;
 using WebManager.Models.AccountViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace WebManager.Areas.Admin.Controllers
 {
@@ -21,7 +22,9 @@ namespace WebManager.Areas.Admin.Controllers
     
     public class AccountController : Controller
     {
+        private const int CODE_LENGTH = 8;
         private readonly UserManager<Member> _userManager;
+        private RoleManager<IdentityRole> _roleManager;
         private readonly ApplicationDbContext _context;
         private readonly SignInManager<Member> _signInManager;
         private readonly IEmailSender _emailSender;
@@ -30,6 +33,7 @@ namespace WebManager.Areas.Admin.Controllers
         private readonly string _externalCookieScheme;
 
         public AccountController(
+            RoleManager<IdentityRole> roleMgr,
             ApplicationDbContext context,
             UserManager<Member> userManager,
             SignInManager<Member> signInManager,
@@ -38,6 +42,7 @@ namespace WebManager.Areas.Admin.Controllers
             ISmsSender smsSender,
             ILoggerFactory loggerFactory)
         {
+            _roleManager = roleMgr;
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
@@ -78,8 +83,11 @@ namespace WebManager.Areas.Admin.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
-
-                    return RedirectToLocal(returnUrl);
+                    string userID = (await GetCurrentUserAsync()).Id;
+                    if (User.IsInRole(RoleName.ROLE_ADMIN) || User.IsInRole(RoleName.ROLE_MANAGER) || User.IsInRole(RoleName.ROLE_MEMBER))
+                        return RedirectToLocal(returnUrl);
+                    else
+                        return null;
                 }
                 if (result.RequiresTwoFactor)
                 {
@@ -105,9 +113,11 @@ namespace WebManager.Areas.Admin.Controllers
         // GET: /Account/Register
         [HttpGet]
         [AllowAnonymous]
-        [Route("/quan-ly-web/dang-ky")]
-        public IActionResult Register(string returnUrl = null)
+        [Route("/quan-ly-web/dang-ky-admin")]
+        public IActionResult RegisterAdmin(string returnUrl = null)
         {
+            if (_context.Users.Any())
+                return RedirectToAction("Login");
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
@@ -117,16 +127,26 @@ namespace WebManager.Areas.Admin.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        [Route("/quan-ly-web/dang-ky")]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        [Route("/quan-ly-web/dang-ky-admin")]
+        public async Task<IActionResult> RegisterAdmin(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new Member { UserName = model.Email, Email = model.Email };
+                var user = new Member { UserName = model.UserName, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    if (user != null)
+                    {
+                        if (!_roleManager.Roles.Any())
+                        {
+                            await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                            await _roleManager.CreateAsync(new IdentityRole("Manager"));
+                            await _roleManager.CreateAsync(new IdentityRole("Member"));
+                        }
+                        await _userManager.AddToRoleAsync(user,"Admin");
+                    }
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
                     // Send an email with this link
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -494,25 +514,33 @@ namespace WebManager.Areas.Admin.Controllers
             return View();
         }
         [HttpGet]
+        [Route("quan-ly-web/dang-ky")]
+        public IActionResult Register()
+        {
+            if (!_context.Users.Any())
+                return RedirectToAction("RegisterAdmin");
+            return RedirectToAction("RegisterSimple");
+        }
+        [HttpGet]
         [Route("quan-ly-web/dang-ky/buoc-1")]
         public IActionResult RegisterSimple()
         {
             return View();
         }
-        [HttpGet]
-        [Route("quan-ly-web/dang-ky/buoc-2")]
+        [HttpPost]
+        [Route("quan-ly-web/dang-ky/buoc-1")]
         public async Task<IActionResult> RegisterSimple(RegisterSimpleViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new Member { UserName = model.UserName };
+                string code = StringExtensions.RandomString(CODE_LENGTH);
+                var user = new Member { UserName = model.UserName,Code = code };
                 var result = await _userManager.CreateAsync(user);
 
                 if (result.Succeeded)
                 {
-                    string code =( await _context.Users.SingleOrDefaultAsync(m => m.UserName == user.UserName)).Code;
-                    return RedirectToAction("CompleteRegisterSimple",code);
+                    return RedirectToAction("CompleteRegisterSimple", new CompleteRegisterSimple { ID = model.UserName,Code = code});
                 }                
                 AddErrors(result);
             }
@@ -520,8 +548,16 @@ namespace WebManager.Areas.Admin.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
+        [Route("quan-ly-web/dang-ky/hoan-tat")]
+        public IActionResult CompleteRegisterSimple(CompleteRegisterSimple model)
+        {
+            return View(model);
+        }
         #region Helpers
+        private Task<Member> GetCurrentUserAsync()
+        {
+            return _userManager.GetUserAsync(HttpContext.User);
+        }
 
         private void AddErrors(IdentityResult result)
         {

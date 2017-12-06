@@ -36,6 +36,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\MemberManager\Controllers\" />
+    <Folder Include="Areas\MemberManager\Data\" />
+    <Folder Include="Areas\MemberManager\Models\" />
+    <Folder Include="Areas\MemberManager\Views\" />
     <Folder Include="Areas\WebManager\Data\" />
     <Folder Include="Areas\WebManager\Views\Dashboard\" />
   </ItemGroup>

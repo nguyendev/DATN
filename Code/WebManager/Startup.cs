@@ -75,6 +75,15 @@ namespace WebManager
 
             app.UseIdentity();
 
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                LoginPath = "/quan-ly-web/dang-nhap",
+                AuthenticationScheme = "Cookies",
+
+                AutomaticAuthenticate = true,
+                AutomaticChallenge = true
+            });
+
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>

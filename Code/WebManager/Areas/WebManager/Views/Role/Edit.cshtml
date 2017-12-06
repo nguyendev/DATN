@@ -37,7 +37,7 @@
                                             }
                                             else
                                             {
-                                                @foreach (ApplicationUser user in Model.NonApplicationUsers)
+                                                @foreach (Member user in Model.NonApplicationUsers)
                                                 {
                                                     <tr>
                                                         <td>@user.UserName</td>
@@ -56,7 +56,7 @@
                                             }
                                             else
                                             {
-                                                @foreach (ApplicationUser user in Model.ApplicationUsers)
+                                                @foreach (Member user in Model.ApplicationUsers)
                                                 {
                                                     <tr>
                                                         <td>@user.UserName</td>

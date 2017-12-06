@@ -6,7 +6,7 @@ namespace DataAccess
 {
     public class CourseRoom
     {
-        public int CourseID { get; set; }
+        public long CourseID { get; set; }
 
         public Course Course { get; set; }
         public  int RoomID { get; set; }

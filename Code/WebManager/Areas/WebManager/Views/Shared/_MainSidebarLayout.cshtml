@@ -1,24 +1,24 @@
-@using DataAccess.Data
 @using Microsoft.EntityFrameworkCore
 @inject SignInManager<Member> SignInManager
 @inject UserManager<Member> UserManager
 @inject ApplicationDbContext _Context
 
 @{
-    var _user = _Context.Users
-         .Include(p => p.Contact)
-         .Include(p => p.Contact.Image)
+    var user = _Context.Users
          .Where(p => p.UserName == UserManager.GetUserName(User)).FirstOrDefault();
+    var userContact = _Context.Contact
+       .Include(p => p.Image)
+       .SingleOrDefault(p => p.OwnerID == user.Id);
 }
 <!-- sidebar: style can be found in sidebar.less -->
 <section class="sidebar">
     <!-- Sidebar user panel (optional) -->
-    @if (_user != null) {
+    @if (user != null) {
     <div class="user-panel">
         <div class="pull-left image">
-            @if (String.IsNullOrWhiteSpace(_user.Contact.Image.Pic1))
+            @if (userContact != null)
             {
-            <img src="@_user.Contact.Image.Pic1" class="img-circle" alt="User Image">
+            <img src="@userContact.Image.Pic1" class="img-circle" alt="User Image">
             }
             else
             {
@@ -27,7 +27,7 @@
 
         </div>
         <div class="pull-left info">
-            <p>@_user.UserName</p>
+            <p>@user.UserName</p>
             <!-- Status -->
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
