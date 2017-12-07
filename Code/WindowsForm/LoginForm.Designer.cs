@@ -29,42 +29,52 @@
         private void InitializeComponent()
         {
             this.panelControl = new DevExpress.XtraEditors.PanelControl();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl
             // 
-            this.panelControl.Location = new System.Drawing.Point(-1, 29);
+            this.panelControl.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl.Appearance.Options.UseBackColor = true;
+            this.panelControl.Location = new System.Drawing.Point(-5, 29);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(304, 296);
+            this.panelControl.Size = new System.Drawing.Size(315, 300);
             this.panelControl.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(162, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(244, 0);
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Image = global::WindowsForm.Properties.Resources.delete;
+            this.button2.Location = new System.Drawing.Point(273, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Login
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::WindowsForm.Properties.Resources._switch;
+            this.button1.Location = new System.Drawing.Point(236, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 30);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(302, 324);
             this.ControlBox = false;
             this.Controls.Add(this.button2);
@@ -73,7 +83,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

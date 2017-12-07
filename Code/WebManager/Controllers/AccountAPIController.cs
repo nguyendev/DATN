@@ -32,5 +32,14 @@ namespace WebManager.Controllers
 
             return loginSuccess;
         }
+
+        //[HttpPost()]
+        //public async Task<bool> UpdateContactAsync(string code)
+        //{
+        //    var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
+        //    bool loginSuccess = result.Succeeded == true ? loginSuccess = true : loginSuccess = false;
+
+        //    return loginSuccess;
+        //}
     }
 }

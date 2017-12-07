@@ -15,10 +15,12 @@ namespace WindowsForm
     public partial class Enrollment
     {
         public long ID { get; set; }
-        public int CourseID { get; set; }
+        public long CourseID { get; set; }
+        public Nullable<int> RoomID { get; set; }
         public string StudentID { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }
         public virtual Course Course { get; set; }
+        public virtual Room Room { get; set; }
     }
 }

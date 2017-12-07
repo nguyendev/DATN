@@ -7,3 +7,5 @@ D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.pdb
 D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.deps.json
 D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.dll
 D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.pdb
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.runtimeconfig.json
+D:\GitHub\DATN\Code\Models\bin\Debug\netcoreapp1.1\DataAccess.runtimeconfig.dev.json

@@ -17,7 +17,7 @@ namespace WindowsForm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Image()
         {
-            this.AspNetUsers = new HashSet<AspNetUser>();
+            this.Contacts = new HashSet<Contact>();
         }
     
         public long ImageID { get; set; }
@@ -33,6 +33,6 @@ namespace WindowsForm
         public string Pic9 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
+        public virtual ICollection<Contact> Contacts { get; set; }
     }
 }

@@ -18,9 +18,10 @@ namespace WindowsForm
         public Course()
         {
             this.Enrollments = new HashSet<Enrollment>();
+            this.Rooms = new HashSet<Room>();
         }
     
-        public int CourseID { get; set; }
+        public long CourseID { get; set; }
         public string Active { get; set; }
         public string Approved { get; set; }
         public string AuthorID { get; set; }
@@ -34,5 +35,7 @@ namespace WindowsForm
         public virtual AspNetUser AspNetUser { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Enrollment> Enrollments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Room> Rooms { get; set; }
     }
 }

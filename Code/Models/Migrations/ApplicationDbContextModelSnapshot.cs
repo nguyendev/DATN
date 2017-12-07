@@ -23,7 +23,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("Address");
 
-                    b.Property<string>("City");
+                    b.Property<DateTime?>("CreateDT");
+
+                    b.Property<DateTime?>("DateIdentityCard");
 
                     b.Property<DateTime?>("DateofBirth");
 
@@ -31,13 +33,23 @@ namespace DataAccess.Migrations
 
                     b.Property<long?>("ImageID");
 
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Landline");
+
                     b.Property<string>("LastName");
+
+                    b.Property<string>("MobilePhone");
 
                     b.Property<string>("OwnerID");
 
-                    b.Property<string>("State");
+                    b.Property<int>("Sex");
 
                     b.Property<int>("Status");
+
+                    b.Property<DateTime?>("UpdateDT");
+
+                    b.Property<string>("WhereIdentityCard");
 
                     b.Property<string>("Zip");
 

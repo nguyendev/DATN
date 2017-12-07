@@ -32,9 +32,11 @@ namespace WindowsForm
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Enrollment> Enrollments { get; set; }
         public virtual DbSet<HistoryLogin> HistoryLogins { get; set; }
         public virtual DbSet<Image> Images { get; set; }
+        public virtual DbSet<Room> Rooms { get; set; }
     }
 }

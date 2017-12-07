@@ -12,7 +12,6 @@ namespace DataAccess
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public long ContactId { get; set; }
-
         // user ID from AspNetUser table
         public string OwnerID { get; set; }
         public Member Owner { get; set; }
@@ -20,13 +19,20 @@ namespace DataAccess
         public string LastName { get; set; }
         public long? ImageID { get; set; }
         public Image Image { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
+        public Sex Sex { get; set; }
         [DataType(DataType.PhoneNumber)]
-        public string State { get; set; }
+        public string Landline { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        public string MobilePhone { get; set; }
+        public DateTime? DateIdentityCard { get; set; }
+        public string WhereIdentityCard { get; set; }
+        public string Address { get; set; }
         public string Zip { get; set; }
         public DateTime? DateofBirth { get; set; }
         public ContactStatus Status { get; set; }
+        public DateTime? CreateDT { get; set; }
+        public DateTime? UpdateDT { get; set; }
+        public bool IsDeleted { get; set; }
     }
 
     public enum ContactStatus
@@ -35,5 +41,9 @@ namespace DataAccess
         Approved,
         Rejected
     }
-
+    public enum Sex
+    {
+        Male,
+        Female,
+    }
 }

@@ -185,3 +185,5 @@ D:\GitHub\DATN\Code\WindowsForm\bin\Debug\de\DevExpress.XtraLayout.v17.1.resourc
 D:\GitHub\DATN\Code\WindowsForm\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
 D:\GitHub\DATN\Code\WindowsForm\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
 D:\GitHub\DATN\Code\WindowsForm\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+D:\GitHub\DATN\Code\WindowsForm\obj\Debug\WindowsForm.LoginUpdateInfo.resources
+D:\GitHub\DATN\Code\WindowsForm\obj\Debug\WindowsForm.UpdateInfo.resources

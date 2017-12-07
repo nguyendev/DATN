@@ -19,6 +19,7 @@ namespace WindowsForm
         {
             this.AspNetUserClaims = new HashSet<AspNetUserClaim>();
             this.AspNetUserLogins = new HashSet<AspNetUserLogin>();
+            this.Contacts = new HashSet<Contact>();
             this.Courses = new HashSet<Course>();
             this.Enrollments = new HashSet<Enrollment>();
             this.HistoryLogins = new HashSet<HistoryLogin>();
@@ -27,9 +28,12 @@ namespace WindowsForm
     
         public string Id { get; set; }
         public int AccessFailedCount { get; set; }
+        public string Code { get; set; }
         public string ConcurrencyStamp { get; set; }
+        public Nullable<System.DateTime> CreateDT { get; set; }
         public string Email { get; set; }
         public bool EmailConfirmed { get; set; }
+        public bool IsDeleted { get; set; }
         public bool LockoutEnabled { get; set; }
         public Nullable<System.DateTimeOffset> LockoutEnd { get; set; }
         public string NormalizedEmail { get; set; }
@@ -38,18 +42,16 @@ namespace WindowsForm
         public string PhoneNumber { get; set; }
         public bool PhoneNumberConfirmed { get; set; }
         public string SecurityStamp { get; set; }
+        public string Slug { get; set; }
         public bool TwoFactorEnabled { get; set; }
         public string UserName { get; set; }
-        public System.DateTime EnrollmentDate { get; set; }
-        public string FirstMidName { get; set; }
-        public long ImageID { get; set; }
-        public string LastName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetUserClaim> AspNetUserClaims { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public virtual Image Image { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contact> Contacts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

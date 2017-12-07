@@ -41,10 +41,17 @@ namespace WindowsForm.UC
 
         public void Initialise_capture()
         {
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, image_PICBX.Width - 3, image_PICBX.Height - 3);
+            Region rg = new Region(gp);
+            image_PICBX.Region = rg;
             grabber = new VideoCapture();
-            grabber.QueryFrame();
-            //Initialize the FrameGraber event
-            Application.Idle += new EventHandler(FrameGrabber_Standard);
+            if(grabber.IsOpened)
+            {
+                grabber.QueryFrame();
+                //Initialize the FrameGraber event
+                Application.Idle += new EventHandler(FrameGrabber_Standard);
+            }
         }
 
         private void btnLoginWithPass_Click(object sender, EventArgs e)

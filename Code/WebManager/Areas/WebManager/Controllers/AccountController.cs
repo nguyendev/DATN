@@ -535,6 +535,10 @@ namespace WebManager.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 string code = StringExtensions.RandomString(CODE_LENGTH);
+                while (_context.Users.Any(p => p.Code == code))
+                { 
+                     code = StringExtensions.RandomString(CODE_LENGTH);
+                }
                 var user = new Member { UserName = model.UserName,Code = code };
                 var result = await _userManager.CreateAsync(user);
 
