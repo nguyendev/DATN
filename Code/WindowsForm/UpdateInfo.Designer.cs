@@ -28,37 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(471, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Xin chào bạn. Đầu tiên hãy tiến hành cập nhật hình ảnh trước nhé";
             // 
             // UpdateInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(492, 364);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.MaximizeBox = false;
             this.Name = "UpdateInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateInfo";
             this.ResumeLayout(false);
-            this.PerformLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
     }
 }

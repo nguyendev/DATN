@@ -1,62 +1,33 @@
-﻿using System;
+﻿using CefSharp;
+using CefSharp.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsForm
 {
-
     public partial class UpdateInfo : Form
     {
-        private LoginUpdateInfo _mainForm;
-        private string SEVER_URL = "http://localhost:51989/";
-        public UpdateInfo(LoginUpdateInfo mainForm, string code)
+        UpdateImage Parrent;
+        public UpdateInfo(UpdateImage _Parrent)
         {
-            _mainForm = mainForm;
             InitializeComponent();
-            LoadFormImage(code);
+            InitBrowser();
+            Parrent = _Parrent;
         }
-        private void LoadFormImage(string code)
+        public ChromiumWebBrowser browser;
+        public void InitBrowser()
         {
-            admin_thitoeicEntities db = new admin_thitoeicEntities();
-            var user = db.AspNetUsers.Single(p => p.Code == code);
-            bool contact = db.Contacts.Any(p => p.OwnerID == user.Id);
-            if (contact)
-            {
-
-            }
-            else
-            {
-                HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri(SEVER_URL);
-
-                // Add an Accept header for JSON format.
-                client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
-                var login = new Dictionary<string, string>
-            {
-               { "UserID",  user.Id}
-            };
-                var content = new FormUrlEncodedContent(login);
-
-                var response = client.PostAsync("api/ContactAPI", content).Result;
-                var responseString = response.Content.ReadAsStringAsync().Result;
-                if (responseString == "true")
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Tạo danh sách liên hệ thất bại");
-                }
-            }
+            Cef.Initialize(new CefSettings());
+            browser = new ChromiumWebBrowser("www.google.com");
+            this.Controls.Add(browser);
+            browser.Dock = DockStyle.Fill;
         }
     }
 }

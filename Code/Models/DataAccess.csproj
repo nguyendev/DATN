@@ -6,7 +6,7 @@
     <AssemblyName>DataAccess</AssemblyName>
     <StartupObject />
     <ApplicationIcon />
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>

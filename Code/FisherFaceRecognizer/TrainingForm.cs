@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
+
 namespace FFRecognizer
 {
     public partial class TrainingForm : Form

@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="admin_thitoeicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="admin_thitoeicEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="admin_thitoeicModel.C__EFMigrationsHistory" />
+    <EntitySet Name="AspNetRoleClaims" EntityType="admin_thitoeicModel.AspNetRoleClaim" />
+    <EntitySet Name="AspNetRoles" EntityType="admin_thitoeicModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="admin_thitoeicModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="admin_thitoeicModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="admin_thitoeicModel.AspNetUser" />
+    <EntitySet Name="AspNetUserTokens" EntityType="admin_thitoeicModel.AspNetUserToken" />
+    <EntitySet Name="Contacts" EntityType="admin_thitoeicModel.Contact" />
+    <EntitySet Name="Courses" EntityType="admin_thitoeicModel.Course" />
+    <EntitySet Name="Enrollments" EntityType="admin_thitoeicModel.Enrollment" />
+    <EntitySet Name="HistoryLogins" EntityType="admin_thitoeicModel.HistoryLogin" />
+    <EntitySet Name="Images" EntityType="admin_thitoeicModel.Image" />
+    <EntitySet Name="Rooms" EntityType="admin_thitoeicModel.Room" />
+    <AssociationSet Name="FK_AspNetRoleClaims_AspNetRoles_RoleId" Association="admin_thitoeicModel.FK_AspNetRoleClaims_AspNetRoles_RoleId">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetRoleClaim" EntitySet="AspNetRoleClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserClaims_AspNetUsers_UserId" Association="admin_thitoeicModel.FK_AspNetUserClaims_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserLogins_AspNetUsers_UserId" Association="admin_thitoeicModel.FK_AspNetUserLogins_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contact_AspNetUsers_OwnerID" Association="admin_thitoeicModel.FK_Contact_AspNetUsers_OwnerID">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Course_AspNetUsers_AuthorID" Association="admin_thitoeicModel.FK_Course_AspNetUsers_AuthorID">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Course" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enrollment_AspNetUsers_StudentID" Association="admin_thitoeicModel.FK_Enrollment_AspNetUsers_StudentID">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Enrollment" EntitySet="Enrollments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoryLogin_AspNetUsers_StudentID" Association="admin_thitoeicModel.FK_HistoryLogin_AspNetUsers_StudentID">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="HistoryLogin" EntitySet="HistoryLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contact_Image_ImageID" Association="admin_thitoeicModel.FK_Contact_Image_ImageID">
+      <End Role="Image" EntitySet="Images" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enrollment_Course_CourseID" Association="admin_thitoeicModel.FK_Enrollment_Course_CourseID">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="Enrollment" EntitySet="Enrollments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enrollment_Room_RoomID" Association="admin_thitoeicModel.FK_Enrollment_Room_RoomID">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Enrollment" EntitySet="Enrollments" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="admin_thitoeicModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="CourseRoom" Association="admin_thitoeicModel.CourseRoom">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRoleClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRole" Relationship="admin_thitoeicModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRoleClaim" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NormalizedName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRoleClaims" Relationship="admin_thitoeicModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRole" ToRole="AspNetRoleClaim" />
+    <NavigationProperty Name="AspNetUsers" Relationship="admin_thitoeicModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="admin_thitoeicModel.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderDisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="admin_thitoeicModel.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDT" Type="DateTime" Precision="7" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEnd" Type="DateTimeOffset" Precision="7" />
+    <Property Name="NormalizedEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NormalizedUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Slug" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="admin_thitoeicModel.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="admin_thitoeicModel.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="Contacts" Relationship="admin_thitoeicModel.FK_Contact_AspNetUsers_OwnerID" FromRole="AspNetUser" ToRole="Contact" />
+    <NavigationProperty Name="Courses" Relationship="admin_thitoeicModel.FK_Course_AspNetUsers_AuthorID" FromRole="AspNetUser" ToRole="Course" />
+    <NavigationProperty Name="Enrollments" Relationship="admin_thitoeicModel.FK_Enrollment_AspNetUsers_StudentID" FromRole="AspNetUser" ToRole="Enrollment" />
+    <NavigationProperty Name="HistoryLogins" Relationship="admin_thitoeicModel.FK_HistoryLogin_AspNetUsers_StudentID" FromRole="AspNetUser" ToRole="HistoryLogin" />
+    <NavigationProperty Name="AspNetRoles" Relationship="admin_thitoeicModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="AspNetUserToken">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateofBirth" Type="DateTime" Precision="7" />
+    <Property Name="FirstMidName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageID" Type="Int64" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerID" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Zip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="admin_thitoeicModel.FK_Contact_AspNetUsers_OwnerID" FromRole="Contact" ToRole="AspNetUser" />
+    <NavigationProperty Name="Image" Relationship="admin_thitoeicModel.FK_Contact_Image_ImageID" FromRole="Contact" ToRole="Image" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Approved" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorID" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDT" Type="DateTime" Precision="7" />
+    <Property Name="ExamTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDT" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="AspNetUser" Relationship="admin_thitoeicModel.FK_Course_AspNetUsers_AuthorID" FromRole="Course" ToRole="AspNetUser" />
+    <NavigationProperty Name="Enrollments" Relationship="admin_thitoeicModel.FK_Enrollment_Course_CourseID" FromRole="Course" ToRole="Enrollment" />
+    <NavigationProperty Name="Rooms" Relationship="admin_thitoeicModel.CourseRoom" FromRole="Course" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="Enrollment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseID" Type="Int64" Nullable="false" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="StudentID" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="admin_thitoeicModel.FK_Enrollment_AspNetUsers_StudentID" FromRole="Enrollment" ToRole="AspNetUser" />
+    <NavigationProperty Name="Course" Relationship="admin_thitoeicModel.FK_Enrollment_Course_CourseID" FromRole="Enrollment" ToRole="Course" />
+    <NavigationProperty Name="Room" Relationship="admin_thitoeicModel.FK_Enrollment_Room_RoomID" FromRole="Enrollment" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="HistoryLogin">
+    <Key>
+      <PropertyRef Name="HistoryLoginID" />
+    </Key>
+    <Property Name="HistoryLoginID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MethodLogin" Type="Int32" Nullable="false" />
+    <Property Name="StudentID" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="admin_thitoeicModel.FK_HistoryLogin_AspNetUsers_StudentID" FromRole="HistoryLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pic1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Pic9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Contacts" Relationship="admin_thitoeicModel.FK_Contact_Image_ImageID" FromRole="Image" ToRole="Contact" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Capacity" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Enrollments" Relationship="admin_thitoeicModel.FK_Enrollment_Room_RoomID" FromRole="Room" ToRole="Enrollment" />
+    <NavigationProperty Name="Courses" Relationship="admin_thitoeicModel.CourseRoom" FromRole="Room" ToRole="Course" />
+  </EntityType>
+  <Association Name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+    <End Type="admin_thitoeicModel.AspNetRole" Role="AspNetRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="admin_thitoeicModel.AspNetRoleClaim" Role="AspNetRoleClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetRoleClaim">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserClaims_AspNetUsers_UserId">
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="admin_thitoeicModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserLogins_AspNetUsers_UserId">
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="admin_thitoeicModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contact_AspNetUsers_OwnerID">
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="admin_thitoeicModel.Contact" Role="Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="OwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Course_AspNetUsers_AuthorID">
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="admin_thitoeicModel.Course" Role="Course" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Course">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enrollment_AspNetUsers_StudentID">
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="admin_thitoeicModel.Enrollment" Role="Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoryLogin_AspNetUsers_StudentID">
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="admin_thitoeicModel.HistoryLogin" Role="HistoryLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HistoryLogin">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contact_Image_ImageID">
+    <End Type="admin_thitoeicModel.Image" Role="Image" Multiplicity="0..1" />
+    <End Type="admin_thitoeicModel.Contact" Role="Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Image">
+        <PropertyRef Name="ImageID" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="ImageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enrollment_Course_CourseID">
+    <End Type="admin_thitoeicModel.Course" Role="Course" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="admin_thitoeicModel.Enrollment" Role="Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enrollment_Room_RoomID">
+    <End Type="admin_thitoeicModel.Room" Role="Room" Multiplicity="0..1" />
+    <End Type="admin_thitoeicModel.Enrollment" Role="Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="RoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="admin_thitoeicModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="admin_thitoeicModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <Association Name="CourseRoom">
+    <End Type="admin_thitoeicModel.Course" Role="Course" Multiplicity="*" />
+    <End Type="admin_thitoeicModel.Room" Role="Room" Multiplicity="*" />
+  </Association>
+</Schema>

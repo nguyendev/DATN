@@ -1,5 +1,16 @@
 D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\haarcascade_eye.xml
 D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\haarcascade_frontalface_default.xml
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x64\concrt140.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x64\cvextern.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x64\msvcp140.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x64\opencv_ffmpeg330_64.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x64\vcruntime140.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x86\concrt140.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x86\cvextern.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x86\msvcp140.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x86\opencv_ffmpeg330.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x86\vcruntime140.dll
+D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\x64\cvextern.lib
 D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\KhoaLuanTotNghiep.exe.config
 D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\KhoaLuanTotNghiep.exe
 D:\GitHub\DATN\Code\KhoaLuanTotNghiep\bin\x64\Debug\KhoaLuanTotNghiep.pdb

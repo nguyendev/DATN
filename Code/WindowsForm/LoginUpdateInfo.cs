@@ -146,7 +146,7 @@ namespace WindowsForm
                     //var user = db.AspNetUsers.Single(p => p.Email == txtUserName.Text);
                     ////var role = db.ASP.Single(p => p.)
                     Hide();
-                    UpdateInfo updateForm = new UpdateInfo(this, txtCodeUpdate.Text);
+                    UpdateImage updateForm = new UpdateImage(this, txtCodeUpdate.Text);
                     updateForm.Show();
                 }
                 else
