@@ -1,0 +1,61 @@
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.dll
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.pdb
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.apk
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.QuanLiPhongThi_DATN-Signed.apk
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.csprojResolveAssemblyReference.cache
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.csproj.CoreCompileInputs.cache
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.dll
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.pdb
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\android\bin\QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.apk
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\main.xml
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\values\strings.xml
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\R.cs.flag
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\uploadflags.txt
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.dll.mdb
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\android\assets\QuanLiPhongThi_DATN.dll.mdb
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\selectfunction.xml
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\getdataexaminer.xml
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\recognitionface.xml
+C:\Users\San\source\repos\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\management.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.pdb
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.apk
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.QuanLiPhongThi_DATN-Signed.apk
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.csprojResolveAssemblyReference.cache
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.csproj.CoreCompileInputs.cache
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\QuanLiPhongThi_DATN.pdb
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\android\bin\QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.apk
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\selectfunction.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\getdataexaminer.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\recognitionface.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\management.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\main.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\values\strings.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\R.cs.flag
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\uploadflags.txt
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\QuanLiPhongThi_DATN.dll.mdb
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\android\assets\QuanLiPhongThi_DATN.dll.mdb
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\dropdown.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\overviewroom.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\layout\choose.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\drawable\notification.png
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Compat.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Fragment.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Compat.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Core.UI.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Core.Utils.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Media.Compat.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Fragment.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Vector.Drawable.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\XbdMerge\Xamarin.Android.Support.v7.AppCompat.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\NotificationBadge.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Debug\res\drawable\badgle_bg_with_shadow.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Debug\CountdownTimer.dll
