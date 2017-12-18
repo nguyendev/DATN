@@ -795,7 +795,95 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int isConvertDaysToHours=0x7f0100fa;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isHideTimeBackground=0x7f0100eb;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int isLightTheme=0x7f010002;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowDay=0x7f0100f5;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowHour=0x7f0100f6;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowMillisecond=0x7f0100f9;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowMinute=0x7f0100f7;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowSecond=0x7f0100f8;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowTimeBgBorder=0x7f01010f;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isShowTimeBgDivisionLine=0x7f0100ec;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isSuffixTextBold=0x7f0100fb;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isTimeTextBold=0x7f0100f2;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1218,6 +1306,185 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int subtitleTextStyle=0x7f010008;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffix=0x7f0100fe;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixDay=0x7f0100ff;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixDayLeftMargin=0x7f010106;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixDayRightMargin=0x7f010107;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0</td><td></td></tr>
+<tr><td><code>center</code></td><td>1</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int suffixGravity=0x7f010104;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixHour=0x7f010100;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixHourLeftMargin=0x7f010108;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixHourRightMargin=0x7f010109;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixLRMargin=0x7f010105;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixMillisecond=0x7f010103;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixMillisecondLeftMargin=0x7f01010e;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixMinute=0x7f010101;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixMinuteLeftMargin=0x7f01010a;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixMinuteRightMargin=0x7f01010b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixSecond=0x7f010102;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixSecondLeftMargin=0x7f01010c;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixSecondRightMargin=0x7f01010d;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixTextColor=0x7f0100fd;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int suffixTextSize=0x7f0100fc;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1371,6 +1638,102 @@ containing a value of this type.
 </table>
          */
         public static final int tickMarkTintMode=0x7f01002a;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgBorderColor=0x7f010110;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgBorderRadius=0x7f010112;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgBorderSize=0x7f010111;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgColor=0x7f0100ef;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgDivisionLineColor=0x7f0100ed;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgDivisionLineSize=0x7f0100ee;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgRadius=0x7f0100f1;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeBgSize=0x7f0100f0;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeTextColor=0x7f0100f4;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int timeTextSize=0x7f0100f3;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1901,133 +2264,134 @@ containing a value of this type.
         public static final int notify_panel_notification_icon_bg=0x7f02005f;
     }
     public static final class id {
-        public static final int action0=0x7f0a0069;
-        public static final int action_bar=0x7f0a0047;
+        public static final int action0=0x7f0a0070;
+        public static final int action_bar=0x7f0a0048;
         public static final int action_bar_activity_content=0x7f0a0000;
-        public static final int action_bar_container=0x7f0a0046;
-        public static final int action_bar_root=0x7f0a0042;
+        public static final int action_bar_container=0x7f0a0047;
+        public static final int action_bar_root=0x7f0a0043;
         public static final int action_bar_spinner=0x7f0a0001;
-        public static final int action_bar_subtitle=0x7f0a0025;
-        public static final int action_bar_title=0x7f0a0024;
-        public static final int action_container=0x7f0a0063;
-        public static final int action_context_bar=0x7f0a0048;
-        public static final int action_divider=0x7f0a006d;
-        public static final int action_image=0x7f0a0064;
+        public static final int action_bar_subtitle=0x7f0a0026;
+        public static final int action_bar_title=0x7f0a0025;
+        public static final int action_container=0x7f0a006a;
+        public static final int action_context_bar=0x7f0a0049;
+        public static final int action_divider=0x7f0a0074;
+        public static final int action_image=0x7f0a006b;
         public static final int action_menu_divider=0x7f0a0002;
         public static final int action_menu_presenter=0x7f0a0003;
-        public static final int action_mode_bar=0x7f0a0044;
-        public static final int action_mode_bar_stub=0x7f0a0043;
-        public static final int action_mode_close_button=0x7f0a0026;
-        public static final int action_text=0x7f0a0065;
-        public static final int actions=0x7f0a0076;
-        public static final int activity_chooser_view_content=0x7f0a0027;
+        public static final int action_mode_bar=0x7f0a0045;
+        public static final int action_mode_bar_stub=0x7f0a0044;
+        public static final int action_mode_close_button=0x7f0a0027;
+        public static final int action_text=0x7f0a006c;
+        public static final int actions=0x7f0a007d;
+        public static final int activity_chooser_view_content=0x7f0a0028;
         public static final int add=0x7f0a0013;
-        public static final int alertTitle=0x7f0a003b;
+        public static final int alertTitle=0x7f0a003c;
         public static final int always=0x7f0a001d;
-        public static final int badgle=0x7f0a0061;
+        public static final int badgle=0x7f0a0069;
         public static final int beginning=0x7f0a001a;
         public static final int bottom=0x7f0a0022;
-        public static final int btnCamera=0x7f0a005a;
-        public static final int btnSenttoServer=0x7f0a005c;
-        public static final int btnTrain=0x7f0a005b;
-        public static final int button1=0x7f0a0057;
-        public static final int button2=0x7f0a0058;
-        public static final int buttonPanel=0x7f0a002e;
-        public static final int cancel_action=0x7f0a006a;
-        public static final int checkbox=0x7f0a003e;
-        public static final int chronometer=0x7f0a0072;
+        public static final int btnCamera=0x7f0a0063;
+        public static final int btnSenttoServer=0x7f0a0065;
+        public static final int btnTrain=0x7f0a0064;
+        public static final int button1=0x7f0a0060;
+        public static final int button2=0x7f0a0061;
+        public static final int buttonPanel=0x7f0a002f;
+        public static final int cancel_action=0x7f0a0071;
+        public static final int center=0x7f0a0024;
+        public static final int checkbox=0x7f0a003f;
+        public static final int chronometer=0x7f0a0079;
         public static final int collapseActionView=0x7f0a001e;
-        public static final int contentPanel=0x7f0a0031;
-        public static final int custom=0x7f0a0038;
-        public static final int customPanel=0x7f0a0037;
-        public static final int decor_content_parent=0x7f0a0045;
-        public static final int default_activity_button=0x7f0a002a;
+        public static final int contentPanel=0x7f0a0032;
+        public static final int custom=0x7f0a0039;
+        public static final int customPanel=0x7f0a0038;
+        public static final int decor_content_parent=0x7f0a0046;
+        public static final int default_activity_button=0x7f0a002b;
         public static final int disableHome=0x7f0a000c;
-        public static final int editText1=0x7f0a005d;
-        public static final int editText2=0x7f0a005e;
-        public static final int edit_query=0x7f0a0049;
+        public static final int editText1=0x7f0a0066;
+        public static final int editText2=0x7f0a0067;
+        public static final int edit_query=0x7f0a004a;
         public static final int end=0x7f0a001b;
-        public static final int end_padder=0x7f0a007c;
-        public static final int expand_activities_button=0x7f0a0028;
-        public static final int expanded_menu=0x7f0a003d;
-        public static final int fl_container=0x7f0a0066;
+        public static final int end_padder=0x7f0a0083;
+        public static final int expand_activities_button=0x7f0a0029;
+        public static final int expanded_menu=0x7f0a003e;
+        public static final int fl_container=0x7f0a006d;
         public static final int home=0x7f0a0004;
         public static final int homeAsUp=0x7f0a000d;
-        public static final int icon=0x7f0a002c;
-        public static final int icon_group=0x7f0a0077;
+        public static final int icon=0x7f0a002d;
+        public static final int icon_group=0x7f0a007e;
         public static final int ifRoom=0x7f0a001f;
-        public static final int image=0x7f0a0029;
-        public static final int imageView=0x7f0a0059;
-        public static final int info=0x7f0a0073;
-        public static final int iv_badge_bg=0x7f0a0067;
-        public static final int line1=0x7f0a0078;
-        public static final int line3=0x7f0a007a;
+        public static final int image=0x7f0a002a;
+        public static final int imageView=0x7f0a0062;
+        public static final int info=0x7f0a007a;
+        public static final int iv_badge_bg=0x7f0a006e;
+        public static final int line1=0x7f0a007f;
+        public static final int line3=0x7f0a0081;
         public static final int listMode=0x7f0a0009;
-        public static final int listView1=0x7f0a0062;
-        public static final int list_item=0x7f0a002b;
-        public static final int media_actions=0x7f0a006c;
+        public static final int listView1=0x7f0a0058;
+        public static final int list_item=0x7f0a002c;
+        public static final int media_actions=0x7f0a0073;
         public static final int middle=0x7f0a001c;
         public static final int multiply=0x7f0a0014;
         public static final int never=0x7f0a0020;
         public static final int none=0x7f0a000e;
         public static final int normal=0x7f0a000a;
-        public static final int notification_background=0x7f0a0075;
-        public static final int notification_main_column=0x7f0a006f;
-        public static final int notification_main_column_container=0x7f0a006e;
-        public static final int parentPanel=0x7f0a0030;
+        public static final int notification_background=0x7f0a007c;
+        public static final int notification_main_column=0x7f0a0076;
+        public static final int notification_main_column_container=0x7f0a0075;
+        public static final int parentPanel=0x7f0a0031;
         public static final int progress_circular=0x7f0a0005;
         public static final int progress_horizontal=0x7f0a0006;
-        public static final int radio=0x7f0a0040;
-        public static final int right_icon=0x7f0a0074;
-        public static final int right_side=0x7f0a0070;
+        public static final int radio=0x7f0a0041;
+        public static final int right_icon=0x7f0a007b;
+        public static final int right_side=0x7f0a0077;
         public static final int screen=0x7f0a0015;
-        public static final int scrollIndicatorDown=0x7f0a0036;
-        public static final int scrollIndicatorUp=0x7f0a0032;
-        public static final int scrollView=0x7f0a0033;
-        public static final int search_badge=0x7f0a004b;
-        public static final int search_bar=0x7f0a004a;
-        public static final int search_button=0x7f0a004c;
-        public static final int search_close_btn=0x7f0a0051;
-        public static final int search_edit_frame=0x7f0a004d;
-        public static final int search_go_btn=0x7f0a0053;
-        public static final int search_mag_icon=0x7f0a004e;
-        public static final int search_plate=0x7f0a004f;
-        public static final int search_src_text=0x7f0a0050;
-        public static final int search_voice_btn=0x7f0a0054;
-        public static final int select_dialog_listview=0x7f0a0055;
-        public static final int shortcut=0x7f0a003f;
+        public static final int scrollIndicatorDown=0x7f0a0037;
+        public static final int scrollIndicatorUp=0x7f0a0033;
+        public static final int scrollView=0x7f0a0034;
+        public static final int search_badge=0x7f0a004c;
+        public static final int search_bar=0x7f0a004b;
+        public static final int search_button=0x7f0a004d;
+        public static final int search_close_btn=0x7f0a0052;
+        public static final int search_edit_frame=0x7f0a004e;
+        public static final int search_go_btn=0x7f0a0054;
+        public static final int search_mag_icon=0x7f0a004f;
+        public static final int search_plate=0x7f0a0050;
+        public static final int search_src_text=0x7f0a0051;
+        public static final int search_voice_btn=0x7f0a0055;
+        public static final int select_dialog_listview=0x7f0a0056;
+        public static final int shortcut=0x7f0a0040;
         public static final int showCustom=0x7f0a000f;
         public static final int showHome=0x7f0a0010;
         public static final int showTitle=0x7f0a0011;
-        public static final int spacer=0x7f0a002f;
-        public static final int spinner=0x7f0a0060;
+        public static final int spacer=0x7f0a0030;
+        public static final int spinner=0x7f0a0068;
         public static final int split_action_bar=0x7f0a0007;
         public static final int src_atop=0x7f0a0016;
         public static final int src_in=0x7f0a0017;
         public static final int src_over=0x7f0a0018;
-        public static final int status_bar_latest_event_content=0x7f0a006b;
-        public static final int submenuarrow=0x7f0a0041;
-        public static final int submit_area=0x7f0a0052;
+        public static final int status_bar_latest_event_content=0x7f0a0072;
+        public static final int submenuarrow=0x7f0a0042;
+        public static final int submit_area=0x7f0a0053;
         public static final int tabMode=0x7f0a000b;
-        public static final int text=0x7f0a007b;
-        public static final int text2=0x7f0a0079;
-        public static final int textSpacerNoButtons=0x7f0a0035;
-        public static final int textSpacerNoTitle=0x7f0a0034;
-        public static final int textView1=0x7f0a0056;
-        public static final int textView2=0x7f0a007e;
-        public static final int textView3=0x7f0a005f;
-        public static final int textView4=0x7f0a007f;
-        public static final int textView5=0x7f0a0080;
-        public static final int textView6=0x7f0a0081;
-        public static final int textView7=0x7f0a0082;
-        public static final int textView8=0x7f0a007d;
-        public static final int time=0x7f0a0071;
-        public static final int title=0x7f0a002d;
-        public static final int titleDividerNoCustom=0x7f0a003c;
-        public static final int title_template=0x7f0a003a;
+        public static final int text=0x7f0a0082;
+        public static final int text2=0x7f0a0080;
+        public static final int textSpacerNoButtons=0x7f0a0036;
+        public static final int textSpacerNoTitle=0x7f0a0035;
+        public static final int textView1=0x7f0a0057;
+        public static final int textView2=0x7f0a0059;
+        public static final int textView3=0x7f0a005a;
+        public static final int textView4=0x7f0a005b;
+        public static final int textView5=0x7f0a005c;
+        public static final int textView6=0x7f0a005d;
+        public static final int textView7=0x7f0a005e;
+        public static final int textView8=0x7f0a005f;
+        public static final int time=0x7f0a0078;
+        public static final int title=0x7f0a002e;
+        public static final int titleDividerNoCustom=0x7f0a003d;
+        public static final int title_template=0x7f0a003b;
         public static final int top=0x7f0a0023;
-        public static final int topPanel=0x7f0a0039;
-        public static final int tv_badge_text=0x7f0a0068;
+        public static final int topPanel=0x7f0a003a;
+        public static final int tv_badge_text=0x7f0a006f;
         public static final int up=0x7f0a0008;
         public static final int useLogo=0x7f0a0012;
         public static final int withText=0x7f0a0021;
@@ -2068,33 +2432,35 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030019;
         public static final int abc_select_dialog_material=0x7f03001a;
         public static final int choose=0x7f03001b;
-        public static final int dropdown=0x7f03001c;
-        public static final int getdataexaminer=0x7f03001d;
-        public static final int main=0x7f03001e;
-        public static final int management=0x7f03001f;
-        public static final int notification_action=0x7f030020;
-        public static final int notification_action_tombstone=0x7f030021;
-        public static final int notification_badge=0x7f030022;
-        public static final int notification_media_action=0x7f030023;
-        public static final int notification_media_cancel_action=0x7f030024;
-        public static final int notification_template_big_media=0x7f030025;
-        public static final int notification_template_big_media_custom=0x7f030026;
-        public static final int notification_template_big_media_narrow=0x7f030027;
-        public static final int notification_template_big_media_narrow_custom=0x7f030028;
-        public static final int notification_template_custom_big=0x7f030029;
-        public static final int notification_template_icon_group=0x7f03002a;
-        public static final int notification_template_lines_media=0x7f03002b;
-        public static final int notification_template_media=0x7f03002c;
-        public static final int notification_template_media_custom=0x7f03002d;
-        public static final int notification_template_part_chronometer=0x7f03002e;
-        public static final int notification_template_part_time=0x7f03002f;
-        public static final int overviewroom=0x7f030030;
-        public static final int recognitionface=0x7f030031;
-        public static final int select_dialog_item_material=0x7f030032;
-        public static final int select_dialog_multichoice_material=0x7f030033;
-        public static final int select_dialog_singlechoice_material=0x7f030034;
-        public static final int selectfunction=0x7f030035;
-        public static final int support_simple_spinner_dropdown_item=0x7f030036;
+        public static final int detailroom=0x7f03001c;
+        public static final int detailroomfinal=0x7f03001d;
+        public static final int dropdown=0x7f03001e;
+        public static final int getdataexaminer=0x7f03001f;
+        public static final int main=0x7f030020;
+        public static final int management=0x7f030021;
+        public static final int notification_action=0x7f030022;
+        public static final int notification_action_tombstone=0x7f030023;
+        public static final int notification_badge=0x7f030024;
+        public static final int notification_media_action=0x7f030025;
+        public static final int notification_media_cancel_action=0x7f030026;
+        public static final int notification_template_big_media=0x7f030027;
+        public static final int notification_template_big_media_custom=0x7f030028;
+        public static final int notification_template_big_media_narrow=0x7f030029;
+        public static final int notification_template_big_media_narrow_custom=0x7f03002a;
+        public static final int notification_template_custom_big=0x7f03002b;
+        public static final int notification_template_icon_group=0x7f03002c;
+        public static final int notification_template_lines_media=0x7f03002d;
+        public static final int notification_template_media=0x7f03002e;
+        public static final int notification_template_media_custom=0x7f03002f;
+        public static final int notification_template_part_chronometer=0x7f030030;
+        public static final int notification_template_part_time=0x7f030031;
+        public static final int overviewroom=0x7f030032;
+        public static final int recognitionface=0x7f030033;
+        public static final int select_dialog_item_material=0x7f030034;
+        public static final int select_dialog_multichoice_material=0x7f030035;
+        public static final int select_dialog_singlechoice_material=0x7f030036;
+        public static final int selectfunction=0x7f030037;
+        public static final int support_simple_spinner_dropdown_item=0x7f030038;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f050000;
@@ -5149,6 +5515,709 @@ containing a value of this type.
           @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
+        /** Attributes that can be used with a CountdownView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CountdownView_isConvertDaysToHours QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isConvertDaysToHours}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isHideTimeBackground QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isHideTimeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowDay QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowDay}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowHour QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowHour}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowMillisecond QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowMillisecond}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowMinute QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowMinute}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowSecond QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowSecond}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowTimeBgBorder QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowTimeBgBorder}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isShowTimeBgDivisionLine QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowTimeBgDivisionLine}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isSuffixTextBold QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isSuffixTextBold}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_isTimeTextBold QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isTimeTextBold}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffix QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffix}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixDay QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixDay}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixDayLeftMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixDayLeftMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixDayRightMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixDayRightMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixGravity QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixHour QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixHour}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixHourLeftMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixHourLeftMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixHourRightMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixHourRightMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixLRMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixLRMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixMillisecond QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMillisecond}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixMillisecondLeftMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMillisecondLeftMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixMinute QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMinute}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixMinuteLeftMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMinuteLeftMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixMinuteRightMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMinuteRightMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixSecond QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixSecond}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixSecondLeftMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixSecondLeftMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixSecondRightMargin QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixSecondRightMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixTextColor QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_suffixTextSize QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgBorderColor QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgBorderColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgBorderRadius QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgBorderRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgBorderSize QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgBorderSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgColor QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgDivisionLineColor QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgDivisionLineColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgDivisionLineSize QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgDivisionLineSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgRadius QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeBgSize QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeTextColor QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CountdownView_timeTextSize QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeTextSize}</code></td><td></td></tr>
+           </table>
+           @see #CountdownView_isConvertDaysToHours
+           @see #CountdownView_isHideTimeBackground
+           @see #CountdownView_isShowDay
+           @see #CountdownView_isShowHour
+           @see #CountdownView_isShowMillisecond
+           @see #CountdownView_isShowMinute
+           @see #CountdownView_isShowSecond
+           @see #CountdownView_isShowTimeBgBorder
+           @see #CountdownView_isShowTimeBgDivisionLine
+           @see #CountdownView_isSuffixTextBold
+           @see #CountdownView_isTimeTextBold
+           @see #CountdownView_suffix
+           @see #CountdownView_suffixDay
+           @see #CountdownView_suffixDayLeftMargin
+           @see #CountdownView_suffixDayRightMargin
+           @see #CountdownView_suffixGravity
+           @see #CountdownView_suffixHour
+           @see #CountdownView_suffixHourLeftMargin
+           @see #CountdownView_suffixHourRightMargin
+           @see #CountdownView_suffixLRMargin
+           @see #CountdownView_suffixMillisecond
+           @see #CountdownView_suffixMillisecondLeftMargin
+           @see #CountdownView_suffixMinute
+           @see #CountdownView_suffixMinuteLeftMargin
+           @see #CountdownView_suffixMinuteRightMargin
+           @see #CountdownView_suffixSecond
+           @see #CountdownView_suffixSecondLeftMargin
+           @see #CountdownView_suffixSecondRightMargin
+           @see #CountdownView_suffixTextColor
+           @see #CountdownView_suffixTextSize
+           @see #CountdownView_timeBgBorderColor
+           @see #CountdownView_timeBgBorderRadius
+           @see #CountdownView_timeBgBorderSize
+           @see #CountdownView_timeBgColor
+           @see #CountdownView_timeBgDivisionLineColor
+           @see #CountdownView_timeBgDivisionLineSize
+           @see #CountdownView_timeBgRadius
+           @see #CountdownView_timeBgSize
+           @see #CountdownView_timeTextColor
+           @see #CountdownView_timeTextSize
+         */
+        public static final int[] CountdownView = {
+            0x7f0100eb, 0x7f0100ec, 0x7f0100ed, 0x7f0100ee,
+            0x7f0100ef, 0x7f0100f0, 0x7f0100f1, 0x7f0100f2,
+            0x7f0100f3, 0x7f0100f4, 0x7f0100f5, 0x7f0100f6,
+            0x7f0100f7, 0x7f0100f8, 0x7f0100f9, 0x7f0100fa,
+            0x7f0100fb, 0x7f0100fc, 0x7f0100fd, 0x7f0100fe,
+            0x7f0100ff, 0x7f010100, 0x7f010101, 0x7f010102,
+            0x7f010103, 0x7f010104, 0x7f010105, 0x7f010106,
+            0x7f010107, 0x7f010108, 0x7f010109, 0x7f01010a,
+            0x7f01010b, 0x7f01010c, 0x7f01010d, 0x7f01010e,
+            0x7f01010f, 0x7f010110, 0x7f010111, 0x7f010112
+        };
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isConvertDaysToHours}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isConvertDaysToHours
+        */
+        public static final int CountdownView_isConvertDaysToHours = 15;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isHideTimeBackground}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isHideTimeBackground
+        */
+        public static final int CountdownView_isHideTimeBackground = 0;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowDay}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowDay
+        */
+        public static final int CountdownView_isShowDay = 10;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowHour}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowHour
+        */
+        public static final int CountdownView_isShowHour = 11;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowMillisecond}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowMillisecond
+        */
+        public static final int CountdownView_isShowMillisecond = 14;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowMinute}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowMinute
+        */
+        public static final int CountdownView_isShowMinute = 12;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowSecond}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowSecond
+        */
+        public static final int CountdownView_isShowSecond = 13;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowTimeBgBorder}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowTimeBgBorder
+        */
+        public static final int CountdownView_isShowTimeBgBorder = 36;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isShowTimeBgDivisionLine}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isShowTimeBgDivisionLine
+        */
+        public static final int CountdownView_isShowTimeBgDivisionLine = 1;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isSuffixTextBold}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isSuffixTextBold
+        */
+        public static final int CountdownView_isSuffixTextBold = 16;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#isTimeTextBold}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:isTimeTextBold
+        */
+        public static final int CountdownView_isTimeTextBold = 7;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffix}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffix
+        */
+        public static final int CountdownView_suffix = 19;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixDay}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixDay
+        */
+        public static final int CountdownView_suffixDay = 20;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixDayLeftMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixDayLeftMargin
+        */
+        public static final int CountdownView_suffixDayLeftMargin = 27;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixDayRightMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixDayRightMargin
+        */
+        public static final int CountdownView_suffixDayRightMargin = 28;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixGravity}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>top</code></td><td>0</td><td></td></tr>
+<tr><td><code>center</code></td><td>1</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixGravity
+        */
+        public static final int CountdownView_suffixGravity = 25;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixHour}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixHour
+        */
+        public static final int CountdownView_suffixHour = 21;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixHourLeftMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixHourLeftMargin
+        */
+        public static final int CountdownView_suffixHourLeftMargin = 29;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixHourRightMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixHourRightMargin
+        */
+        public static final int CountdownView_suffixHourRightMargin = 30;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixLRMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixLRMargin
+        */
+        public static final int CountdownView_suffixLRMargin = 26;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixMillisecond}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMillisecond
+        */
+        public static final int CountdownView_suffixMillisecond = 24;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixMillisecondLeftMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMillisecondLeftMargin
+        */
+        public static final int CountdownView_suffixMillisecondLeftMargin = 35;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixMinute}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMinute
+        */
+        public static final int CountdownView_suffixMinute = 22;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixMinuteLeftMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMinuteLeftMargin
+        */
+        public static final int CountdownView_suffixMinuteLeftMargin = 31;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixMinuteRightMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixMinuteRightMargin
+        */
+        public static final int CountdownView_suffixMinuteRightMargin = 32;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixSecond}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixSecond
+        */
+        public static final int CountdownView_suffixSecond = 23;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixSecondLeftMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixSecondLeftMargin
+        */
+        public static final int CountdownView_suffixSecondLeftMargin = 33;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixSecondRightMargin}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixSecondRightMargin
+        */
+        public static final int CountdownView_suffixSecondRightMargin = 34;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixTextColor}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixTextColor
+        */
+        public static final int CountdownView_suffixTextColor = 18;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#suffixTextSize}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:suffixTextSize
+        */
+        public static final int CountdownView_suffixTextSize = 17;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgBorderColor}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgBorderColor
+        */
+        public static final int CountdownView_timeBgBorderColor = 37;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgBorderRadius}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgBorderRadius
+        */
+        public static final int CountdownView_timeBgBorderRadius = 39;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgBorderSize}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgBorderSize
+        */
+        public static final int CountdownView_timeBgBorderSize = 38;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgColor}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgColor
+        */
+        public static final int CountdownView_timeBgColor = 4;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgDivisionLineColor}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgDivisionLineColor
+        */
+        public static final int CountdownView_timeBgDivisionLineColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgDivisionLineSize}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgDivisionLineSize
+        */
+        public static final int CountdownView_timeBgDivisionLineSize = 3;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgRadius}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgRadius
+        */
+        public static final int CountdownView_timeBgRadius = 6;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeBgSize}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeBgSize
+        */
+        public static final int CountdownView_timeBgSize = 5;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeTextColor}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeTextColor
+        */
+        public static final int CountdownView_timeTextColor = 9;
+        /**
+          <p>This symbol is the offset where the {@link QuanLiPhongThi_DATN.QuanLiPhongThi_DATN.R.attr#timeTextSize}
+          attribute's value can be found in the {@link #CountdownView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name QuanLiPhongThi_DATN.QuanLiPhongThi_DATN:timeTextSize
+        */
+        public static final int CountdownView_timeTextSize = 8;
         /** Attributes that can be used with a DrawerArrowToggle.
            <p>Includes the following attributes:</p>
            <table>

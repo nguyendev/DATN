@@ -5,6 +5,7 @@
   <application android:allowBackup="true" android:label="@string/app_name" android:name="android.app.Application">
     <activity android:label="Getdataexaminer" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Getdataexaminer" />
     <activity android:label="Recognitionface" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Recognitionface" />
+    <activity android:label="Detailroom" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Detailroom" />
     <activity android:label="Selectfunction" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Selectfunction" />
     <activity android:label="QuanLiPhongThi_DATN" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.MainActivity">
       <intent-filter>

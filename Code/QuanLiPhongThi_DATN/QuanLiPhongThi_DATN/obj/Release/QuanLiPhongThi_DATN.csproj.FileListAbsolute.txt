@@ -57,3 +57,6 @@ D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\XbdMerge\Xama
 D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\XbdMerge\Xamarin.Android.Support.v7.AppCompat.dll
 D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\NotificationBadge.dll
 D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\badgle_bg_with_shadow.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\CountdownTimer.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\layout\detailroom.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\layout\detailroomfinal.xml
