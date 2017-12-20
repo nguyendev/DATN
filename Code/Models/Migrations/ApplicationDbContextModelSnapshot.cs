@@ -153,6 +153,8 @@ namespace DataAccess.Migrations
                     b.Property<long>("ImageID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("OwnerID");
+
                     b.Property<string>("Pic1");
 
                     b.Property<string>("Pic10");
@@ -174,6 +176,8 @@ namespace DataAccess.Migrations
                     b.Property<string>("Pic9");
 
                     b.HasKey("ImageID");
+
+                    b.HasIndex("OwnerID");
 
                     b.ToTable("Image");
                 });
@@ -409,6 +413,13 @@ namespace DataAccess.Migrations
                     b.HasOne("DataAccess.Member", "Student")
                         .WithMany("HistoryLogins")
                         .HasForeignKey("StudentID");
+                });
+
+            modelBuilder.Entity("DataAccess.Image", b =>
+                {
+                    b.HasOne("DataAccess.Member", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

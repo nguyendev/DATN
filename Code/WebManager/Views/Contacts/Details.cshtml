@@ -1,0 +1,114 @@
+@model DataAccess.Contact
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstMidName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Landline)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Landline)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MobilePhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MobilePhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateIdentityCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateIdentityCard)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WhereIdentityCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WhereIdentityCard)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateofBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateDT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Image.ImageID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Owner.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ContactId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

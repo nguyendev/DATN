@@ -22,5 +22,7 @@ namespace DataAccess
         public string Pic8 { get; set; }
         public string Pic9 { get; set; }
         public string Pic10 { get; set; }
+        public string OwnerID { get; set; }
+        public Member Owner { get; set; }
     }
 }

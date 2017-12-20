@@ -99,3 +99,5 @@ D:\GitHub\DATN\Code\Android\obj\Debug\res\layout\main.xml
 D:\GitHub\DATN\Code\Android\obj\Debug\res\values\strings.xml
 D:\GitHub\DATN\Code\Android\obj\Debug\R.cs.flag
 D:\GitHub\DATN\Code\Android\obj\Debug\uploadflags.txt
+D:\GitHub\DATN\Code\Android\bin\Debug\Android.dll.mdb
+D:\GitHub\DATN\Code\Android\obj\Debug\android\assets\Android.dll.mdb

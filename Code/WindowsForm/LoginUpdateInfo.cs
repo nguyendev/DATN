@@ -25,23 +25,10 @@ namespace WindowsForm
 
             InitializeComponent();
             //Open Wait Form
-            ShowWaitForm();
+            Global.ShowWaitForm(this);
             CreateImage();
         }
-        private void ShowWaitForm()
-        {
-            SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, ParentFormState.Locked);
-
-            //The Wait Form is opened in a separate thread. To change its Description, use the SetWaitFormDescription method.
-            for (int i = 1; i <= 100; i++)
-            {
-                SplashScreenManager.Default.SetWaitFormDescription(i.ToString() + "%");
-                Thread.Sleep(25);
-            }
-
-            //Close Wait Form
-            SplashScreenManager.CloseForm();
-        }
+      
         #region Capcha
         private void CreateImage()
         {

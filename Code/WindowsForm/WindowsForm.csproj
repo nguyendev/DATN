@@ -331,6 +331,7 @@
     <Compile Include="Enrollment.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="HistoryLogin.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>

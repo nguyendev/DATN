@@ -24,66 +24,53 @@ namespace WindowsForm
 
     public partial class UpdateImage : Form
     {
-        private LoginUpdateInfo Parent;
-        private string UserID;
-        private string SEVER_URL = "http://localhost:51989/";
+        private LoginUpdateInfo _parent;
+        private string _userID;
 
         #region Variables
         //Camera specific
-        VideoCapture grabber;
+        private VideoCapture _grabber;
 
         //Images for finding face
-        Image<Bgr, Byte> currentFrame;
-        Image<Gray, byte> result = null;
-        Image<Gray, byte> gray_frame = null;
+        private Image<Bgr, Byte> _currentFrame;
+        private Image<Gray, byte> _result = null;
+        private Image<Gray, byte> _gray_frame = null;
 
         //Classifier
-        CascadeClassifier Face = new CascadeClassifier(Application.StartupPath + "/haarcascade_frontalface_default.xml");//Our face detection method ;
+        private CascadeClassifier _face = new CascadeClassifier(Application.StartupPath + "/haarcascade_frontalface_default.xml");//Our face detection method ;
 
         //For aquiring 10 images in a row
-        List<Image<Gray, byte>> resultImages = new List<Image<Gray, byte>>();
-        int results_list_pos = 0;
-        int NUM_FACES_TO_AQUIRE = 3;
-        bool RECORD = false;
+        private List<Image<Gray, byte>> _resultImages = new List<Image<Gray, byte>>();
+        private int _results_list_pos = 0;
+        private int _NUM_FACES_TO_AQUIRE = 3;
+        private bool _RECORD = false;
 
         //Saving Jpg
-        List<Image<Gray, byte>> ImagestoWrite = new List<Image<Gray, byte>>();
-        EncoderParameters ENC_Parameters = new EncoderParameters(1);
-        EncoderParameter ENC = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100);
-        ImageCodecInfo Image_Encoder_JPG;
+        private List<Image<Gray, byte>> _imagestoWrite = new List<Image<Gray, byte>>();
+        private EncoderParameters _ENC_Parameters = new EncoderParameters(1);
+        private EncoderParameter _ENC = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100);
+        private ImageCodecInfo _Image_Encoder_JPG;
 
         //Saving XAML Data file
-        List<string> NamestoWrite = new List<string>();
-        List<string> NamesforFile = new List<string>();
-        XmlDocument docu = new XmlDocument();
+        private List<string> NamestoWrite = new List<string>();
+        private List<string> NamesforFile = new List<string>();
+        private XmlDocument docu = new XmlDocument();
 
         //Variables
+        private string _code;
         #endregion
         
         public UpdateImage(LoginUpdateInfo mainForm, string code)
         {
-            Parent = mainForm;
+            _parent = mainForm;
             InitializeComponent();
-            ShowWaitForm();
-            LoadFormImage(code);
-            ENC_Parameters.Param[0] = ENC;
-            Image_Encoder_JPG = GetEncoder(ImageFormat.Jpeg);
+            Global.ShowWaitForm(this);
+            //LoadFormImage(code);
+            _ENC_Parameters.Param[0] = _ENC;
+            _code = code;
+            _Image_Encoder_JPG = GetEncoder(ImageFormat.Jpeg);
             initialise_capture();
             
-        }
-        private void ShowWaitForm()
-        {
-            SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, ParentFormState.Locked);
-
-            //The Wait Form is opened in a separate thread. To change its Description, use the SetWaitFormDescription method.
-            for (int i = 1; i <= 100; i++)
-            {
-                SplashScreenManager.Default.SetWaitFormDescription(i.ToString() + "%");
-                Thread.Sleep(25);
-            }
-
-            //Close Wait Form
-            SplashScreenManager.CloseForm();
         }
         private void LoadFormImage(string code)
         {
@@ -97,7 +84,7 @@ namespace WindowsForm
             else
             {
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri(SEVER_URL);
+                client.BaseAddress = new Uri(Global.SEVER_URL);
 
                 // Add an Accept header for JSON format.
                 client.DefaultRequestHeaders.Accept.Add(
@@ -119,17 +106,17 @@ namespace WindowsForm
                     MessageBox.Show("Tạo danh sách liên hệ thất bại");
                 }
             }
-            UserID = user.Id;
+            _userID = user.Id;
         }
 
 
         //Camera Start Stop
         public void initialise_capture()
         {
-            grabber = new VideoCapture();
-            if(grabber.IsOpened)
+            _grabber = new VideoCapture();
+            if(_grabber.IsOpened)
             { 
-                grabber.QueryFrame();
+                _grabber.QueryFrame();
                 //Initialize the FrameGraber event
                 Application.Idle += new EventHandler(FrameGrabber);
             }
@@ -142,9 +129,9 @@ namespace WindowsForm
         private void stop_capture()
         {
             Application.Idle -= new EventHandler(FrameGrabber);
-            if (grabber != null)
+            if (_grabber != null)
             {
-                grabber.Dispose();
+                _grabber.Dispose();
             }
             //Initialize the FrameGraber event
         }
@@ -153,16 +140,16 @@ namespace WindowsForm
         void FrameGrabber(object sender, EventArgs e)
         {
             //Get the current frame form capture device
-            currentFrame = grabber.QueryFrame().ToImage<Bgr, byte>().Resize(320, 240, Emgu.CV.CvEnum.Inter.Cubic);
+            _currentFrame = _grabber.QueryFrame().ToImage<Bgr, byte>().Resize(320, 240, Emgu.CV.CvEnum.Inter.Cubic);
 
             //Convert it to Grayscale
-            if (currentFrame != null)
+            if (_currentFrame != null)
             {
-                gray_frame = currentFrame.Convert<Gray, Byte>();
+                _gray_frame = _currentFrame.Convert<Gray, Byte>();
 
                 //Face Detector
                 //MCvAvgComp[][] facesDetected = gray_frame.DetectHaarCascade(Face, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(20, 20)); //old method
-                Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(25, 25),new Size(800,800));
+                Rectangle[] facesDetected = _face.DetectMultiScale(_gray_frame, 1.2, 10, new Size(25, 25),new Size(800,800));
 
                 //Action for each element detected
                 for (int i = 0; i < facesDetected.Length; i++)// (Rectangle face_found in facesDetected)
@@ -174,20 +161,20 @@ namespace WindowsForm
                     //facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
                     //facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
 
-                    result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
-                    result._EqualizeHist();
-                    face_PICBX.Image = result.ToBitmap();
+                    _result = _currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
+                    _result._EqualizeHist();
+                    face_PICBX.Image = _result.ToBitmap();
                     //draw the face detected in the 0th (gray) channel with blue color
-                    currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
+                    _currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
 
                 }
-                if (RECORD && facesDetected.Length > 0 && resultImages.Count <= NUM_FACES_TO_AQUIRE)
+                if (_RECORD && facesDetected.Length > 0 && _resultImages.Count <= _NUM_FACES_TO_AQUIRE)
                 {
-                    resultImages.Add(result);
-                    count_lbl.Text = "Count: " + resultImages.Count.ToString();
-                    pos_lb.Text = "Pos: " + results_list_pos.ToString();
+                    _resultImages.Add(_result);
+                    count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+                    pos_lb.Text = "Pos: " + _results_list_pos.ToString();
                 }
-                if (resultImages.Count == NUM_FACES_TO_AQUIRE)
+                if (_resultImages.Count == _NUM_FACES_TO_AQUIRE)
                 {
                     ADD_BTN.Visible = false;
                     NEXT_BTN.Visible = true;
@@ -196,14 +183,14 @@ namespace WindowsForm
                     Single_btn.Visible = true;
                     ADD_ALL.Visible = true;
                     BTN_REMOVEALL.Visible = true;
-                    RECORD = false;
-                    count_lbl.Text = "Count: " + resultImages.Count.ToString();
-                    pos_lb.Text = "Pos: " + results_list_pos.ToString();
+                    _RECORD = false;
+                    count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+                    pos_lb.Text = "Pos: " + _results_list_pos.ToString();
                     Application.Idle -= new EventHandler(FrameGrabber);
                 }
-                count_lbl.Text = "Count: " + resultImages.Count.ToString();
-                pos_lb.Text = "Pos: " + results_list_pos.ToString();
-                image_PICBX.Image = currentFrame.ToBitmap();
+                count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+                pos_lb.Text = "Pos: " + _results_list_pos.ToString();
+                image_PICBX.Image = _currentFrame.ToBitmap();
             }
         }
 
@@ -214,7 +201,7 @@ namespace WindowsForm
             {
                 Random rand = new Random();
                 bool file_create = true;
-                string facename = "face_" + UserID + "_" + rand.Next().ToString() + ".jpg";
+                string facename = "face_" + _userID + "_" + rand.Next().ToString() + ".jpg";
                 while (file_create)
                 {
 
@@ -224,7 +211,7 @@ namespace WindowsForm
                     }
                     else
                     {
-                        facename = "face_" + UserID + "_" + rand.Next().ToString() + ".jpg";
+                        facename = "face_" + _userID + "_" + rand.Next().ToString() + ".jpg";
                     }
                 }
 
@@ -268,7 +255,7 @@ namespace WindowsForm
                     //name.Value = textBoxName.Text;
                     //age.InnerText = textBoxAge.Text;
                     //gender.InnerText = textBoxGender.Text;
-                    name_D.InnerText = UserID;
+                    name_D.InnerText = _userID;
                     file_D.InnerText = facename;
 
                     //Construct the Person element
@@ -294,7 +281,7 @@ namespace WindowsForm
                         writer.WriteStartElement("Faces_For_Training");
 
                         writer.WriteStartElement("FACE");
-                        writer.WriteElementString("NAME", UserID);
+                        writer.WriteElementString("NAME", _userID);
                         writer.WriteElementString("FILE", facename);
                         writer.WriteEndElement();
 
@@ -338,47 +325,56 @@ namespace WindowsForm
         //Add the image to training data
         private void ADD_BTN_Click(object sender, EventArgs e)
         {
-            if (resultImages.Count == NUM_FACES_TO_AQUIRE)
+            if (face_PICBX.Image != null)
             {
-                ADD_ALL.Visible = true;
+                if (_resultImages.Count == _NUM_FACES_TO_AQUIRE)
+                {
+                    ADD_ALL.Visible = true;
+                }
+                else
+                {
+
+                    stop_capture();
+                    _resultImages.Add(_result);
+                    NEXT_BTN.Visible = true;
+                    if (_results_list_pos > 2)
+                        PREV_btn.Visible = true;
+                    ADD_ALL.Visible = false;
+                    Single_btn.Visible = true;
+                    BTN_REMOVEALL.Visible = true;
+                    initialise_capture();
+                }
+
+                count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+                pos_lb.Text = "Pos: " + _results_list_pos.ToString();
+                face_PICBX.Image = null;
             }
             else
             {
-
-                stop_capture();
-                resultImages.Add(result);
-                NEXT_BTN.Visible = true;
-                if (results_list_pos > 2)
-                    PREV_btn.Visible = true;
-                ADD_ALL.Visible = false;
-                Single_btn.Visible = true;
-                BTN_REMOVEALL.Visible = true;
-                initialise_capture();
+                MessageBox.Show("Vui lòng nhận diện hình ảnh của bạn trước");
             }
-            count_lbl.Text = "Count: " + resultImages.Count.ToString();
-            pos_lb.Text = "Pos: " + results_list_pos.ToString();
         }
         private void Single_btn_Click(object sender, EventArgs e)
         {
-            RECORD = false;
-            List<Image<Gray, byte>> temp = resultImages;
-            temp.RemoveAt(results_list_pos);
+            _RECORD = false;
+            List<Image<Gray, byte>> temp = _resultImages;
+            temp.RemoveAt(_results_list_pos);
             
             int j = 0;
-            for (int i = 0; i < resultImages.Count - 1; i++)
+            for (int i = 0; i < _resultImages.Count - 1; i++)
             {
-                if (i != results_list_pos)
+                if (i != _results_list_pos)
                 {
-                    resultImages[j] = temp[i];
+                    _resultImages[j] = temp[i];
                     j++;
                 }
             }
             Application.Idle += new EventHandler(FrameGrabber);
-            if(resultImages.Count > 1)
+            if(_resultImages.Count > 1)
                 Single_btn.Visible = true;
-            if (results_list_pos > 0)
-                results_list_pos--;
-            if (results_list_pos > 0)
+            if (_results_list_pos > 0)
+                _results_list_pos--;
+            if (_results_list_pos > 0)
             {
                 NEXT_BTN.Visible = true;
                 PREV_btn.Visible = true;
@@ -387,8 +383,8 @@ namespace WindowsForm
             {
                 PREV_btn.Visible = false;
             }
-                count_lbl.Text = "Count: " + resultImages.Count.ToString();
-            pos_lb.Text = "Pos: " + results_list_pos;
+                count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+            pos_lb.Text = "Pos: " + _results_list_pos;
             //Application.Idle += new EventHandler(PREV_btn_Click);
             count_lbl.Visible = true;
             ADD_BTN.Visible = true;
@@ -398,25 +394,25 @@ namespace WindowsForm
         private void RECORD_BTN_Click(object sender, EventArgs e)
         {
             try {
-                if (RECORD)
+                if (_RECORD)
                 {
-                    RECORD = false;
+                    _RECORD = false;
                 }
                 else
                 {
-                    if (resultImages.Count == NUM_FACES_TO_AQUIRE)
+                    if (_resultImages.Count == _NUM_FACES_TO_AQUIRE)
                     {
                         //resultImages.Clear();
                         //Application.Idle += new EventHandler(FrameGrabber);
 
                     }
-                    RECORD = true;
+                    _RECORD = true;
                     ADD_BTN.Visible = false;
-                    if (resultImages.Count > 1)
+                    if (_resultImages.Count > 1)
                         BTN_REMOVEALL.Visible = true;
                 }
-                count_lbl.Text = "Count: " + resultImages.Count.ToString();
-                pos_lb.Text = "Pos: " + results_list_pos.ToString();
+                count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+                pos_lb.Text = "Pos: " + _results_list_pos.ToString();
             }
             catch (Exception ex)
             {
@@ -425,39 +421,39 @@ namespace WindowsForm
         }
         private void NEXT_BTN_Click(object sender, EventArgs e)
         {
-            if (results_list_pos < resultImages.Count - 1)
+            if (_results_list_pos < _resultImages.Count - 1)
             {
-                face_PICBX.Image = resultImages[results_list_pos].ToBitmap();
-                results_list_pos++;
+                face_PICBX.Image = _resultImages[_results_list_pos].ToBitmap();
+                _results_list_pos++;
                 PREV_btn.Visible = true;
             }
             else
             {
                 NEXT_BTN.Visible = false;
             }
-            count_lbl.Text = "Count: " + resultImages.Count.ToString();
-            pos_lb.Text = "Pos: " + results_list_pos.ToString();
+            count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+            pos_lb.Text = "Pos: " + _results_list_pos.ToString();
         }
         private void PREV_btn_Click(object sender, EventArgs e)
         {
-            if (results_list_pos > 0)
+            if (_results_list_pos > 0)
             {
-                results_list_pos--;
-                face_PICBX.Image = resultImages[results_list_pos].ToBitmap();
+                _results_list_pos--;
+                face_PICBX.Image = _resultImages[_results_list_pos].ToBitmap();
                 NEXT_BTN.Visible = true;
             }
             else
             {
                 PREV_btn.Visible = false;
             }
-            count_lbl.Text = "Count: " + resultImages.Count.ToString();
-            pos_lb.Text = "Pos: " + results_list_pos.ToString();
+            count_lbl.Text = "Count: " + _resultImages.Count.ToString();
+            pos_lb.Text = "Pos: " + _results_list_pos.ToString();
         }
         private void ADD_ALL_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < resultImages.Count; i++)
+            for (int i = 0; i < _resultImages.Count; i++)
             {
-                face_PICBX.Image = resultImages[i].ToBitmap();
+                face_PICBX.Image = _resultImages[i].ToBitmap();
                 if (!save_training_data(face_PICBX.Image))
                     MessageBox.Show("Error", "Error in saving file info. Training data not saved", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -471,23 +467,23 @@ namespace WindowsForm
             //restart single face detection
             Single_btn_Click(null, null);
             Hide();
-            UpdateInfo updateInfo = new UpdateInfo(this,this.Parent);
+            UpdateInfo updateInfo = new UpdateInfo(this,this._parent,_code);
             updateInfo.Show();
         }
 
         private void UpdateInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
             stop_capture();
-            Parent.Show();
-            Parent.Clear();
+            _parent.Show();
+            _parent.Clear();
         }
 
         private void BTN_REMOVEALL_Click(object sender, EventArgs e)
         {
-            resultImages.Clear();
-            results_list_pos = 0;
-            pos_lb.Text = "Pos: " + results_list_pos.ToString();
-            count_lbl.Text = "Count: " + resultImages.Count.ToString();
+            _resultImages.Clear();
+            _results_list_pos = 0;
+            pos_lb.Text = "Pos: " + _results_list_pos.ToString();
+            count_lbl.Text = "Count: " + _resultImages.Count.ToString();
             BTN_REMOVEALL.Visible = false;
             ADD_BTN.Visible = true;
             Application.Idle += new EventHandler(FrameGrabber);
