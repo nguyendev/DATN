@@ -1,2 +1,20 @@
 [1209/124622.013:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
 [1209/124859.467:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/094941.545:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/100509.076:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/101403.756:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/101532.520:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/101834.041:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/101857.257:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/101933.120:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/142705.231:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142710.845:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142715.849:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142719.188:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/142720.855:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142725.859:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142728.225:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142730.862:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/142733.228:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1218/151403.601:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[1218/152329.667:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateImage));
             this.label1 = new System.Windows.Forms.Label();
             this.ADD_ALL = new System.Windows.Forms.Button();
             this.count_lbl = new System.Windows.Forms.Label();
@@ -186,7 +187,7 @@
             this.BTN_REMOVEALL.Visible = false;
             this.BTN_REMOVEALL.Click += new System.EventHandler(this.BTN_REMOVEALL_Click);
             // 
-            // UpdateInfo
+            // UpdateImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,8 +207,9 @@
             this.Controls.Add(this.face_PICBX);
             this.Controls.Add(this.image_PICBX);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "UpdateInfo";
+            this.Name = "UpdateImage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateInfo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UpdateInfo_FormClosing);

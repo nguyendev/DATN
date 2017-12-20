@@ -14,20 +14,23 @@ namespace WindowsForm
 {
     public partial class UpdateInfo : Form
     {
-        UpdateImage Parrent;
-        public UpdateInfo(UpdateImage _Parrent)
+        private UpdateImage Parrent;
+        private LoginUpdateInfo LoginParrent;
+        public UpdateInfo(UpdateImage _Parrent, LoginUpdateInfo _LoginParrent)
         {
             InitializeComponent();
             InitBrowser();
             Parrent = _Parrent;
+            LoginParrent = _LoginParrent;
         }
         public ChromiumWebBrowser browser;
         public void InitBrowser()
         {
             Cef.Initialize(new CefSettings());
-            browser = new ChromiumWebBrowser("www.google.com");
-            this.Controls.Add(browser);
+            browser = new ChromiumWebBrowser("https://www.google.com");
             browser.Dock = DockStyle.Fill;
+            browser.Show();
+            this.Controls.Add(browser);
         }
     }
 }

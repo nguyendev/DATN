@@ -88,80 +88,80 @@ namespace FFRecognizer
             //}
         }
         //Process Frame
-        void FrameGrabber_Standard(object sender, EventArgs e)
-        {
-            //Get the current frame form capture device
-            currentFrame = grabber.QueryFrame().ToImage<Bgr, byte>().Resize(320, 240, Emgu.CV.CvEnum.Inter.Cubic);
-
-            //Convert it to Grayscale
-            if (currentFrame != null)
+            void FrameGrabber_Standard(object sender, EventArgs e)
             {
-                gray_frame = currentFrame.Convert<Gray, Byte>();
+                //Get the current frame form capture device
+                currentFrame = grabber.QueryFrame().ToImage<Bgr, byte>().Resize(320, 240, Emgu.CV.CvEnum.Inter.Cubic);
 
-                //Face Detector
-                Rectangle[] facesDetected = _face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
-
-                //Action for each element detected
-                Parallel.For(0, facesDetected.Length, i =>
+                //Convert it to Grayscale
+                if (currentFrame != null)
                 {
-                    try
+                    gray_frame = currentFrame.Convert<Gray, Byte>();
+
+                    //Face Detector
+                    Rectangle[] facesDetected = _face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
+
+                    //Action for each element detected
+                    Parallel.For(0, facesDetected.Length, i =>
                     {
-                        //facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
-                        //facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
-                        //facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
-                        //facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
-
-                        result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
-                        result._EqualizeHist();
-                        //draw the face detected in the 0th (gray) channel with blue color
-                        currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
-
-                        if (_recognition.IsTrained)
+                        try
                         {
-                            string name = _recognition.Recognise(result);
-                            int match_value = (int)_recognition.Get_Fisher_Distance;
+                            //facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
+                            //facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
+                            //facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
+                            //facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
 
-                            //Draw the label for each face detected and recognized
-                            currentFrame.Draw(name + " ", new Point(facesDetected[i].X - 2, facesDetected[i].Y - 2), Emgu.CV.CvEnum.FontFace.HersheyComplex, 1, new Bgr(Color.LightGreen));
-                            ADD_Face_Found(result, name, match_value);
+                            result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
+                            result._EqualizeHist();
+                            //draw the face detected in the 0th (gray) channel with blue color
+                            currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
+
+                            if (_recognition.IsTrained)
+                            {
+                                string name = _recognition.Recognise(result);
+                                int match_value = (int)_recognition.Get_Fisher_Distance;
+
+                                //Draw the label for each face detected and recognized
+                                currentFrame.Draw(name + " ", new Point(facesDetected[i].X - 2, facesDetected[i].Y - 2), Emgu.CV.CvEnum.FontFace.HersheyComplex, 1, new Bgr(Color.LightGreen));
+                                ADD_Face_Found(result, name, match_value);
+                            }
+
                         }
+                        catch
+                        {
+                            //do nothing as parrellel loop buggy
+                            //No action as the error is useless, it is simply an error in 
+                            //no data being there to process and this occurss sporadically 
+                        }
+                    });
 
-                    }
-                    catch
-                    {
-                        //do nothing as parrellel loop buggy
-                        //No action as the error is useless, it is simply an error in 
-                        //no data being there to process and this occurss sporadically 
-                    }
-                });
+                    //for (int i = 0; i < facesDetected.Length; i++)// (Rectangle face_found in facesDetected)
+                    //{
+                    //    facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
+                    //        facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
+                    //        facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
+                    //        facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
 
-                //for (int i = 0; i < facesDetected.Length; i++)// (Rectangle face_found in facesDetected)
-                //{
-                //    facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
-                //        facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
-                //        facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
-                //        facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
+                    //        result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
+                    //        result._EqualizeHist();
+                    //        //draw the face detected in the 0th (gray) channel with blue color
+                    //        currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
 
-                //        result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
-                //        result._EqualizeHist();
-                //        //draw the face detected in the 0th (gray) channel with blue color
-                //        currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
+                    //        if (_recognition.IsTrained)
+                    //        {
+                    //            string name = _recognition.Recognise(result);
+                    //            int match_value = (int)_recognition.Get_Fisher_Distance;
 
-                //        if (_recognition.IsTrained)
-                //        {
-                //            string name = _recognition.Recognise(result);
-                //            int match_value = (int)_recognition.Get_Fisher_Distance;
+                    //            //Draw the label for each face detected and recognized
+                    //            currentFrame.Draw(name + " ", new Point(facesDetected[i].X - 2, facesDetected[i].Y - 2), Emgu.CV.CvEnum.FontFace.HersheyComplex, 1, new Bgr(Color.LightGreen));
+                    //            ADD_Face_Found(result, name, match_value);
+                    //        }
 
-                //            //Draw the label for each face detected and recognized
-                //            currentFrame.Draw(name + " ", new Point(facesDetected[i].X - 2, facesDetected[i].Y - 2), Emgu.CV.CvEnum.FontFace.HersheyComplex, 1, new Bgr(Color.LightGreen));
-                //            ADD_Face_Found(result, name, match_value);
-                //        }
-
-                //};
-                //Show the faces procesed and recognized
-                image_PICBX.Image = currentFrame.ToBitmap();
+                    //};
+                    //Show the faces procesed and recognized
+                    image_PICBX.Image = currentFrame.ToBitmap();
+                }
             }
-        }
         //ADD Picture box and label to a panel for each face
         int faces_count = 0;
         int faces_panel_Y = 0;

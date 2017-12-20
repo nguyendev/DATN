@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUpdateInfo));
             this.lbCodeUpdate = new System.Windows.Forms.Label();
             this.txtCodeUpdate = new System.Windows.Forms.TextBox();
             this.lbProtect = new System.Windows.Forms.Label();
@@ -44,10 +45,10 @@
             // lbCodeUpdate
             // 
             this.lbCodeUpdate.AutoSize = true;
-            this.lbCodeUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodeUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbCodeUpdate.Location = new System.Drawing.Point(33, 42);
             this.lbCodeUpdate.Name = "lbCodeUpdate";
-            this.lbCodeUpdate.Size = new System.Drawing.Size(89, 18);
+            this.lbCodeUpdate.Size = new System.Drawing.Size(67, 13);
             this.lbCodeUpdate.TabIndex = 1;
             this.lbCodeUpdate.Text = "Mã cập nhật";
             // 
@@ -56,11 +57,12 @@
             this.txtCodeUpdate.Location = new System.Drawing.Point(128, 43);
             this.txtCodeUpdate.Name = "txtCodeUpdate";
             this.txtCodeUpdate.Size = new System.Drawing.Size(204, 20);
-            this.txtCodeUpdate.TabIndex = 2;
+            this.txtCodeUpdate.TabIndex = 1;
             // 
             // lbProtect
             // 
             this.lbProtect.AutoSize = true;
+            this.lbProtect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbProtect.Location = new System.Drawing.Point(33, 121);
             this.lbProtect.Name = "lbProtect";
             this.lbProtect.Size = new System.Drawing.Size(58, 13);
@@ -70,6 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.Location = new System.Drawing.Point(33, 218);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 13);
@@ -81,7 +84,7 @@
             this.txtProtectCode.Location = new System.Drawing.Point(189, 215);
             this.txtProtectCode.Name = "txtProtectCode";
             this.txtProtectCode.Size = new System.Drawing.Size(100, 20);
-            this.txtProtectCode.TabIndex = 5;
+            this.txtProtectCode.TabIndex = 2;
             // 
             // btnRemove
             // 
@@ -99,7 +102,7 @@
             this.btnLogin.Location = new System.Drawing.Point(150, 272);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(52, 23);
-            this.btnLogin.TabIndex = 7;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -109,7 +112,7 @@
             this.btnReloadCapcha.Location = new System.Drawing.Point(296, 213);
             this.btnReloadCapcha.Name = "btnReloadCapcha";
             this.btnReloadCapcha.Size = new System.Drawing.Size(36, 23);
-            this.btnReloadCapcha.TabIndex = 6;
+            this.btnReloadCapcha.TabIndex = 5;
             this.btnReloadCapcha.Text = "\r\n";
             this.btnReloadCapcha.UseVisualStyleBackColor = true;
             this.btnReloadCapcha.Click += new System.EventHandler(this.btnReloadCapcha_Click);
@@ -135,7 +138,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(382, 324);
             this.ControlBox = false;
             this.Controls.Add(this.lbNotify);
@@ -149,10 +151,10 @@
             this.Controls.Add(this.lbCodeUpdate);
             this.Controls.Add(this.IMG_Capcha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginUpdateInfo";
-            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật thông tin";

@@ -6,3 +6,4 @@ D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.AssemblyInfoInputs
 D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.AssemblyInfo.cs
 D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.dll
 D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.pdb
+D:\GitHub\DATN\Code\Models\obj\Debug\netcoreapp1.1\DataAccess.csprojResolveAssemblyReference.cache

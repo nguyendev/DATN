@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraSplashScreen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,9 +22,26 @@ namespace WindowsForm
         private string SEVER_URL = "http://localhost:51989/";
         public LoginUpdateInfo()
         {
-            InitializeComponent();
-        }
 
+            InitializeComponent();
+            //Open Wait Form
+            ShowWaitForm();
+            CreateImage();
+        }
+        private void ShowWaitForm()
+        {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, ParentFormState.Locked);
+
+            //The Wait Form is opened in a separate thread. To change its Description, use the SetWaitFormDescription method.
+            for (int i = 1; i <= 100; i++)
+            {
+                SplashScreenManager.Default.SetWaitFormDescription(i.ToString() + "%");
+                Thread.Sleep(25);
+            }
+
+            //Close Wait Form
+            SplashScreenManager.CloseForm();
+        }
         #region Capcha
         private void CreateImage()
         {
@@ -116,7 +135,6 @@ namespace WindowsForm
 
         private void LoginUpdateInfo_Load(object sender, EventArgs e)
         {
-            CreateImage();
         }
 
         private void btnReloadCapcha_Click(object sender, EventArgs e)
@@ -134,31 +152,56 @@ namespace WindowsForm
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            lbNotify.Text = "Đang tiến hành đăng nhập....";
+            lbNotify.ForeColor = Color.Orange;
             if (txtProtectCode.Text == code.ToString())
             {
                 admin_thitoeicEntities db = new admin_thitoeicEntities();
-                bool responseLogin = db.AspNetUsers.Any(p => p.Code == txtCodeUpdate.Text);
-                if (responseLogin)
+                
+                try
                 {
-                    lbNotify.Text = "Đăng nhập thành công, đang chuyển";
-                    lbNotify.ForeColor = Color.Green;
-                    //admin_thitoeicEntities db = new admin_thitoeicEntities();
-                    //var user = db.AspNetUsers.Single(p => p.Email == txtUserName.Text);
-                    ////var role = db.ASP.Single(p => p.)
-                    Hide();
-                    UpdateImage updateForm = new UpdateImage(this, txtCodeUpdate.Text);
-                    updateForm.Show();
+
+                    bool responseLogin = db.AspNetUsers.Any(p => p.Code == txtCodeUpdate.Text);
+                    if (responseLogin)
+                    {
+                        lbNotify.Text = "Đăng nhập thành công, đang chuyển";
+                        lbNotify.ForeColor = Color.Green;
+                        //admin_thitoeicEntities db = new admin_thitoeicEntities();
+                        //var user = db.AspNetUsers.Single(p => p.Email == txtUserName.Text);
+                        ////var role = db.ASP.Single(p => p.)
+                        this.Hide();
+                        UpdateImage updateForm = new UpdateImage(this, txtCodeUpdate.Text);
+                        updateForm.Show();
+
+                    }
+                    else
+                    {
+                        lbNotify.Text = "Sai mã cập nhật, vui lòng kiểm tra lại";
+                        lbNotify.ForeColor = Color.Red;
+                    }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    lbNotify.Text = "Sai mã cập nhật, vui lòng kiểm tra lại";
-                    lbNotify.ForeColor = Color.Red;
+                    MessageBox.Show("Error",ex.Message);
                 }
+
+                
             }
             else
             {
                 MessageBox.Show("Mã bảo vệ không đúng");
             }
+            lbNotify.Text = "";
+        }
+        public void Clear()
+        {
+            IMG_Capcha.Image.Dispose();
+            code = "";
+            CreateImage();
+            txtCodeUpdate.Text = "";
+            txtProtectCode.Text = "";
+            lbNotify.Text = "";
         }
     }
 }

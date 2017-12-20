@@ -83,3 +83,4 @@ D:\GitHub\DATN\Code\FisherFaceRecognizer\bin\Debug\zh-cn\ZedGraph.resources.dll
 D:\GitHub\DATN\Code\FisherFaceRecognizer\bin\Debug\zh-tw\ZedGraph.resources.dll
 D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Debug\FisherFaceRecognizer.exe
 D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Debug\FisherFaceRecognizer.pdb
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Debug\FFRecognizer.csprojFakesResolveAssemblyReference.cache

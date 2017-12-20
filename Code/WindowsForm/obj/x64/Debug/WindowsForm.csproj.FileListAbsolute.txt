@@ -192,3 +192,4 @@ D:\GitHub\DATN\Code\WindowsForm\obj\x64\Debug\WindowsForm.csproj.CoreCompileInpu
 D:\GitHub\DATN\Code\WindowsForm\obj\x64\Debug\WindowsForm.exe
 D:\GitHub\DATN\Code\WindowsForm\obj\x64\Debug\WindowsForm.pdb
 D:\GitHub\DATN\Code\WindowsForm\obj\x64\Debug\WindowsForm.UpdateImage.resources
+D:\GitHub\DATN\Code\WindowsForm\obj\x64\Debug\WindowsForm.WaitForm1.resources
