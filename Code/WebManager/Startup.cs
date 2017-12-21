@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using WebManager.Models;
 using WebManager.Services;
 using DataAccess;
+using WebManager.Repository;
 
 namespace WebManager
 {
@@ -52,6 +53,7 @@ namespace WebManager
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddScoped<IContactRepository, ContactRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

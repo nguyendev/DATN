@@ -469,6 +469,7 @@ namespace WindowsForm
             Hide();
             UpdateInfo updateInfo = new UpdateInfo(this,this._parent,_code);
             updateInfo.Show();
+            _grabber.Stop();
         }
 
         private void UpdateInfo_FormClosing(object sender, FormClosingEventArgs e)

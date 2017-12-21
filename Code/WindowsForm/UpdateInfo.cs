@@ -42,5 +42,15 @@ namespace WindowsForm
             browser.Show();
             this.Controls.Add(browser);
         }
+
+        private void sBtnReload_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            string urlBrowser = Global.SEVER_URL + "/" + Global.CREATE_UPDATE_INFO_URL + "/" + _code;
+            browser = new ChromiumWebBrowser(urlBrowser);
+            browser.Dock = DockStyle.Fill;
+            browser.Show();
+            this.Controls.Add(browser);
+        }
     }
 }

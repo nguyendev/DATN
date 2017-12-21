@@ -1,0 +1,41 @@
+﻿@model CompleteRegisterSimple
+@{
+    ViewData["Title"] = "Đăng ký thí sinh hoàn tất | Thitoeic";
+}
+<section class="content-header">
+    <h1>
+        @Html.Raw(ViewData["Title"] as string)
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Đăng ký</a></li>
+        <li class="active">Hoàn tất</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        Mã code
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-responsive">
+                        <tbody>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.ID)</th>
+                                <th><strong>@Html.DisplayFor(model => model.ID)</strong></th>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Code)</th>
+                                <th><strong>@Html.DisplayFor(model => model.Code)</strong></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
