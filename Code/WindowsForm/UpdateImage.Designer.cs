@@ -113,7 +113,7 @@
             this.RECORD_BTN.Name = "RECORD_BTN";
             this.RECORD_BTN.Size = new System.Drawing.Size(102, 23);
             this.RECORD_BTN.TabIndex = 36;
-            this.RECORD_BTN.Text = "Record 10 Faces";
+            this.RECORD_BTN.Text = "Record 3 Faces";
             this.RECORD_BTN.UseVisualStyleBackColor = true;
             this.RECORD_BTN.Click += new System.EventHandler(this.RECORD_BTN_Click);
             // 

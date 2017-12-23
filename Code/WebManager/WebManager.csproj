@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Extension\Extension.csproj" />
     <ProjectReference Include="..\Models\DataAccess.csproj" />
   </ItemGroup>
 
@@ -44,6 +45,7 @@
     <Folder Include="Areas\MemberManager\Views\" />
     <Folder Include="Areas\WebManager\Data\" />
     <Folder Include="Areas\WebManager\Views\Dashboard\" />
+    <Folder Include="wwwroot\upload\faces\" />
   </ItemGroup>
 
 </Project>

@@ -7,12 +7,11 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WebManager.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
-            return LocalRedirect("~/quan-ly-web/dang-nhap");
+            return View();
         }
 
         //public IActionResult About()

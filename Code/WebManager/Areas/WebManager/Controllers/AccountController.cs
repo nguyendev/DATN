@@ -15,6 +15,7 @@ using WebManager.Services;
 using WebManager.Models.AccountViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Extension;
 
 namespace WebManager.Areas.Admin.Controllers
 {
@@ -22,7 +23,7 @@ namespace WebManager.Areas.Admin.Controllers
     
     public class AccountController : Controller
     {
-        private const int CODE_LENGTH = 8;
+        
         private readonly UserManager<Member> _userManager;
         private RoleManager<IdentityRole> _roleManager;
         private readonly ApplicationDbContext _context;
@@ -83,7 +84,7 @@ namespace WebManager.Areas.Admin.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
-                    string userID = (await GetCurrentUserAsync()).Id;
+                   // string userID = (await GetCurrentUserAsync()).Id;l
                     if (User.IsInRole(RoleName.ROLE_ADMIN) || User.IsInRole(RoleName.ROLE_MANAGER) || User.IsInRole(RoleName.ROLE_MEMBER))
                         return RedirectToLocal(returnUrl);
                     else
@@ -534,10 +535,10 @@ namespace WebManager.Areas.Admin.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                string code = StringExtensions.RandomString(CODE_LENGTH);
+                string code = StringExtensions.RandomString(GlobalLength.CODE_LENGTH);
                 while (_context.Users.Any(p => p.Code == code))
                 { 
-                     code = StringExtensions.RandomString(CODE_LENGTH);
+                     code = StringExtensions.RandomString(GlobalLength.CODE_LENGTH);
                 }
                 var user = new Member { UserName = model.UserName,Code = code };
                 var result = await _userManager.CreateAsync(user);

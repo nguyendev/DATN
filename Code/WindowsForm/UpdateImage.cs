@@ -18,6 +18,8 @@ using System.Xml;
 using CefSharp;
 using CefSharp.WinForms;
 using DevExpress.XtraSplashScreen;
+using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace WindowsForm
 {
@@ -66,52 +68,59 @@ namespace WindowsForm
             InitializeComponent();
             Global.ShowWaitForm(this);
             //LoadFormImage(code);
+            LoadForm(code);
+            Initialise_capture();
+            
+        }
+        public void LoadForm(string code)
+        {
             _ENC_Parameters.Param[0] = _ENC;
             _code = code;
             _Image_Encoder_JPG = GetEncoder(ImageFormat.Jpeg);
-            initialise_capture();
-            
+            admin_thitoeicEntities db = new admin_thitoeicEntities();
+            var user = db.AspNetUsers.Single(p => p.Code == code);
+            _userID = user.Id;
         }
         private void LoadFormImage(string code)
         {
             admin_thitoeicEntities db = new admin_thitoeicEntities();
             var user = db.AspNetUsers.Single(p => p.Code == code);
-            bool contact = db.Contacts.Any(p => p.OwnerID == user.Id);
-            if (contact)
-            {
+            //bool contact = db.Contacts.Any(p => p.OwnerID == user.Id);
+            //if (contact)
+            //{
                 
-            }
-            else
-            {
-                HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri(Global.SEVER_URL);
+            //}
+            //else
+            //{
+            //    HttpClient client = new HttpClient();
+            //    client.BaseAddress = new Uri(Global.SEVER_URL);
 
-                // Add an Accept header for JSON format.
-                client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
-                var login = new Dictionary<string, string>
-            {
-               { "UserID",  user.Id}
-            };
-                var content = new FormUrlEncodedContent(login);
+            //    // Add an Accept header for JSON format.
+            //    client.DefaultRequestHeaders.Accept.Add(
+            //        new MediaTypeWithQualityHeaderValue("application/json"));
+            //    var login = new Dictionary<string, string>
+            //{
+            //   { "UserID",  user.Id}
+            //};
+            //    var content = new FormUrlEncodedContent(login);
 
-                var response = client.PostAsync("api/ContactAPI", content).Result;
-                var responseString = response.Content.ReadAsStringAsync().Result;
-                if (responseString == "true")
-                {
+            //    var response = client.PostAsync("api/ContactAPI", content).Result;
+            //    var responseString = response.Content.ReadAsStringAsync().Result;
+            //    if (responseString == "true")
+            //    {
 
-                }
-                else
-                {
-                    MessageBox.Show("Tạo danh sách liên hệ thất bại");
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Tạo danh sách liên hệ thất bại");
+            //    }
+            //}
             _userID = user.Id;
         }
 
 
         //Camera Start Stop
-        public void initialise_capture()
+        public void Initialise_capture()
         {
             _grabber = new VideoCapture();
             if(_grabber.IsOpened)
@@ -195,105 +204,125 @@ namespace WindowsForm
         }
 
         //Saving The Data
-        private bool save_training_data(System.Drawing.Image face_data)
+        private bool Save_training_data(System.Drawing.Image face_data, int number)
         {
             try
             {
-                Random rand = new Random();
+
+                //if (File.Exists(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml"))
+                //{
+                //    //File.AppendAllText(Application.StartupPath + "/TrainedFaces/TrainedLabels.txt", NAME_PERSON.Text + "\n\r");
+                //    bool loading = true;
+                //    while (loading)
+                //    {
+                //        try
+                //        {
+                //            docu.Load(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml");
+                //            loading = false;
+                //        }
+                //        catch
+                //        {
+                //            docu = null;
+                //            docu = new XmlDocument();
+                //            Thread.Sleep(10);
+                //        }
+                //    }
+
+                //    //Get the root element
+                //    XmlElement root = docu.DocumentElement;
+
+                //    XmlElement face_D = docu.CreateElement("FACE");
+                //    XmlElement name_D = docu.CreateElement("NAME");
+                //    XmlElement file_D = docu.CreateElement("FILE");
+
+                //    //Add the values for each nodes
+                //    //name.Value = textBoxName.Text;
+                //    //age.InnerText = textBoxAge.Text;
+                //    //gender.InnerText = textBoxGender.Text;
+                //    name_D.InnerText = _userID;
+                //    file_D.InnerText = facename;
+
+                //    //Construct the Person element
+                //    //person.Attributes.Append(name);
+                //    face_D.AppendChild(name_D);
+                //    face_D.AppendChild(file_D);
+
+                //    //Add the New person element to the end of the root element
+                //    root.AppendChild(face_D);
+
+                //    //Save the document
+                //    docu.Save(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml");
+                //    //XmlElement child_element = docu.CreateElement("FACE");
+                //    //docu.AppendChild(child_element);
+                //    //docu.Save("TrainedLabels.xml");
+                //}
+                //else
+                //{
+                //    FileStream FS_Face = File.OpenWrite(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml");
+                //    using (XmlWriter writer = XmlWriter.Create(FS_Face))
+                //    {
+                //        writer.WriteStartDocument();
+                //        writer.WriteStartElement("Faces_For_Training");
+
+                //        writer.WriteStartElement("FACE");
+                //        writer.WriteElementString("NAME", _userID);
+                //        writer.WriteElementString("FILE", facename);
+                //        writer.WriteEndElement();
+
+                //        writer.WriteEndElement();
+                //        writer.WriteEndDocument();
+                //    }
+                //    FS_Face.Close();
+                //}
                 bool file_create = true;
-                string facename = "face_" + _userID + "_" + rand.Next().ToString() + ".jpg";
+                string facename = "face_" + _userID + "_" + StringExtensions.RandomNumber(8) + ".jpg";
+                string pathImage = Application.StartupPath + "/TrainedFaces/" + facename;
                 while (file_create)
                 {
-
-                    if (!File.Exists(Application.StartupPath + "/TrainedFaces/" + facename))
+                    pathImage = Application.StartupPath + "/TrainedFaces/" + facename;
+                    if (!File.Exists(pathImage))
                     {
                         file_create = false;
                     }
                     else
                     {
-                        facename = "face_" + _userID + "_" + rand.Next().ToString() + ".jpg";
+                        facename = "face_" + _userID + "_" + StringExtensions.RandomNumber(8) + ".jpg";
                     }
                 }
 
 
                 if (Directory.Exists(Application.StartupPath + "/TrainedFaces/"))
                 {
-                    face_data.Save(Application.StartupPath + "/TrainedFaces/" + facename, ImageFormat.Jpeg);
+                    face_data.Save(pathImage, ImageFormat.Jpeg);
                 }
                 else
                 {
                     Directory.CreateDirectory(Application.StartupPath + "/TrainedFaces/");
-                    face_data.Save(Application.StartupPath + "/TrainedFaces/" + facename, ImageFormat.Jpeg);
+                    face_data.Save(pathImage, ImageFormat.Jpeg);
                 }
-                if (File.Exists(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml"))
+                var client = new WebClient();
+                string url = Global.SEVER_URL + "/" + Global.UPLOAD_IMAGE_URL + "/" + _code + "/" + (number +1);
+                var uri = new Uri(url);
                 {
-                    //File.AppendAllText(Application.StartupPath + "/TrainedFaces/TrainedLabels.txt", NAME_PERSON.Text + "\n\r");
-                    bool loading = true;
-                    while (loading)
-                    {
-                        try
-                        {
-                            docu.Load(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml");
-                            loading = false;
-                        }
-                        catch
-                        {
-                            docu = null;
-                            docu = new XmlDocument();
-                            Thread.Sleep(10);
-                        }
-                    }
+                    client.Headers.Add("fileName", System.IO.Path.GetFileName(pathImage));
+                    client.UploadFileAsync(uri, pathImage);
+                    //var responseString = response.Content.ReadAsStringAsync().Result;
+                    //if (responseString == "true")
+                    //{
 
-                    //Get the root element
-                    XmlElement root = docu.DocumentElement;
-
-                    XmlElement face_D = docu.CreateElement("FACE");
-                    XmlElement name_D = docu.CreateElement("NAME");
-                    XmlElement file_D = docu.CreateElement("FILE");
-
-                    //Add the values for each nodes
-                    //name.Value = textBoxName.Text;
-                    //age.InnerText = textBoxAge.Text;
-                    //gender.InnerText = textBoxGender.Text;
-                    name_D.InnerText = _userID;
-                    file_D.InnerText = facename;
-
-                    //Construct the Person element
-                    //person.Attributes.Append(name);
-                    face_D.AppendChild(name_D);
-                    face_D.AppendChild(file_D);
-
-                    //Add the New person element to the end of the root element
-                    root.AppendChild(face_D);
-
-                    //Save the document
-                    docu.Save(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml");
-                    //XmlElement child_element = docu.CreateElement("FACE");
-                    //docu.AppendChild(child_element);
-                    //docu.Save("TrainedLabels.xml");
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Tạo danh sách liên hệ thất bại");
+                    //}
                 }
-                else
-                {
-                    FileStream FS_Face = File.OpenWrite(Application.StartupPath + "/TrainedFaces/TrainedLabels.xml");
-                    using (XmlWriter writer = XmlWriter.Create(FS_Face))
-                    {
-                        writer.WriteStartDocument();
-                        writer.WriteStartElement("Faces_For_Training");
+                
 
-                        writer.WriteStartElement("FACE");
-                        writer.WriteElementString("NAME", _userID);
-                        writer.WriteElementString("FILE", facename);
-                        writer.WriteEndElement();
-
-                        writer.WriteEndElement();
-                        writer.WriteEndDocument();
-                    }
-                    FS_Face.Close();
-                }
 
                 return true;
+
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -342,7 +371,7 @@ namespace WindowsForm
                     ADD_ALL.Visible = false;
                     Single_btn.Visible = true;
                     BTN_REMOVEALL.Visible = true;
-                    initialise_capture();
+                    Initialise_capture();
                 }
 
                 count_lbl.Text = "Count: " + _resultImages.Count.ToString();
@@ -454,7 +483,7 @@ namespace WindowsForm
             for (int i = 0; i < _resultImages.Count; i++)
             {
                 face_PICBX.Image = _resultImages[i].ToBitmap();
-                if (!save_training_data(face_PICBX.Image))
+                if (!Save_training_data(face_PICBX.Image, i))
                     MessageBox.Show("Error", "Error in saving file info. Training data not saved", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
@@ -469,7 +498,7 @@ namespace WindowsForm
             Hide();
             UpdateInfo updateInfo = new UpdateInfo(this,this._parent,_code);
             updateInfo.Show();
-            _grabber.Stop();
+            _grabber = null;
         }
 
         private void UpdateInfo_FormClosing(object sender, FormClosingEventArgs e)

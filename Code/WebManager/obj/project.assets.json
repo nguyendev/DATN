@@ -4323,6 +4323,19 @@
         "runtime": {
           "bin/placeholder/DataAccess.dll": {}
         }
+      },
+      "Extension/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Extension.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Extension.dll": {}
+        }
       }
     }
   },
@@ -11143,12 +11156,18 @@
       "type": "project",
       "path": "../Models/DataAccess.csproj",
       "msbuildProject": "../Models/DataAccess.csproj"
+    },
+    "Extension/1.0.0": {
+      "type": "project",
+      "path": "../Extension/Extension.csproj",
+      "msbuildProject": "../Extension/Extension.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
       "BuildBundlerMinifier >= 2.5.357",
       "DataAccess >= 1.0.0",
+      "Extension >= 1.0.0",
       "ImageSharp >= 1.0.0-alpha9-00194",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.0.0",
       "Microsoft.AspNetCore >= 1.1.4",
@@ -11202,6 +11221,9 @@
           "projectReferences": {
             "D:\\GitHub\\DATN\\Code\\Models\\DataAccess.csproj": {
               "projectPath": "D:\\GitHub\\DATN\\Code\\Models\\DataAccess.csproj"
+            },
+            "D:\\GitHub\\DATN\\Code\\Extension\\Extension.csproj": {
+              "projectPath": "D:\\GitHub\\DATN\\Code\\Extension\\Extension.csproj"
             }
           }
         }

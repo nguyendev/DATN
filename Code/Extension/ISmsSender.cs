@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebManager.Services
+namespace Extension
 {
     public interface ISmsSender
     {

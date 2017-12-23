@@ -78,7 +78,7 @@ namespace WebManager.Controllers
             if (ModelState.IsValid)
             {
                 if(await _repository.Create(contact))
-                    return RedirectToAction("Index");
+                    return RedirectToAction("SetPassword", "Manage",new {code =  contact.Code});
                 ModelState.AddModelError(string.Empty, "Không tạo được.");
             }
             return View(contact);

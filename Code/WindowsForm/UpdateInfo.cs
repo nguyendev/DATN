@@ -52,5 +52,11 @@ namespace WindowsForm
             browser.Show();
             this.Controls.Add(browser);
         }
+
+        private void UpdateInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _parrent.Close();
+            _loginParrent.Show();
+        }
     }
 }
