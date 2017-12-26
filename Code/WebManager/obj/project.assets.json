@@ -4336,6 +4336,19 @@
         "runtime": {
           "bin/placeholder/Extension.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -11161,6 +11174,11 @@
       "type": "project",
       "path": "../Extension/Extension.csproj",
       "msbuildProject": "../Extension/Extension.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11184,7 +11202,8 @@
       "Microsoft.Extensions.Logging.Debug >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.2",
       "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.3",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 1.1.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 1.1.3",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11224,6 +11243,9 @@
             },
             "D:\\GitHub\\DATN\\Code\\Extension\\Extension.csproj": {
               "projectPath": "D:\\GitHub\\DATN\\Code\\Extension\\Extension.csproj"
+            },
+            "D:\\GitHub\\DATN\\Code\\Services\\Services.csproj": {
+              "projectPath": "D:\\GitHub\\DATN\\Code\\Services\\Services.csproj"
             }
           }
         }

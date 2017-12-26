@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForm", "WindowsForm\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "Models\DataAccess.csproj", "{2CA9E4DC-A31F-49F6-90DD-9E85D304F0E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension", "Extension\Extension.csproj", "{49FB1ACC-1BB0-489D-AA7F-C54DA5980A11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extension", "Extension\Extension.csproj", "{49FB1ACC-1BB0-489D-AA7F-C54DA5980A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{620F9693-33C2-4165-8864-7FEEA4323E2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,14 @@ Global
 		{49FB1ACC-1BB0-489D-AA7F-C54DA5980A11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49FB1ACC-1BB0-489D-AA7F-C54DA5980A11}.Release|x64.ActiveCfg = Release|Any CPU
 		{49FB1ACC-1BB0-489D-AA7F-C54DA5980A11}.Release|x64.Build.0 = Release|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Debug|x64.Build.0 = Debug|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Release|x64.ActiveCfg = Release|Any CPU
+		{620F9693-33C2-4165-8864-7FEEA4323E2B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,6 +25,7 @@
         "dependencies": {
           "BuildBundlerMinifier": "2.5.357",
           "DataAccess": "1.0.0",
+          "Extension": "1.0.0",
           "ImageSharp": "1.0.0-alpha9-00194",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.4",
@@ -2023,6 +2024,17 @@
         },
         "compile": {
           "DataAccess.dll": {}
+        }
+      },
+      "Extension/1.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.2"
+        },
+        "runtime": {
+          "Extension.dll": {}
+        },
+        "compile": {
+          "Extension.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
@@ -4559,6 +4571,11 @@
       "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
     },
     "DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Extension/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

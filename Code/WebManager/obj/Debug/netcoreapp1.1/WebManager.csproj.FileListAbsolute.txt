@@ -12,3 +12,5 @@ D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.AssemblyInfoIn
 D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.AssemblyInfo.cs
 D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.dll
 D:\GitHub\DATN\Code\WebManager\obj\Debug\netcoreapp1.1\WebManager.pdb
+D:\GitHub\DATN\Code\WebManager\bin\Debug\netcoreapp1.1\Extension.dll
+D:\GitHub\DATN\Code\WebManager\bin\Debug\netcoreapp1.1\Extension.pdb
