@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>28/11/2017 4:14:27 PM</xs:documentation>
+    <xs:documentation>25/12/2017 3:25:39 PM</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -82,6 +82,8 @@
       <xs:element ref="RadioGroup" />
       <xs:element ref="TextSwitcher" />
       <xs:element ref="fragment" />
+      <xs:element ref="com.nex3z.notificationbadge.NotificationBadge" />
+      <xs:element ref="steelkiwi.com.library.DotsLoaderView" />
       <xs:element ref="android.support.v7.widget.ViewStubCompat" />
       <xs:element ref="android.support.v7.widget.SwitchCompat" />
       <xs:element ref="android.support.v7.widget.SearchView" />
@@ -118,6 +120,7 @@
       <xs:element ref="android.support.v4.view.PagerTitleStrip" />
       <xs:element ref="android.support.v4.view.PagerTabStrip" />
       <xs:element ref="android.support.v4.app.FragmentTabHost" />
+      <xs:element ref="cn.iwgang.countdownview.CountdownView" />
       <xs:element ref="include" />
     </xs:choice>
   </xs:group>
@@ -1437,6 +1440,37 @@
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
   </xs:complexType>
+  <xs:element name="com.nex3z.notificationbadge.NotificationBadge" type="com.nex3z.notificationbadge.NotificationBadge">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Nex3z.Notificationbadge.NotificationBadge</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.nex3z.notificationbadge.NotificationBadge">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout">
+        <xs:attribute ref="app:badgeTextSize" />
+        <xs:attribute ref="app:badgeTextColor" />
+        <xs:attribute ref="app:badgeBackground" />
+        <xs:attribute ref="app:animationEnabled" />
+        <xs:attribute ref="app:animationDuration" />
+        <xs:attribute ref="app:maxTextLength" />
+        <xs:attribute ref="app:ellipsizeText" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="steelkiwi.com.library.DotsLoaderView" type="steelkiwi.com.library.DotsLoaderView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Steelkiwi.Com.Library.DotsLoaderView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="steelkiwi.com.library.DotsLoaderView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RelativeLayout">
+        <xs:attribute ref="app:dlv_item_drawable" />
+        <xs:attribute ref="app:dlv_line_color" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="android.support.v7.widget.ViewStubCompat" type="android.support.v7.widget.ViewStubCompat">
     <xs:annotation>
       <xs:documentation>Runtime Type: Android.Support.V7.Widget.ViewStubCompat</xs:documentation>
@@ -1861,6 +1895,57 @@
   <xs:complexType name="android.support.v4.app.FragmentTabHost">
     <xs:complexContent mixed="false">
       <xs:extension base="TabHost" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="cn.iwgang.countdownview.CountdownView" type="cn.iwgang.countdownview.CountdownView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: CN.Iwgang.Countdownview.CountdownView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="cn.iwgang.countdownview.CountdownView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View">
+        <xs:attribute ref="app:isHideTimeBackground" />
+        <xs:attribute ref="app:isShowTimeBgDivisionLine" />
+        <xs:attribute ref="app:timeBgDivisionLineColor" />
+        <xs:attribute ref="app:timeBgDivisionLineSize" />
+        <xs:attribute ref="app:timeBgColor" />
+        <xs:attribute ref="app:timeBgSize" />
+        <xs:attribute ref="app:timeBgRadius" />
+        <xs:attribute ref="app:isTimeTextBold" />
+        <xs:attribute ref="app:timeTextSize" />
+        <xs:attribute ref="app:timeTextColor" />
+        <xs:attribute ref="app:isShowDay" />
+        <xs:attribute ref="app:isShowHour" />
+        <xs:attribute ref="app:isShowMinute" />
+        <xs:attribute ref="app:isShowSecond" />
+        <xs:attribute ref="app:isShowMillisecond" />
+        <xs:attribute ref="app:isConvertDaysToHours" />
+        <xs:attribute ref="app:isSuffixTextBold" />
+        <xs:attribute ref="app:suffixTextSize" />
+        <xs:attribute ref="app:suffixTextColor" />
+        <xs:attribute ref="app:suffix" />
+        <xs:attribute ref="app:suffixDay" />
+        <xs:attribute ref="app:suffixHour" />
+        <xs:attribute ref="app:suffixMinute" />
+        <xs:attribute ref="app:suffixSecond" />
+        <xs:attribute ref="app:suffixMillisecond" />
+        <xs:attribute ref="app:suffixGravity" />
+        <xs:attribute ref="app:suffixLRMargin" />
+        <xs:attribute ref="app:suffixDayLeftMargin" />
+        <xs:attribute ref="app:suffixDayRightMargin" />
+        <xs:attribute ref="app:suffixHourLeftMargin" />
+        <xs:attribute ref="app:suffixHourRightMargin" />
+        <xs:attribute ref="app:suffixMinuteLeftMargin" />
+        <xs:attribute ref="app:suffixMinuteRightMargin" />
+        <xs:attribute ref="app:suffixSecondLeftMargin" />
+        <xs:attribute ref="app:suffixSecondRightMargin" />
+        <xs:attribute ref="app:suffixMillisecondLeftMargin" />
+        <xs:attribute ref="app:isShowTimeBgBorder" />
+        <xs:attribute ref="app:timeBgBorderColor" />
+        <xs:attribute ref="app:timeBgBorderSize" />
+        <xs:attribute ref="app:timeBgBorderRadius" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="include" type="include">

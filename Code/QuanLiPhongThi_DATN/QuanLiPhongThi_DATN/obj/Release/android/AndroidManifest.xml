@@ -7,7 +7,7 @@
     <activity android:label="Recognitionface" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Recognitionface" />
     <activity android:label="Detailroom" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Detailroom" />
     <activity android:label="Selectfunction" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.Selectfunction" />
-    <activity android:label="QuanLiPhongThi_DATN" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.MainActivity">
+    <activity android:icon="@drawable/icon" android:label="QuanLiPhongThi_DATN" android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" android:name="md516c9c6f903968864cd49de07d3b1c71b.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

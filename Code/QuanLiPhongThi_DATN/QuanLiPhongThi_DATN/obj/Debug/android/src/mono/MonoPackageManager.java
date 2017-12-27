@@ -108,6 +108,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "QuanLiPhongThi_DATN.dll" comes first in this list. */
 		"QuanLiPhongThi_DATN.dll",
 		"CountdownTimer.dll",
+		"DotsLoaderView.dll",
+		"Newtonsoft.Json.dll",
 		"NotificationBadge.dll",
 		"Xamarin.Android.Support.Compat.dll",
 		"Xamarin.Android.Support.Core.UI.dll",

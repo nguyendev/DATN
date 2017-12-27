@@ -8,6 +8,8 @@
     <ManifestDocument>obj\Debug\lp\1\jl\manifest\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\10\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\10\jl\manifest\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\lp\12\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\lp\12\jl\manifest\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\3\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\4\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\5\jl\AndroidManifest.xml</ManifestDocument>
@@ -21,6 +23,7 @@
     <Jar>obj\Debug\lp\0\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\lp\1\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\lp\10\jl\classes.jar</Jar>
+    <Jar>obj\Debug\lp\12\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\lp\3\jl\classes.jar</Jar>
     <Jar>obj\Debug\lp\4\jl\classes.jar</Jar>
     <Jar>obj\Debug\lp\5\jl\classes.jar</Jar>

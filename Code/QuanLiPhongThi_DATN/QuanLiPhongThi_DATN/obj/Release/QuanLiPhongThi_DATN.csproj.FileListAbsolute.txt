@@ -60,3 +60,49 @@ D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\
 D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\CountdownTimer.dll
 D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\layout\detailroom.xml
 D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\layout\detailroomfinal.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\DotsLoaderView.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\Newtonsoft.Json.dll
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\Newtonsoft.Json.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\customizelistview.xml
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\backgroundmain.jpg
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\icon.png
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\dot.png
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\obj\Release\res\drawable\recognition.png
+D:\1LV Project\QuanLiPhongThi_DATN\QuanLiPhongThi_DATN\bin\Release\QuanLiPhongThi_DATN.dll
+bin\Release\Mono.Android.pdb
+bin\Release\mscorlib.pdb
+bin\Release\System.Core.pdb
+bin\Release\System.Data.pdb
+bin\Release\System.pdb
+bin\Release\System.Net.Http.pdb
+bin\Release\System.Xml.pdb
+bin\Release\System.Runtime.Serialization.pdb
+bin\Release\System.ServiceModel.Internals.pdb
+bin\Release\System.IO.Compression.pdb
+bin\Release\System.IO.Compression.FileSystem.pdb
+bin\Release\System.ComponentModel.Composition.pdb
+bin\Release\System.Numerics.pdb
+bin\Release\System.Transactions.pdb
+bin\Release\System.Web.Services.pdb
+bin\Release\System.Xml.Linq.pdb
+bin\Release\Mono.Data.Tds.pdb
+bin\Release\Mono.Security.pdb
+obj\Release\linksrc\QuanLiPhongThi_DATN.dll.mdb
+obj\Release\linksrc\Mono.Android.pdb
+obj\Release\linksrc\mscorlib.pdb
+obj\Release\linksrc\System.Core.pdb
+obj\Release\linksrc\System.Data.pdb
+obj\Release\linksrc\System.pdb
+obj\Release\linksrc\System.Net.Http.pdb
+obj\Release\linksrc\System.Xml.pdb
+obj\Release\linksrc\System.Runtime.Serialization.pdb
+obj\Release\linksrc\System.ServiceModel.Internals.pdb
+obj\Release\linksrc\System.IO.Compression.pdb
+obj\Release\linksrc\System.IO.Compression.FileSystem.pdb
+obj\Release\linksrc\System.ComponentModel.Composition.pdb
+obj\Release\linksrc\System.Numerics.pdb
+obj\Release\linksrc\System.Transactions.pdb
+obj\Release\linksrc\System.Web.Services.pdb
+obj\Release\linksrc\System.Xml.Linq.pdb
+obj\Release\linksrc\Mono.Data.Tds.pdb
+obj\Release\linksrc\Mono.Security.pdb

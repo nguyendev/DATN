@@ -51,15 +51,18 @@ namespace QuanLiPhongThi_DATN
         {
             var view = context.LayoutInflater.Inflate(Resource.Layout.Detailroomfinal, parent, false);
             if(ttts[position].absent == 0)
-                view.SetBackgroundColor(Android.Graphics.Color.DarkRed);
+                view.SetBackgroundColor(Android.Graphics.Color.YellowGreen);
             TextView txt1 = (TextView)view.FindViewById(Resource.Id.textView5);  // ho va ten
             TextView txt2 = (TextView)view.FindViewById(Resource.Id.textView6);  // so dien thoai
-            TextView txt3 = (TextView)view.FindViewById(Resource.Id.textView7); // ngay sinh
+            //TextView txt3 = (TextView)view.FindViewById(Resource.Id.textView7); // ngay sinh
             TextView txt4 = (TextView)view.FindViewById(Resource.Id.textView8);  // gioi tinh
             txt1.Text = (ttts[position].Midname +" " +ttts[position].Name);
             txt2.Text = (ttts[position].Phone.ToString());
             //txt3.Text = (ttts[position].Birday.ToString());
-            txt4.Text = (ttts[position].Sex.ToString());
+            if(ttts[position].Sex == 0)
+            txt4.Text = ("Nam");
+            else
+                txt4.Text = ("Nữ");
             return view;
             
             

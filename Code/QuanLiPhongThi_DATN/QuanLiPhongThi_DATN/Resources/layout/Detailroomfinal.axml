@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/customizelistview">
     <LinearLayout
         android:orientation="vertical"
         android:paddingLeft="2dp"
@@ -22,13 +23,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView2" />
-        <TextView
-            android:text="Ngày sinh: "
-            android:padding="2dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3" />
         <TextView
             android:text="Giới tính:"
             android:padding="2dp"
@@ -55,12 +49,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView6" />
-        <TextView
-            android:text="3"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView7" />
         <TextView
             android:text="3"
             android:padding="2dp"

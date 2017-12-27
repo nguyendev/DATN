@@ -9,3 +9,5 @@ Xamarin.Android.Support.Fragment
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.v7.AppCompat
+Newtonsoft.Json
+DotsLoaderView

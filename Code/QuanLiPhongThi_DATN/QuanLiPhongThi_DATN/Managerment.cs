@@ -33,7 +33,7 @@ namespace QuanLiPhongThi_DATN
         List<qlp> qlp = new List<qlp>();
         // chỉ hiện thông tin của thí sinh và + thêm chuỗi "đã thi xong xin được ra về" nên mảng vầy là đủ
         string[] listitem = { " C# Corner", " Xamarin", " Google Plus", " Twitter", " Windows", " Bing", " Itunes", " Wordpress", "   Drupal", " Whatapp" };
-        NotificationBadge m;
+        //NotificationBadge m;
         ActivityCustomListview lvAdapter;
         ActivityCustomSpinner spinAdapter;
         
@@ -65,7 +65,7 @@ namespace QuanLiPhongThi_DATN
             string sql1 = "select thitoeic.Enrollment.RoomID,count(*) "
                             + " from thitoeic.AspNetUsers, thitoeic.Enrollment, thitoeic.Course"
                             + " where thitoeic.AspNetUsers.id = thitoeic.Enrollment.StudentID AND thitoeic.Course.CourseID = thitoeic.Enrollment.CourseID"
-                            + " AND(thitoeic.Course.ExamTime BETWEEN '2017-12-13 07:30:00.0000000' AND '2017-12-13 09:30:00.0000000')"
+                            + " AND(thitoeic.Course.ExamTime BETWEEN '2017-12-30 13:30:00.0000000' AND '2017-12-30 16:30:00.0000000')"
                             + " GROUP BY thitoeic.Enrollment.RoomID"
                             + " ORDER BY thitoeic.Enrollment.RoomID";
             using (SqlConnection con = new SqlConnection(connectstring))
@@ -103,7 +103,7 @@ namespace QuanLiPhongThi_DATN
             string sql3 = "select thitoeic.Enrollment.RoomID,count(thitoeic.HistoryLogin.HistoryLoginID)"
                             + " from thitoeic.HistoryLogin,thitoeic.Enrollment"
                             + " where   thitoeic.Enrollment.StudentID = thitoeic.HistoryLogin.StudentID"
-                            + " AND(thitoeic.HistoryLogin.DateTime BETWEEN '2017-12-13 07:30:00.0000000' AND '2017-12-13 09:30:00.0000000')"
+                            + " AND(thitoeic.HistoryLogin.DateTime BETWEEN '2017-12-30 13:30:00.0000000' AND '2017-12-30 16:30:00.0000000')"
                             + " GROUP BY thitoeic.Enrollment.RoomID"
                             + " ORDER BY thitoeic.Enrollment.RoomID";
             using (SqlConnection con = new SqlConnection(connectstring))
@@ -140,7 +140,9 @@ namespace QuanLiPhongThi_DATN
 
             //SQL lấy danh sách phòng
             int j = 1;
-            string sql2 = "select thitoeic.Room.Name from thitoeic.Room, thitoeic.Course, thitoeic.CourseRoom where thitoeic.Room.ID = thitoeic.CourseRoom.RoomID AND thitoeic.Course.CourseID = thitoeic.CourseRoom.CourseID AND(thitoeic.Course.ExamTime BETWEEN '2017-12-13 07:30:00.0000000' AND '2017-12-13 09:30:00.0000000') ORDER BY thitoeic.Room.ID";
+            string sql2 = "select thitoeic.Room.Name from thitoeic.Room, thitoeic.Course, thitoeic.CourseRoom where thitoeic.Room.ID = thitoeic.CourseRoom.RoomID " +
+                "AND thitoeic.Course.CourseID = thitoeic.CourseRoom.CourseID AND(thitoeic.Course.ExamTime BETWEEN '2017-12-30 13:30:00.0000000' " +
+                "AND '2017-12-30 16:30:00.0000000') ORDER BY thitoeic.Room.ID";
             using (SqlConnection con = new SqlConnection(connectstring))
             {
                 try
@@ -187,8 +189,8 @@ namespace QuanLiPhongThi_DATN
             lv.ItemClick += OnListItemClick;
             spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
 
-            m = FindViewById<NotificationBadge>(Resource.Id.badgle);
-            m.SetNumber(count);
+            //m = FindViewById<NotificationBadge>(Resource.Id.badgle);
+            //m.SetNumber(count);
         }
             
         protected override void OnResume()
@@ -208,43 +210,14 @@ namespace QuanLiPhongThi_DATN
                 count++;
                 RunOnUiThread(() =>
                 {
-                    m.SetNumber(10);
-                    txt.Text = "Danh sách phòng: \nNgày: "+ DateTime.Now.Day.ToString() +"/" +DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString()  + "\nCa: " +
-                     DateTime.Now.Hour.ToString() + "h " + DateTime.Now.Minute.ToString()+ "p";
+                    // m.SetNumber(10);
+                    if(DateTime.Now.Hour > 7 && DateTime.Now.Hour<10)
+                        txt.Text = "Danh sách phòng: \nNgày: " + DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString() + "\nSáng: 7h30-9h30";
+                    if (DateTime.Now.Hour > 13 && DateTime.Now.Hour < 16)
+                        txt.Text = "Danh sách phòng: \nNgày: " + DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString() + "\nChiều: 13h30-15h30";
 
-                    //string connectstring = @"data source=125.212.221.212;initial catalog=admin_thitoeic;user id=thitoeic;password=T@Nguyenkinh15;Connect Timeout=60";
-                    //string id = "ban đầu";
-                    //string sql = "SELECT * FROM Image";
+                    //lấy h của máy tính DateTime.Now.Hour.ToString() + "h " + DateTime.Now.Minute.ToString()+ "p";
 
-                    //using (SqlConnection con = new SqlConnection(connectstring))
-                    //{
-                    //    try
-                    //    {
-                    //        con.Open();
-
-                    //        using (SqlCommand comando = new SqlCommand(sql, con))
-                    //        {
-                    //            using (SqlDataReader reader = comando.ExecuteReader())
-                    //            {
-                    //                while (reader.Read())
-                    //                {
-                    //                    id = reader.GetString(1);
-                    //                }
-                    //            }
-                    //        }
-
-                    //        con.Close();
-                    //    }
-                    //    catch (SqlException)
-                    //    {
-                    //        id = "không connect";
-                    //    }
-
-                    //}
-                    //items[5] = id;
-                    //listitem[1] = id;
-                    //spinAdapter.NotifyDataSetChanged();
-                    //lvAdapter.NotifyDataSetChanged();
                 });
             }
            

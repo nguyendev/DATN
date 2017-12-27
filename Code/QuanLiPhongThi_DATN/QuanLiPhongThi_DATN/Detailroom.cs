@@ -34,18 +34,19 @@ namespace QuanLiPhongThi_DATN
                         + "thitoeic.Contact.DateofBirth, thitoeic.Contact.Sex"
                         + " from thitoeic.Contact, thitoeic.Enrollment, thitoeic.Course"
                         + " where thitoeic.Contact.OwnerID = thitoeic.Enrollment.StudentID AND thitoeic.Course.CourseID = thitoeic.Enrollment.CourseID"
-                        + " AND(thitoeic.Course.ExamTime BETWEEN '2017-12-13 07:30:00.0000000' AND '2017-12-13 09:30:00.0000000')"
-                        + " AND thitoeic.Enrollment.RoomID = "+i+" AND thitoeic.Contact.OwnerID"
+                        + " AND(thitoeic.Course.ExamTime BETWEEN '2017-12-30 13:30:00.0000000' AND '2017-12-30 16:30:00.0000000')"
+                        + " AND thitoeic.Enrollment.RoomID = "+i+
+                            " AND thitoeic.Contact.OwnerID"
                         + " NOT IN(select  thitoeic.Contact.OwnerID"
                         + " from thitoeic.Contact, thitoeic.Enrollment, thitoeic.HistoryLogin"
                         + " where thitoeic.Contact.OwnerID = thitoeic.Enrollment.StudentID AND thitoeic.Contact.OwnerID = thitoeic.HistoryLogin.StudentID"
-                        + " AND(thitoeic.HistoryLogin.DateTime BETWEEN '2017-12-13 07:30:00.0000000' AND '2017-12-13 09:30:00.0000000')"
+                        + " AND(thitoeic.HistoryLogin.DateTime BETWEEN '2017-12-30 13:30:00.0000000' AND '2017-12-30 16:30:00.0000000')"
                         + " AND thitoeic.Enrollment.RoomID = "+i+")";
             string sql2 = "select  thitoeic.Contact.FirstMidName, thitoeic.Contact.LastName, thitoeic.Contact.MobilePhone,"
                             + " thitoeic.Contact.DateofBirth, thitoeic.Contact.Sex "
                             + " from thitoeic.Contact, thitoeic.Enrollment, thitoeic.HistoryLogin"
                             + " where thitoeic.Contact.OwnerID = thitoeic.Enrollment.StudentID AND thitoeic.Contact.OwnerID = thitoeic.HistoryLogin.StudentID"
-                            + " AND(thitoeic.HistoryLogin.DateTime BETWEEN '2017-12-13 07:30:00.0000000' AND '2017-12-13 09:30:00.0000000')"
+                            + " AND(thitoeic.HistoryLogin.DateTime BETWEEN '2017-12-30 13:30:00.0000000' AND '2017-12-30 16:30:00.0000000')"
                             + "AND thitoeic.Enrollment.RoomID =" + i;
         
             using (SqlConnection con = new SqlConnection(connectstring))
@@ -65,7 +66,6 @@ namespace QuanLiPhongThi_DATN
                                     Midname = reader.GetString(0),
                                     Name = reader.GetString(1),
                                     Phone = reader.GetString(2),
-                                    //Birday = reader.GetDateTime(3),
                                     Sex = reader.GetInt32(4),
                                     absent = 1 //1 là đã vào phòng // 0 là chưa vào phòng 
                                 };

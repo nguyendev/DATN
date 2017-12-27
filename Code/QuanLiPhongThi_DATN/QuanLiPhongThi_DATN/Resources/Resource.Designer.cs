@@ -387,6 +387,12 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f010062
 			public const int dividerVertical = 2130772066;
 			
+			// aapt resource value: 0x7f0100eb
+			public const int dlv_item_drawable = 2130772203;
+			
+			// aapt resource value: 0x7f0100ec
+			public const int dlv_line_color = 2130772204;
+			
 			// aapt resource value: 0x7f0100a3
 			public const int drawableSize = 2130772131;
 			
@@ -450,41 +456,41 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f01001f
 			public const int initialActivityCount = 2130771999;
 			
-			// aapt resource value: 0x7f0100fa
-			public const int isConvertDaysToHours = 2130772218;
+			// aapt resource value: 0x7f0100fc
+			public const int isConvertDaysToHours = 2130772220;
 			
-			// aapt resource value: 0x7f0100eb
-			public const int isHideTimeBackground = 2130772203;
+			// aapt resource value: 0x7f0100ed
+			public const int isHideTimeBackground = 2130772205;
 			
 			// aapt resource value: 0x7f010002
 			public const int isLightTheme = 2130771970;
 			
-			// aapt resource value: 0x7f0100f5
-			public const int isShowDay = 2130772213;
-			
-			// aapt resource value: 0x7f0100f6
-			public const int isShowHour = 2130772214;
-			
-			// aapt resource value: 0x7f0100f9
-			public const int isShowMillisecond = 2130772217;
-			
 			// aapt resource value: 0x7f0100f7
-			public const int isShowMinute = 2130772215;
+			public const int isShowDay = 2130772215;
 			
 			// aapt resource value: 0x7f0100f8
-			public const int isShowSecond = 2130772216;
-			
-			// aapt resource value: 0x7f01010f
-			public const int isShowTimeBgBorder = 2130772239;
-			
-			// aapt resource value: 0x7f0100ec
-			public const int isShowTimeBgDivisionLine = 2130772204;
+			public const int isShowHour = 2130772216;
 			
 			// aapt resource value: 0x7f0100fb
-			public const int isSuffixTextBold = 2130772219;
+			public const int isShowMillisecond = 2130772219;
 			
-			// aapt resource value: 0x7f0100f2
-			public const int isTimeTextBold = 2130772210;
+			// aapt resource value: 0x7f0100f9
+			public const int isShowMinute = 2130772217;
+			
+			// aapt resource value: 0x7f0100fa
+			public const int isShowSecond = 2130772218;
+			
+			// aapt resource value: 0x7f010111
+			public const int isShowTimeBgBorder = 2130772241;
+			
+			// aapt resource value: 0x7f0100ee
+			public const int isShowTimeBgDivisionLine = 2130772206;
+			
+			// aapt resource value: 0x7f0100fd
+			public const int isSuffixTextBold = 2130772221;
+			
+			// aapt resource value: 0x7f0100f4
+			public const int isTimeTextBold = 2130772212;
 			
 			// aapt resource value: 0x7f010014
 			public const int itemPadding = 2130771988;
@@ -681,62 +687,62 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f010008
 			public const int subtitleTextStyle = 2130771976;
 			
-			// aapt resource value: 0x7f0100fe
-			public const int suffix = 2130772222;
-			
-			// aapt resource value: 0x7f0100ff
-			public const int suffixDay = 2130772223;
-			
-			// aapt resource value: 0x7f010106
-			public const int suffixDayLeftMargin = 2130772230;
-			
-			// aapt resource value: 0x7f010107
-			public const int suffixDayRightMargin = 2130772231;
-			
-			// aapt resource value: 0x7f010104
-			public const int suffixGravity = 2130772228;
-			
 			// aapt resource value: 0x7f010100
-			public const int suffixHour = 2130772224;
-			
-			// aapt resource value: 0x7f010108
-			public const int suffixHourLeftMargin = 2130772232;
-			
-			// aapt resource value: 0x7f010109
-			public const int suffixHourRightMargin = 2130772233;
-			
-			// aapt resource value: 0x7f010105
-			public const int suffixLRMargin = 2130772229;
-			
-			// aapt resource value: 0x7f010103
-			public const int suffixMillisecond = 2130772227;
-			
-			// aapt resource value: 0x7f01010e
-			public const int suffixMillisecondLeftMargin = 2130772238;
+			public const int suffix = 2130772224;
 			
 			// aapt resource value: 0x7f010101
-			public const int suffixMinute = 2130772225;
+			public const int suffixDay = 2130772225;
 			
-			// aapt resource value: 0x7f01010a
-			public const int suffixMinuteLeftMargin = 2130772234;
+			// aapt resource value: 0x7f010108
+			public const int suffixDayLeftMargin = 2130772232;
 			
-			// aapt resource value: 0x7f01010b
-			public const int suffixMinuteRightMargin = 2130772235;
+			// aapt resource value: 0x7f010109
+			public const int suffixDayRightMargin = 2130772233;
+			
+			// aapt resource value: 0x7f010106
+			public const int suffixGravity = 2130772230;
 			
 			// aapt resource value: 0x7f010102
-			public const int suffixSecond = 2130772226;
+			public const int suffixHour = 2130772226;
+			
+			// aapt resource value: 0x7f01010a
+			public const int suffixHourLeftMargin = 2130772234;
+			
+			// aapt resource value: 0x7f01010b
+			public const int suffixHourRightMargin = 2130772235;
+			
+			// aapt resource value: 0x7f010107
+			public const int suffixLRMargin = 2130772231;
+			
+			// aapt resource value: 0x7f010105
+			public const int suffixMillisecond = 2130772229;
+			
+			// aapt resource value: 0x7f010110
+			public const int suffixMillisecondLeftMargin = 2130772240;
+			
+			// aapt resource value: 0x7f010103
+			public const int suffixMinute = 2130772227;
 			
 			// aapt resource value: 0x7f01010c
-			public const int suffixSecondLeftMargin = 2130772236;
+			public const int suffixMinuteLeftMargin = 2130772236;
 			
 			// aapt resource value: 0x7f01010d
-			public const int suffixSecondRightMargin = 2130772237;
+			public const int suffixMinuteRightMargin = 2130772237;
 			
-			// aapt resource value: 0x7f0100fd
-			public const int suffixTextColor = 2130772221;
+			// aapt resource value: 0x7f010104
+			public const int suffixSecond = 2130772228;
 			
-			// aapt resource value: 0x7f0100fc
-			public const int suffixTextSize = 2130772220;
+			// aapt resource value: 0x7f01010e
+			public const int suffixSecondLeftMargin = 2130772238;
+			
+			// aapt resource value: 0x7f01010f
+			public const int suffixSecondRightMargin = 2130772239;
+			
+			// aapt resource value: 0x7f0100ff
+			public const int suffixTextColor = 2130772223;
+			
+			// aapt resource value: 0x7f0100fe
+			public const int suffixTextSize = 2130772222;
 			
 			// aapt resource value: 0x7f0100c0
 			public const int suggestionRowLayout = 2130772160;
@@ -807,35 +813,35 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f01002a
 			public const int tickMarkTintMode = 2130772010;
 			
-			// aapt resource value: 0x7f010110
-			public const int timeBgBorderColor = 2130772240;
-			
 			// aapt resource value: 0x7f010112
-			public const int timeBgBorderRadius = 2130772242;
+			public const int timeBgBorderColor = 2130772242;
 			
-			// aapt resource value: 0x7f010111
-			public const int timeBgBorderSize = 2130772241;
+			// aapt resource value: 0x7f010114
+			public const int timeBgBorderRadius = 2130772244;
 			
-			// aapt resource value: 0x7f0100ef
-			public const int timeBgColor = 2130772207;
-			
-			// aapt resource value: 0x7f0100ed
-			public const int timeBgDivisionLineColor = 2130772205;
-			
-			// aapt resource value: 0x7f0100ee
-			public const int timeBgDivisionLineSize = 2130772206;
+			// aapt resource value: 0x7f010113
+			public const int timeBgBorderSize = 2130772243;
 			
 			// aapt resource value: 0x7f0100f1
-			public const int timeBgRadius = 2130772209;
+			public const int timeBgColor = 2130772209;
+			
+			// aapt resource value: 0x7f0100ef
+			public const int timeBgDivisionLineColor = 2130772207;
 			
 			// aapt resource value: 0x7f0100f0
-			public const int timeBgSize = 2130772208;
-			
-			// aapt resource value: 0x7f0100f4
-			public const int timeTextColor = 2130772212;
+			public const int timeBgDivisionLineSize = 2130772208;
 			
 			// aapt resource value: 0x7f0100f3
-			public const int timeTextSize = 2130772211;
+			public const int timeBgRadius = 2130772211;
+			
+			// aapt resource value: 0x7f0100f2
+			public const int timeBgSize = 2130772210;
+			
+			// aapt resource value: 0x7f0100f6
+			public const int timeTextColor = 2130772214;
+			
+			// aapt resource value: 0x7f0100f5
+			public const int timeTextSize = 2130772213;
 			
 			// aapt resource value: 0x7f010003
 			public const int title = 2130771971;
@@ -956,44 +962,44 @@ namespace QuanLiPhongThi_DATN
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f09003d
-			public const int abc_background_cache_hint_selector_material_dark = 2131296317;
-			
-			// aapt resource value: 0x7f09003e
-			public const int abc_background_cache_hint_selector_material_light = 2131296318;
-			
 			// aapt resource value: 0x7f09003f
-			public const int abc_btn_colored_borderless_text_material = 2131296319;
+			public const int abc_background_cache_hint_selector_material_dark = 2131296319;
 			
 			// aapt resource value: 0x7f090040
-			public const int abc_btn_colored_text_material = 2131296320;
+			public const int abc_background_cache_hint_selector_material_light = 2131296320;
 			
 			// aapt resource value: 0x7f090041
-			public const int abc_color_highlight_material = 2131296321;
+			public const int abc_btn_colored_borderless_text_material = 2131296321;
 			
 			// aapt resource value: 0x7f090042
-			public const int abc_hint_foreground_material_dark = 2131296322;
+			public const int abc_btn_colored_text_material = 2131296322;
 			
 			// aapt resource value: 0x7f090043
-			public const int abc_hint_foreground_material_light = 2131296323;
+			public const int abc_color_highlight_material = 2131296323;
+			
+			// aapt resource value: 0x7f090044
+			public const int abc_hint_foreground_material_dark = 2131296324;
+			
+			// aapt resource value: 0x7f090045
+			public const int abc_hint_foreground_material_light = 2131296325;
 			
 			// aapt resource value: 0x7f090001
 			public const int abc_input_method_navigation_guard = 2131296257;
 			
-			// aapt resource value: 0x7f090044
-			public const int abc_primary_text_disable_only_material_dark = 2131296324;
-			
-			// aapt resource value: 0x7f090045
-			public const int abc_primary_text_disable_only_material_light = 2131296325;
-			
 			// aapt resource value: 0x7f090046
-			public const int abc_primary_text_material_dark = 2131296326;
+			public const int abc_primary_text_disable_only_material_dark = 2131296326;
 			
 			// aapt resource value: 0x7f090047
-			public const int abc_primary_text_material_light = 2131296327;
+			public const int abc_primary_text_disable_only_material_light = 2131296327;
 			
 			// aapt resource value: 0x7f090048
-			public const int abc_search_url_text = 2131296328;
+			public const int abc_primary_text_material_dark = 2131296328;
+			
+			// aapt resource value: 0x7f090049
+			public const int abc_primary_text_material_light = 2131296329;
+			
+			// aapt resource value: 0x7f09004a
+			public const int abc_search_url_text = 2131296330;
 			
 			// aapt resource value: 0x7f090002
 			public const int abc_search_url_text_normal = 2131296258;
@@ -1004,38 +1010,41 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f090004
 			public const int abc_search_url_text_selected = 2131296260;
 			
-			// aapt resource value: 0x7f090049
-			public const int abc_secondary_text_material_dark = 2131296329;
-			
-			// aapt resource value: 0x7f09004a
-			public const int abc_secondary_text_material_light = 2131296330;
-			
 			// aapt resource value: 0x7f09004b
-			public const int abc_tint_btn_checkable = 2131296331;
+			public const int abc_secondary_text_material_dark = 2131296331;
 			
 			// aapt resource value: 0x7f09004c
-			public const int abc_tint_default = 2131296332;
+			public const int abc_secondary_text_material_light = 2131296332;
 			
 			// aapt resource value: 0x7f09004d
-			public const int abc_tint_edittext = 2131296333;
+			public const int abc_tint_btn_checkable = 2131296333;
 			
 			// aapt resource value: 0x7f09004e
-			public const int abc_tint_seek_thumb = 2131296334;
+			public const int abc_tint_default = 2131296334;
 			
 			// aapt resource value: 0x7f09004f
-			public const int abc_tint_spinner = 2131296335;
+			public const int abc_tint_edittext = 2131296335;
 			
 			// aapt resource value: 0x7f090050
-			public const int abc_tint_switch_thumb = 2131296336;
+			public const int abc_tint_seek_thumb = 2131296336;
 			
 			// aapt resource value: 0x7f090051
-			public const int abc_tint_switch_track = 2131296337;
+			public const int abc_tint_spinner = 2131296337;
+			
+			// aapt resource value: 0x7f090052
+			public const int abc_tint_switch_thumb = 2131296338;
+			
+			// aapt resource value: 0x7f090053
+			public const int abc_tint_switch_track = 2131296339;
 			
 			// aapt resource value: 0x7f090005
 			public const int accent_material_dark = 2131296261;
 			
 			// aapt resource value: 0x7f090006
 			public const int accent_material_light = 2131296262;
+			
+			// aapt resource value: 0x7f09003d
+			public const int background_color = 2131296317;
 			
 			// aapt resource value: 0x7f090007
 			public const int background_floating_material_dark = 2131296263;
@@ -1142,6 +1151,9 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f090028
 			public const int notification_material_background_media_default_color = 2131296296;
 			
+			// aapt resource value: 0x7f09003e
+			public const int point_color = 2131296318;
+			
 			// aapt resource value: 0x7f090029
 			public const int primary_dark_material_dark = 2131296297;
 			
@@ -1193,11 +1205,11 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f090038
 			public const int switch_thumb_disabled_material_light = 2131296312;
 			
-			// aapt resource value: 0x7f090052
-			public const int switch_thumb_material_dark = 2131296338;
+			// aapt resource value: 0x7f090054
+			public const int switch_thumb_material_dark = 2131296340;
 			
-			// aapt resource value: 0x7f090053
-			public const int switch_thumb_material_light = 2131296339;
+			// aapt resource value: 0x7f090055
+			public const int switch_thumb_material_light = 2131296341;
 			
 			// aapt resource value: 0x7f090039
 			public const int switch_thumb_normal_material_dark = 2131296313;
@@ -1443,6 +1455,15 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f060004
 			public const int abc_text_size_title_material_toolbar = 2131099652;
 			
+			// aapt resource value: 0x7f060062
+			public const int arc_height = 2131099746;
+			
+			// aapt resource value: 0x7f060063
+			public const int arc_width = 2131099747;
+			
+			// aapt resource value: 0x7f060064
+			public const int bottom_line_margin = 2131099748;
+			
 			// aapt resource value: 0x7f06004e
 			public const int disabled_alpha_material_dark = 2131099726;
 			
@@ -1469,6 +1490,9 @@ namespace QuanLiPhongThi_DATN
 			
 			// aapt resource value: 0x7f060056
 			public const int hint_pressed_alpha_material_light = 2131099734;
+			
+			// aapt resource value: 0x7f060065
+			public const int line_width = 2131099749;
 			
 			// aapt resource value: 0x7f060057
 			public const int notification_action_icon_size = 2131099735;
@@ -1778,49 +1802,67 @@ namespace QuanLiPhongThi_DATN
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int badge_bg = 2130837587;
+			public const int backgroundmain = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int badgle_bg_with_shadow = 2130837588;
+			public const int badge_bg = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int notification = 2130837589;
+			public const int badgle_bg_with_shadow = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int notification_action_background = 2130837590;
+			public const int circle_background = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int notification_bg = 2130837591;
+			public const int customizelistview = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int notification_bg_low = 2130837592;
+			public const int dot = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int notification_bg_low_normal = 2130837593;
+			public const int icon = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int notification_bg_low_pressed = 2130837594;
+			public const int notification = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int notification_bg_normal = 2130837595;
+			public const int notification_action_background = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int notification_bg_normal_pressed = 2130837596;
+			public const int notification_bg = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notification_icon_background = 2130837597;
-			
-			// aapt resource value: 0x7f020060
-			public const int notification_template_icon_bg = 2130837600;
-			
-			// aapt resource value: 0x7f020061
-			public const int notification_template_icon_low_bg = 2130837601;
+			public const int notification_bg_low = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int notification_tile_bg = 2130837598;
+			public const int notification_bg_low_normal = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int notify_panel_notification_icon_bg = 2130837599;
+			public const int notification_bg_low_pressed = 2130837599;
+			
+			// aapt resource value: 0x7f020060
+			public const int notification_bg_normal = 2130837600;
+			
+			// aapt resource value: 0x7f020061
+			public const int notification_bg_normal_pressed = 2130837601;
+			
+			// aapt resource value: 0x7f020062
+			public const int notification_icon_background = 2130837602;
+			
+			// aapt resource value: 0x7f020066
+			public const int notification_template_icon_bg = 2130837606;
+			
+			// aapt resource value: 0x7f020067
+			public const int notification_template_icon_low_bg = 2130837607;
+			
+			// aapt resource value: 0x7f020063
+			public const int notification_tile_bg = 2130837603;
+			
+			// aapt resource value: 0x7f020064
+			public const int notify_panel_notification_icon_bg = 2130837604;
+			
+			// aapt resource value: 0x7f020065
+			public const int recognition = 2130837605;
 			
 			static Drawable()
 			{
@@ -1835,8 +1877,8 @@ namespace QuanLiPhongThi_DATN
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0070
-			public const int action0 = 2131361904;
+			// aapt resource value: 0x7f0a006e
+			public const int action0 = 2131361902;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int action_bar = 2131361864;
@@ -1859,17 +1901,17 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a0025
 			public const int action_bar_title = 2131361829;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int action_container = 2131361898;
+			// aapt resource value: 0x7f0a0068
+			public const int action_container = 2131361896;
 			
 			// aapt resource value: 0x7f0a0049
 			public const int action_context_bar = 2131361865;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int action_divider = 2131361908;
+			// aapt resource value: 0x7f0a0072
+			public const int action_divider = 2131361906;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int action_image = 2131361899;
+			// aapt resource value: 0x7f0a0069
+			public const int action_image = 2131361897;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_menu_divider = 2131361794;
@@ -1886,11 +1928,11 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a0027
 			public const int action_mode_close_button = 2131361831;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int action_text = 2131361900;
+			// aapt resource value: 0x7f0a006a
+			public const int action_text = 2131361898;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int actions = 2131361917;
+			// aapt resource value: 0x7f0a007b
+			public const int actions = 2131361915;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int activity_chooser_view_content = 2131361832;
@@ -1904,35 +1946,32 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a001d
 			public const int always = 2131361821;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int badgle = 2131361897;
-			
 			// aapt resource value: 0x7f0a001a
 			public const int beginning = 2131361818;
 			
 			// aapt resource value: 0x7f0a0022
 			public const int bottom = 2131361826;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int btnCamera = 2131361891;
-			
-			// aapt resource value: 0x7f0a0065
-			public const int btnSenttoServer = 2131361893;
-			
-			// aapt resource value: 0x7f0a0064
-			public const int btnTrain = 2131361892;
-			
-			// aapt resource value: 0x7f0a0060
-			public const int button1 = 2131361888;
-			
 			// aapt resource value: 0x7f0a0061
-			public const int button2 = 2131361889;
+			public const int btnCamera = 2131361889;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int btnSenttoServer = 2131361891;
+			
+			// aapt resource value: 0x7f0a0062
+			public const int btnTrain = 2131361890;
+			
+			// aapt resource value: 0x7f0a005e
+			public const int button1 = 2131361886;
+			
+			// aapt resource value: 0x7f0a005f
+			public const int button2 = 2131361887;
 			
 			// aapt resource value: 0x7f0a002f
 			public const int buttonPanel = 2131361839;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int cancel_action = 2131361905;
+			// aapt resource value: 0x7f0a006f
+			public const int cancel_action = 2131361903;
 			
 			// aapt resource value: 0x7f0a0024
 			public const int center = 2131361828;
@@ -1940,8 +1979,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a003f
 			public const int checkbox = 2131361855;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int chronometer = 2131361913;
+			// aapt resource value: 0x7f0a0077
+			public const int chronometer = 2131361911;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int collapseActionView = 2131361822;
@@ -1964,11 +2003,11 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a000c
 			public const int disableHome = 2131361804;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int editText1 = 2131361894;
+			// aapt resource value: 0x7f0a0064
+			public const int editText1 = 2131361892;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int editText2 = 2131361895;
+			// aapt resource value: 0x7f0a0065
+			public const int editText2 = 2131361893;
 			
 			// aapt resource value: 0x7f0a004a
 			public const int edit_query = 2131361866;
@@ -1976,8 +2015,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a001b
 			public const int end = 2131361819;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int end_padder = 2131361923;
+			// aapt resource value: 0x7f0a0081
+			public const int end_padder = 2131361921;
 			
 			// aapt resource value: 0x7f0a0029
 			public const int expand_activities_button = 2131361833;
@@ -1985,8 +2024,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a003e
 			public const int expanded_menu = 2131361854;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int fl_container = 2131361901;
+			// aapt resource value: 0x7f0a006b
+			public const int fl_container = 2131361899;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int home = 2131361796;
@@ -1997,8 +2036,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a002d
 			public const int icon = 2131361837;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int icon_group = 2131361918;
+			// aapt resource value: 0x7f0a007c
+			public const int icon_group = 2131361916;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int ifRoom = 2131361823;
@@ -2006,20 +2045,20 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a002a
 			public const int image = 2131361834;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int imageView = 2131361890;
+			// aapt resource value: 0x7f0a0060
+			public const int imageView = 2131361888;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int info = 2131361914;
+			// aapt resource value: 0x7f0a0078
+			public const int info = 2131361912;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int iv_badge_bg = 2131361902;
+			// aapt resource value: 0x7f0a006c
+			public const int iv_badge_bg = 2131361900;
+			
+			// aapt resource value: 0x7f0a007d
+			public const int line1 = 2131361917;
 			
 			// aapt resource value: 0x7f0a007f
-			public const int line1 = 2131361919;
-			
-			// aapt resource value: 0x7f0a0081
-			public const int line3 = 2131361921;
+			public const int line3 = 2131361919;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int listMode = 2131361801;
@@ -2030,8 +2069,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a002c
 			public const int list_item = 2131361836;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int media_actions = 2131361907;
+			// aapt resource value: 0x7f0a0071
+			public const int media_actions = 2131361905;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int middle = 2131361820;
@@ -2048,14 +2087,14 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a000a
 			public const int normal = 2131361802;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int notification_background = 2131361916;
+			// aapt resource value: 0x7f0a007a
+			public const int notification_background = 2131361914;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int notification_main_column = 2131361910;
+			// aapt resource value: 0x7f0a0074
+			public const int notification_main_column = 2131361908;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int notification_main_column_container = 2131361909;
+			// aapt resource value: 0x7f0a0073
+			public const int notification_main_column_container = 2131361907;
 			
 			// aapt resource value: 0x7f0a0031
 			public const int parentPanel = 2131361841;
@@ -2069,11 +2108,11 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a0041
 			public const int radio = 2131361857;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int right_icon = 2131361915;
+			// aapt resource value: 0x7f0a0079
+			public const int right_icon = 2131361913;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int right_side = 2131361911;
+			// aapt resource value: 0x7f0a0075
+			public const int right_side = 2131361909;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int screen = 2131361813;
@@ -2135,8 +2174,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a0030
 			public const int spacer = 2131361840;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int spinner = 2131361896;
+			// aapt resource value: 0x7f0a0067
+			public const int spinner = 2131361895;
 			
 			// aapt resource value: 0x7f0a0007
 			public const int split_action_bar = 2131361799;
@@ -2150,8 +2189,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a0018
 			public const int src_over = 2131361816;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int status_bar_latest_event_content = 2131361906;
+			// aapt resource value: 0x7f0a0070
+			public const int status_bar_latest_event_content = 2131361904;
 			
 			// aapt resource value: 0x7f0a0042
 			public const int submenuarrow = 2131361858;
@@ -2162,11 +2201,11 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a000b
 			public const int tabMode = 2131361803;
 			
-			// aapt resource value: 0x7f0a0082
-			public const int text = 2131361922;
-			
 			// aapt resource value: 0x7f0a0080
-			public const int text2 = 2131361920;
+			public const int text = 2131361920;
+			
+			// aapt resource value: 0x7f0a007e
+			public const int text2 = 2131361918;
 			
 			// aapt resource value: 0x7f0a0036
 			public const int textSpacerNoButtons = 2131361846;
@@ -2180,26 +2219,26 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a0059
 			public const int textView2 = 2131361881;
 			
+			// aapt resource value: 0x7f0a0066
+			public const int textView3 = 2131361894;
+			
 			// aapt resource value: 0x7f0a005a
-			public const int textView3 = 2131361882;
+			public const int textView4 = 2131361882;
 			
 			// aapt resource value: 0x7f0a005b
-			public const int textView4 = 2131361883;
+			public const int textView5 = 2131361883;
 			
 			// aapt resource value: 0x7f0a005c
-			public const int textView5 = 2131361884;
+			public const int textView6 = 2131361884;
+			
+			// aapt resource value: 0x7f0a0082
+			public const int textView7 = 2131361922;
 			
 			// aapt resource value: 0x7f0a005d
-			public const int textView6 = 2131361885;
+			public const int textView8 = 2131361885;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int textView7 = 2131361886;
-			
-			// aapt resource value: 0x7f0a005f
-			public const int textView8 = 2131361887;
-			
-			// aapt resource value: 0x7f0a0078
-			public const int time = 2131361912;
+			// aapt resource value: 0x7f0a0076
+			public const int time = 2131361910;
 			
 			// aapt resource value: 0x7f0a002e
 			public const int title = 2131361838;
@@ -2216,8 +2255,8 @@ namespace QuanLiPhongThi_DATN
 			// aapt resource value: 0x7f0a003a
 			public const int topPanel = 2131361850;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int tv_badge_text = 2131361903;
+			// aapt resource value: 0x7f0a006d
+			public const int tv_badge_text = 2131361901;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int up = 2131361800;
@@ -2354,91 +2393,94 @@ namespace QuanLiPhongThi_DATN
 			public const int choose = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int Detailroom = 2130903068;
+			public const int circle_layout = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int Detailroomfinal = 2130903069;
+			public const int Detailroom = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int dropdown = 2130903070;
+			public const int Detailroomfinal = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int Getdataexaminer = 2130903071;
+			public const int dropdown = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int Main = 2130903072;
+			public const int Getdataexaminer = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int Management = 2130903073;
+			public const int Main = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_action = 2130903074;
+			public const int Management = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_action_tombstone = 2130903075;
+			public const int notification_action = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_badge = 2130903076;
+			public const int notification_action_tombstone = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_media_action = 2130903077;
+			public const int notification_badge = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_media_cancel_action = 2130903078;
+			public const int notification_media_action = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_big_media = 2130903079;
+			public const int notification_media_cancel_action = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_big_media_custom = 2130903080;
+			public const int notification_template_big_media = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_big_media_narrow = 2130903081;
+			public const int notification_template_big_media_custom = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_big_media_narrow_custom = 2130903082;
+			public const int notification_template_big_media_narrow = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_template_custom_big = 2130903083;
+			public const int notification_template_big_media_narrow_custom = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int notification_template_icon_group = 2130903084;
+			public const int notification_template_custom_big = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int notification_template_lines_media = 2130903085;
+			public const int notification_template_icon_group = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int notification_template_media = 2130903086;
+			public const int notification_template_lines_media = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int notification_template_media_custom = 2130903087;
+			public const int notification_template_media = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int notification_template_part_chronometer = 2130903088;
+			public const int notification_template_media_custom = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int notification_template_part_time = 2130903089;
+			public const int notification_template_part_chronometer = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int Overviewroom = 2130903090;
+			public const int notification_template_part_time = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int Recognitionface = 2130903091;
+			public const int Overviewroom = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int select_dialog_item_material = 2130903092;
+			public const int Recognitionface = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int select_dialog_multichoice_material = 2130903093;
+			public const int select_dialog_item_material = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_singlechoice_material = 2130903094;
+			public const int select_dialog_multichoice_material = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int Selectfunction = 2130903095;
+			public const int select_dialog_singlechoice_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int support_simple_spinner_dropdown_item = 2130903096;
+			public const int Selectfunction = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int support_simple_spinner_dropdown_item = 2130903097;
 			
 			static Layout()
 			{
@@ -4400,8 +4442,6 @@ namespace QuanLiPhongThi_DATN
 			public const int CompoundButton_buttonTintMode = 2;
 			
 			public static int[] CountdownView = new int[] {
-					2130772203,
-					2130772204,
 					2130772205,
 					2130772206,
 					2130772207,
@@ -4439,7 +4479,9 @@ namespace QuanLiPhongThi_DATN
 					2130772239,
 					2130772240,
 					2130772241,
-					2130772242};
+					2130772242,
+					2130772243,
+					2130772244};
 			
 			// aapt resource value: 15
 			public const int CountdownView_isConvertDaysToHours = 15;
@@ -4560,6 +4602,16 @@ namespace QuanLiPhongThi_DATN
 			
 			// aapt resource value: 8
 			public const int CountdownView_timeTextSize = 8;
+			
+			public static int[] DotsLoaderView = new int[] {
+					2130772203,
+					2130772204};
+			
+			// aapt resource value: 0
+			public const int DotsLoaderView_dlv_item_drawable = 0;
+			
+			// aapt resource value: 1
+			public const int DotsLoaderView_dlv_line_color = 1;
 			
 			public static int[] DrawerArrowToggle = new int[] {
 					2130772129,
