@@ -143,7 +143,7 @@ namespace WindowsForm
             lbNotify.ForeColor = Color.Orange;
             if (txtProtectCode.Text == code.ToString())
             {
-                admin_thitoeicEntities db = new admin_thitoeicEntities();
+                admin_thitoeicEntities1 db = new admin_thitoeicEntities1();
                 
                 try
                 {
@@ -156,10 +156,11 @@ namespace WindowsForm
                         //admin_thitoeicEntities db = new admin_thitoeicEntities();
                         //var user = db.AspNetUsers.Single(p => p.Email == txtUserName.Text);
                         ////var role = db.ASP.Single(p => p.)
-                        this.Hide();
+                        
                         UpdateImage updateForm = new UpdateImage(this, txtCodeUpdate.Text);
                         updateForm.Show();
-
+                        Thread.Sleep(5000);
+                        this.Hide();
                     }
                     else
                     {

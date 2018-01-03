@@ -16,15 +16,21 @@ namespace WindowsForm
     {
         public long ContactId { get; set; }
         public string Address { get; set; }
-        public string City { get; set; }
+        public string MobilePhone { get; set; }
         public Nullable<System.DateTime> DateofBirth { get; set; }
         public string FirstMidName { get; set; }
         public Nullable<long> ImageID { get; set; }
         public string LastName { get; set; }
         public string OwnerID { get; set; }
-        public string State { get; set; }
+        public string WhereIdentityCard { get; set; }
         public int Status { get; set; }
         public string Zip { get; set; }
+        public Nullable<System.DateTime> DateIdentityCard { get; set; }
+        public string Landline { get; set; }
+        public int Sex { get; set; }
+        public Nullable<System.DateTime> CreateDT { get; set; }
+        public bool IsDeleted { get; set; }
+        public Nullable<System.DateTime> UpdateDT { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }
         public virtual Image Image { get; set; }

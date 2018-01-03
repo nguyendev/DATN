@@ -23,6 +23,7 @@ namespace WindowsForm
             this.Courses = new HashSet<Course>();
             this.Enrollments = new HashSet<Enrollment>();
             this.HistoryLogins = new HashSet<HistoryLogin>();
+            this.Images = new HashSet<Image>();
             this.AspNetRoles = new HashSet<AspNetRole>();
         }
     
@@ -58,6 +59,8 @@ namespace WindowsForm
         public virtual ICollection<Enrollment> Enrollments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HistoryLogin> HistoryLogins { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Image> Images { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetRole> AspNetRoles { get; set; }
     }

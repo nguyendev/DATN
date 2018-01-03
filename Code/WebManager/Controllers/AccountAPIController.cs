@@ -24,7 +24,7 @@ namespace WebManager.Controllers
             _signInManager = signInManager;
         }
 
-        [HttpPost()]
+        [HttpPost]
         public async Task<bool> LoginAsync(LoginViewModel model)
         {
             var result = await _signInManager.PasswordSignInAsync(model.UserName,model.Password, model.RememberMe, lockoutOnFailure: false);

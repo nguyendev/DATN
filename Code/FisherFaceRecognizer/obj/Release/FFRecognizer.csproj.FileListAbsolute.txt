@@ -1,0 +1,6 @@
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Release\FFRecognizer.csprojFakesResolveAssemblyReference.cache
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Release\FFRecognizer.MainForm.resources
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Release\FisherFaceRecognizer.Properties.Resources.resources
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Release\FFRecognizer.TrainingForm.resources
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Release\FFRecognizer.csproj.GenerateResource.Cache
+D:\GitHub\DATN\Code\FisherFaceRecognizer\obj\Release\FFRecognizer.csproj.CoreCompileInputs.cache

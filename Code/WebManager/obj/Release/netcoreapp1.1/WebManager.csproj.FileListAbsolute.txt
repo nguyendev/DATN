@@ -12,3 +12,7 @@ D:\GitHub\DATN\Code\WebManager\obj\Release\netcoreapp1.1\WebManager.AssemblyInfo
 D:\GitHub\DATN\Code\WebManager\obj\Release\netcoreapp1.1\WebManager.AssemblyInfo.cs
 D:\GitHub\DATN\Code\WebManager\obj\Release\netcoreapp1.1\WebManager.dll
 D:\GitHub\DATN\Code\WebManager\obj\Release\netcoreapp1.1\WebManager.pdb
+D:\GitHub\DATN\Code\WebManager\bin\Release\netcoreapp1.1\Extension.dll
+D:\GitHub\DATN\Code\WebManager\bin\Release\netcoreapp1.1\Services.dll
+D:\GitHub\DATN\Code\WebManager\bin\Release\netcoreapp1.1\Extension.pdb
+D:\GitHub\DATN\Code\WebManager\bin\Release\netcoreapp1.1\Services.pdb

@@ -20,6 +20,7 @@ using Extension;
 namespace WebManager.Areas.Admin.Controllers
 {
     [Area("webmanager")]
+   
     
     public class AccountController : Controller
     {
@@ -84,11 +85,12 @@ namespace WebManager.Areas.Admin.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
+                    HttpContext.Session.SetObjectAsJson("loginViewModel", model);
                    // string userID = (await GetCurrentUserAsync()).Id;l
                     if (User.IsInRole(RoleName.ROLE_ADMIN) || User.IsInRole(RoleName.ROLE_MANAGER) || User.IsInRole(RoleName.ROLE_MEMBER))
                         return RedirectToLocal(returnUrl);
                     else
-                        return null;
+                        return RedirectToLocal("");
                 }
                 if (result.RequiresTwoFactor)
                 {
@@ -540,12 +542,16 @@ namespace WebManager.Areas.Admin.Controllers
                 { 
                      code = StringExtensions.RandomString(GlobalLength.CODE_LENGTH);
                 }
-                var user = new Member { UserName = model.UserName,Code = code };
+                var user = new Member { UserName = model.UserName,Code = code, CreateDT = DateTime.Now };
                 var result = await _userManager.CreateAsync(user);
-
+                
                 if (result.Succeeded)
                 {
+                    var LoginViewModel = HttpContext.Session.GetObjectFromJson<LoginViewModel>("loginViewModel");
+                    await HttpContext.Authentication.SignOutAsync(_externalCookieScheme);
+                    await _signInManager.PasswordSignInAsync(LoginViewModel.UserName, LoginViewModel.Password, LoginViewModel.RememberMe, lockoutOnFailure: false);
                     return RedirectToAction("CompleteRegisterSimple", new CompleteRegisterSimple { ID = model.UserName,Code = code});
+
                 }                
                 AddErrors(result);
             }

@@ -1,0 +1,29 @@
+[0102/105411.543:INFO:CONSOLE(3436)] "Uncaught ReferenceError: $ is not defined", source: http://dangkythitoeic.com/ToeicExam/DeThi (3436)
+[0102/105714.595:WARNING:dns_config_service_win.cc(669)] Failed to read DnsConfig.
+[0102/105719.597:WARNING:dns_config_service_win.cc(669)] Failed to read DnsConfig.
+[0102/110353.996:INFO:CONSOLE(3436)] "Uncaught ReferenceError: $ is not defined", source: http://dangkythitoeic.com/ToeicExam/DeThi (3436)
+[0102/113138.348:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0102/113138.416:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0102/121842.127:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0102/121842.210:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0102/122502.895:WARNING:dns_config_service_win.cc(669)] Failed to read DnsConfig.
+[0102/122507.899:WARNING:dns_config_service_win.cc(669)] Failed to read DnsConfig.
+[0102/122647.370:WARNING:dns_config_service_win.cc(669)] Failed to read DnsConfig.
+[0102/122652.372:WARNING:dns_config_service_win.cc(669)] Failed to read DnsConfig.
+[0103/162516.710:INFO:CONSOLE(0)] "Failed to find a valid digest in the 'integrity' attribute for resource 'http://dangkythitoeic.com/lib/jquery/dist/jquery.min.js' with computed SHA-256 integrity 'j6c60LlBesdfhh6eIu7si5Hwz2dWAEcWKhsf2+URb+I='. The resource has been blocked.", source: http://dangkythitoeic.com/de-thi/doi/ (0)
+[0103/162527.086:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0103/162527.294:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0103/163027.160:INFO:CONSOLE(0)] "Failed to find a valid digest in the 'integrity' attribute for resource 'http://dangkythitoeic.com/lib/jquery/dist/jquery.min.js' with computed SHA-256 integrity 'j6c60LlBesdfhh6eIu7si5Hwz2dWAEcWKhsf2+URb+I='. The resource has been blocked.", source: http://dangkythitoeic.com/de-thi/doi/ (0)
+[0103/163027.695:INFO:CONSOLE(6)] "Uncaught Error: Bootstrap's JavaScript requires jQuery", source: http://dangkythitoeic.com/lib/bootstrap/dist/js/bootstrap.min.js (6)
+[0103/163049.342:INFO:CONSOLE(0)] "Failed to find a valid digest in the 'integrity' attribute for resource 'http://dangkythitoeic.com/lib/jquery/dist/jquery.min.js' with computed SHA-256 integrity 'j6c60LlBesdfhh6eIu7si5Hwz2dWAEcWKhsf2+URb+I='. The resource has been blocked.", source: http://dangkythitoeic.com/de-thi/doi-1?WaitingTime=1%2F3%2F2018+4%3A30%3A35+PM (0)
+[0103/163049.413:INFO:CONSOLE(6)] "Uncaught Error: Bootstrap's JavaScript requires jQuery", source: http://dangkythitoeic.com/lib/bootstrap/dist/js/bootstrap.min.js (6)
+[0103/163053.099:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0103/163053.100:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0103/164446.317:INFO:CONSOLE(0)] "Failed to find a valid digest in the 'integrity' attribute for resource 'http://dangkythitoeic.com/lib/jquery/dist/jquery.min.js' with computed SHA-256 integrity 'j6c60LlBesdfhh6eIu7si5Hwz2dWAEcWKhsf2+URb+I='. The resource has been blocked.", source: http://dangkythitoeic.com/de-thi/doi/ (0)
+[0103/164446.700:INFO:CONSOLE(6)] "Uncaught Error: Bootstrap's JavaScript requires jQuery", source: http://dangkythitoeic.com/lib/bootstrap/dist/js/bootstrap.min.js (6)
+[0103/164508.215:INFO:CONSOLE(0)] "Failed to find a valid digest in the 'integrity' attribute for resource 'http://dangkythitoeic.com/lib/jquery/dist/jquery.min.js' with computed SHA-256 integrity 'j6c60LlBesdfhh6eIu7si5Hwz2dWAEcWKhsf2+URb+I='. The resource has been blocked.", source: http://dangkythitoeic.com/de-thi/doi-1?WaitingTime=1%2F3%2F2018+4%3A44%3A51+PM (0)
+[0103/164508.267:INFO:CONSOLE(6)] "Uncaught Error: Bootstrap's JavaScript requires jQuery", source: http://dangkythitoeic.com/lib/bootstrap/dist/js/bootstrap.min.js (6)
+[0103/164512.340:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0103/164512.341:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN
+[0103/164924.711:ERROR:render_media_log.cc(30)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"FFmpegDemuxer: open context failed"}
+[0103/164924.711:ERROR:render_media_log.cc(30)] MediaEvent: PIPELINE_ERROR DEMUXER_ERROR_COULD_NOT_OPEN

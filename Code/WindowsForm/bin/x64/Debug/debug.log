@@ -33,3 +33,20 @@
 [1223/103401.464:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
 [1223/144638.080:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
 [1223/152338.188:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0102/115707.249:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0102/120249.580:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0102/121326.620:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0102/122502.901:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122507.915:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122512.919:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122517.924:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122522.927:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122527.930:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122532.934:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122537.938:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122542.941:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122547.942:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122552.946:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0102/122557.949:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0103/171643.710:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0103/212538.223:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain

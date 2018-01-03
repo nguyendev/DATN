@@ -1,0 +1,86 @@
+﻿@model WebManager.Areas.WebManager.ViewModels.MemberManagerViewModels.ListMemberManagerViewModel
+
+@{
+    ViewData["Title"] = "Danh sách thí sinh | Quản lý web";
+    ViewData["Heading"] = "Danh sách thí sinh";
+    ViewData["SmallHeading"] = "";
+    ViewData["BreadcrumbOne"] = "Quản lý web";
+    ViewData["BreadcrumbTwo"] = "Thí sinh";
+    ViewData["BreadcrumbThree"] = "Danh sách thí sinh";
+    ViewData["BoxTitle"] = "Danh sách thí sinh";
+    ViewData["Search"] = "Tìm thí sinh";
+    Layout = "_TableIndexLayout";
+}
+<div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+
+    <div class="row">
+        @Html.Partial("_SearchIndexPartial", Model)
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["UserNameParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.DisplayNameFor(model => model.ListMember.First().UserName)</a>
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["CodeParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.DisplayNameFor(model => model.ListMember.First().Code)</a>
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["CreateParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                                @Html.DisplayNameFor(model => model.ListMember.First().CreateDT)
+                            </a>
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["ApprovedParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.DisplayNameFor(model => model.ListMember.First().Approved)</a>
+                        </th>
+                        <th>Lựa chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ListMember)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserName)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Code)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DisplayDT)
+                            </td>
+                            <td>
+                                @*@if (item.Approved == "A")
+                                {
+                                    @Html.Raw("Đã duyệt")
+                                }
+                                else
+                                {
+                                    @Html.Raw("Chưa duyệt")
+                                }*@
+                                @Html.Raw(item.Approved)
+                            </td>
+                            <td>
+                                @*@if (item.Approved != "A")
+                                {
+                                    <a asp-action="EditPublishDT" asp-route-id="@item.ID" class="btn btn-default fa fa-clock-o"></a>
+                                        <a asp-action="EditApproved" asp-route-id="@item.ID" class="btn btn-primary fa fa-check"></a>
+                                }*@
+                                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-warning fa fa-edit"></a>
+                                <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-success fa fa-newspaper-o"></a>
+                                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger fa fa-remove"></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        @Html.Partial("_PageIndexPartial", Model)
+    </div>
+</div>

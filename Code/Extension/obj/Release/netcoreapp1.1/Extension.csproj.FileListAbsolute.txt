@@ -1,0 +1,9 @@
+D:\GitHub\DATN\Code\Extension\bin\Release\netcoreapp1.1\Extension.deps.json
+D:\GitHub\DATN\Code\Extension\bin\Release\netcoreapp1.1\Extension.dll
+D:\GitHub\DATN\Code\Extension\bin\Release\netcoreapp1.1\Extension.pdb
+D:\GitHub\DATN\Code\Extension\obj\Release\netcoreapp1.1\Extension.csprojResolveAssemblyReference.cache
+D:\GitHub\DATN\Code\Extension\obj\Release\netcoreapp1.1\Extension.csproj.CoreCompileInputs.cache
+D:\GitHub\DATN\Code\Extension\obj\Release\netcoreapp1.1\Extension.AssemblyInfoInputs.cache
+D:\GitHub\DATN\Code\Extension\obj\Release\netcoreapp1.1\Extension.AssemblyInfo.cs
+D:\GitHub\DATN\Code\Extension\obj\Release\netcoreapp1.1\Extension.dll
+D:\GitHub\DATN\Code\Extension\obj\Release\netcoreapp1.1\Extension.pdb

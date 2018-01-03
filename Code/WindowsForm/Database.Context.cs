@@ -13,10 +13,10 @@ namespace WindowsForm
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class admin_thitoeicEntities : DbContext
+    public partial class admin_thitoeicEntities1 : DbContext
     {
-        public admin_thitoeicEntities()
-            : base("name=admin_thitoeicEntities")
+        public admin_thitoeicEntities1()
+            : base("name=admin_thitoeicEntities1")
         {
         }
     

@@ -66,7 +66,7 @@ namespace WindowsForm.UC
             {
                 lbStatus.Text = "Đăng nhập thành công, đang chuyển";
                 lbStatus.ForeColor = Color.Green;
-                admin_thitoeicEntities db = new admin_thitoeicEntities();
+                admin_thitoeicEntities1 db = new admin_thitoeicEntities1();
                 var user = db.AspNetUsers.Single(p => p.Email == txtUserName.Text);
                 //var role = db.ASP.Single(p => p.)
             }

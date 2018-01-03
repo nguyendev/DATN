@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="1.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.4" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.4" />
@@ -40,9 +41,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\WebManager\Data\" />
     <Folder Include="Areas\WebManager\Views\Dashboard\" />
+    <Folder Include="Views\ToeicExam\" />
     <Folder Include="wwwroot\upload\faces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\WebManager\Views\Shared\_PageIndexPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\WebManager\Views\Shared\_TableIndexLayout.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

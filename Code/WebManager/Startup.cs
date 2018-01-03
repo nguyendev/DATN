@@ -14,6 +14,7 @@ using WebManager.Services;
 using DataAccess;
 using WebManager.Repository;
 using Extension;
+using WebManager.Areas.WebManager.Data;
 
 namespace WebManager
 {
@@ -50,11 +51,13 @@ namespace WebManager
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddSession();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IMemberRepository, MemberRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -88,6 +91,7 @@ namespace WebManager
             });
 
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

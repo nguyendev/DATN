@@ -49,5 +49,43 @@ namespace Extension
                 return years <= 1 ? "một năm trước" : years + " năm trước";
             }
         }
+
+        public static string WatingDay(DateTime yourDate)
+        {
+            var ts = new TimeSpan(DateTime.Now.Ticks - yourDate.Ticks);
+            double delta = Math.Abs(ts.TotalSeconds);
+
+            if (delta < 1 * MINUTE)
+                return ts.Seconds == 1 ? "Một giây" : Math.Abs(ts.Seconds) + " giây";
+
+            if (delta < 2 * MINUTE)
+                return "Một phút";
+
+            if (delta < 45 * MINUTE)
+                return ts.Minutes + " phút";
+
+            if (delta < 90 * MINUTE)
+                return "một giờ";
+
+            if (delta < 24 * HOUR)
+                return ts.Hours + " giờ còn lại";
+
+            if (delta < 48 * HOUR)
+                return "hôm còn lại";
+
+            if (delta < 30 * DAY)
+                return ts.Days + " ngày còn lại";
+
+            if (delta < 12 * MONTH)
+            {
+                int months = Convert.ToInt32(Math.Floor((double)ts.Days / 30));
+                return months <= 1 ? "một tháng còn lại" : months + " tháng còn lại";
+            }
+            else
+            {
+                int years = Convert.ToInt32(Math.Floor((double)ts.Days / 365));
+                return years <= 1 ? "một năm còn lại" : years + " năm còn lại";
+            }
+        }
     }
 }

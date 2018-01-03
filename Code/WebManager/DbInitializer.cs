@@ -13,11 +13,11 @@ namespace WebManager
         public static void MemberExample(ApplicationDbContext context)
         {
             // Look for any students.
-            if (context.Users.Any())
+            if (context.Users.Count() > 2)
             {
                 return;   // DB has been seeded
             }
-
+            if(context.Users.Count() >= 1) { 
             for (int i = 0; i < 100; i++)
             {
                 string code = StringExtensions.RandomString(GlobalLength.CODE_LENGTH);
@@ -34,10 +34,10 @@ namespace WebManager
                 if (i == 0)
                 {
                     user = new Member {
-                        UserName = userName,
+                        UserName = "341862050",
                         Code = code,
                         PasswordHash = "AQAAAAEAACcQAAAAENbQjGt8JFC9bn6V6oHYnhLh7DUICN95vW5mvd00xDGCInLaouHIrhPyvPYlWORp2g=="
-                    
+
                     };
                     var roleID =( context.Roles.SingleOrDefault(p => p.Name == "Admin")).Id;
 
@@ -55,7 +55,7 @@ namespace WebManager
            
 
             context.SaveChanges();
-            
+            }
         }
         public static void RoleExample(ApplicationDbContext context)
         {

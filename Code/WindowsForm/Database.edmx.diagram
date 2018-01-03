@@ -4,32 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="977d9354b9a740f2bdf4f39536b811c4" Name="Diagram1" ZoomLevel="78">
-        <EntityTypeShape EntityType="admin_thitoeicModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetRoleClaim" Width="1.5" PointX="3" PointY="4.75" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetRole" Width="1.5" PointX="0.75" PointY="10.875" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="14.5" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="17.25" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUser" Width="1.5" PointX="3" PointY="10.375" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserToken" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.Contact" Width="1.5" PointX="8.25" PointY="11.625" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.Course" Width="1.5" PointX="5.25" PointY="20" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.Enrollment" Width="1.5" PointX="9.75" PointY="16.875" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.HistoryLogin" Width="1.5" PointX="5.25" PointY="7.5" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.Image" Width="1.5" PointX="6" PointY="2.625" />
-        <EntityTypeShape EntityType="admin_thitoeicModel.Room" Width="1.5" PointX="7.5" PointY="23.875" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUserClaims_AspNetUsers_UserId" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUserLogins_AspNetUsers_UserId" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_Contact_AspNetUsers_OwnerID" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_Course_AspNetUsers_AuthorID" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_AspNetUsers_StudentID" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_HistoryLogin_AspNetUsers_StudentID" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_Contact_Image_ImageID" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_Course_CourseID" />
-        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_Room_RoomID" />
-        <AssociationConnector Association="admin_thitoeicModel.AspNetUserRoles" />
-        <AssociationConnector Association="admin_thitoeicModel.CourseRoom" />
+      <Diagram DiagramId="fe6b86eeb2f84334b32e7e07b304ac4b" Name="Diagram1">
+        <EntityTypeShape EntityType="admin_thitoeicModel.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetRoleClaim" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetRole" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUser" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.AspNetUserToken" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Contact" Width="1.5" PointX="7.5" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Course" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Enrollment" Width="1.5" PointX="9.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.HistoryLogin" Width="1.5" PointX="5.25" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Image" Width="1.5" PointX="5.25" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_thitoeicModel.Room" Width="1.5" PointX="7.5" PointY="23.125" IsExpanded="true" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUserClaims_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_AspNetUserLogins_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Contact_AspNetUsers_OwnerID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Course_AspNetUsers_AuthorID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_AspNetUsers_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_HistoryLogin_AspNetUsers_StudentID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Image_AspNetUsers_OwnerID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Contact_Image_ImageID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_Course_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.FK_Enrollment_Room_RoomID" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_thitoeicModel.CourseRoom" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -21,7 +21,7 @@ using Emgu.CV.Face;
 /// <summary>
 /// Desingned to remove the training a EigenObjectRecognizer code from the main form
 /// </summary>
-class Classifier_Train : IDisposable
+class Classifier_TrainClound : IDisposable
 {
 
     #region Variables
@@ -50,7 +50,7 @@ class Classifier_Train : IDisposable
     /// <summary>
     /// Default Constructor, Looks in (Application.StartupPath + "\\TrainedFaces") for traing data.
     /// </summary>
-    public Classifier_Train()
+    public Classifier_TrainClound()
     {
         _IsTrained = LoadTrainingData(Application.StartupPath + "\\TrainedFaces");
     }
@@ -59,7 +59,7 @@ class Classifier_Train : IDisposable
     /// Takes String input to a different location for training data
     /// </summary>
     /// <param name="Training_Folder"></param>
-    public Classifier_Train(string Training_Folder)
+    public Classifier_TrainClound(string Training_Folder)
     {
         _IsTrained = LoadTrainingData(Training_Folder);
     }

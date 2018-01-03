@@ -47,7 +47,7 @@
     <!-- /.search form -->
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Danh mục bài hát</li>
+        <li class="header">Danh mục</li>
         <!-- Optionally, you can add icons to the links -->
         <li>
             <a asp-action="Index" asp-controller="Media" asp-area="WebManager">
@@ -58,7 +58,16 @@
                 </span>*@
             </a>
         </li>
-        <li class="treeview">
+        <li>
+            <a asp-action="Index" asp-controller="MembersManager" asp-area="WebManager">
+                <i class="fa fa-user"></i>
+                <span class="">Danh sách thí sinh</span>
+                @*<span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>*@
+            </a>
+        </li>
+        @*<li class="treeview">
             <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Bài hát</span>
                 <span class="pull-right-container">
@@ -102,7 +111,7 @@
                 <li><a asp-area="WebManager" asp-controller="LikeSongChordsManager" asp-action="Index"><i class="fa fa-list-ol"></i> Thích phiên bản hợp âm</a></li>
                 <li><a asp-area="WebManager" asp-controller="FavoriteSongManager" asp-action="Index"><i class="fa fa-arrow-circle-o-up"></i> Ưu thích bài hát</a></li>
             </ul>
-        </li>
+        </li>*@
         @if(User.IsInRole("Admin"))
         {
         <li class="header">Quản lý</li>

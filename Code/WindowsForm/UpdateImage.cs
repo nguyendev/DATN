@@ -18,7 +18,6 @@ using System.Xml;
 using CefSharp;
 using CefSharp.WinForms;
 using DevExpress.XtraSplashScreen;
-using Microsoft.AspNetCore.Http;
 using System.Net;
 
 namespace WindowsForm
@@ -77,13 +76,13 @@ namespace WindowsForm
             _ENC_Parameters.Param[0] = _ENC;
             _code = code;
             _Image_Encoder_JPG = GetEncoder(ImageFormat.Jpeg);
-            admin_thitoeicEntities db = new admin_thitoeicEntities();
+            admin_thitoeicEntities1 db = new admin_thitoeicEntities1();
             var user = db.AspNetUsers.Single(p => p.Code == code);
             _userID = user.Id;
         }
         private void LoadFormImage(string code)
         {
-            admin_thitoeicEntities db = new admin_thitoeicEntities();
+            admin_thitoeicEntities1 db = new admin_thitoeicEntities1();
             var user = db.AspNetUsers.Single(p => p.Code == code);
             //bool contact = db.Contacts.Any(p => p.OwnerID == user.Id);
             //if (contact)
@@ -165,10 +164,10 @@ namespace WindowsForm
                 {
                     //This will focus in on the face from the haar results its not perfect but it will remove a majoriy
                     //of the background noise
-                    //facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
-                    //facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
-                    //facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
-                    //facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
+                    facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
+                    facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
+                    facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
+                    facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
 
                     _result = _currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
                     _result._EqualizeHist();
@@ -498,7 +497,7 @@ namespace WindowsForm
             Hide();
             UpdateInfo updateInfo = new UpdateInfo(this,this._parent,_code);
             updateInfo.Show();
-            _grabber = null;
+            _grabber.Stop();
         }
 
         private void UpdateInfo_FormClosing(object sender, FormClosingEventArgs e)

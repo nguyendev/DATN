@@ -93,15 +93,21 @@
     </Key>
     <Property Name="ContactId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Address" Type="nvarchar(max)" />
-    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
     <Property Name="DateofBirth" Type="datetime2" Precision="7" />
     <Property Name="FirstMidName" Type="nvarchar(max)" />
     <Property Name="ImageID" Type="bigint" />
     <Property Name="LastName" Type="nvarchar(max)" />
     <Property Name="OwnerID" Type="nvarchar" MaxLength="450" />
-    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="WhereIdentityCard" Type="nvarchar(max)" />
     <Property Name="Status" Type="int" Nullable="false" />
     <Property Name="Zip" Type="nvarchar(max)" />
+    <Property Name="DateIdentityCard" Type="datetime2" Precision="7" />
+    <Property Name="Landline" Type="nvarchar(max)" />
+    <Property Name="Sex" Type="int" Nullable="false" />
+    <Property Name="CreateDT" Type="datetime2" Precision="7" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="UpdateDT" Type="datetime2" Precision="7" />
   </EntityType>
   <EntityType Name="Course">
     <Key>
@@ -159,6 +165,7 @@
     <Property Name="Pic7" Type="nvarchar(max)" />
     <Property Name="Pic8" Type="nvarchar(max)" />
     <Property Name="Pic9" Type="nvarchar(max)" />
+    <Property Name="OwnerID" Type="nvarchar" MaxLength="450" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -352,6 +359,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Image_AspNetUsers_OwnerID">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Image" Type="Self.Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="OwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="admin_thitoeicModelStoreContainer">
     <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="thitoeic" store:Type="Tables" />
     <EntitySet Name="AspNetRoleClaims" EntityType="Self.AspNetRoleClaims" Schema="thitoeic" store:Type="Tables" />
@@ -423,6 +442,10 @@
     <AssociationSet Name="FK_HistoryLogin_AspNetUsers_StudentID" Association="Self.FK_HistoryLogin_AspNetUsers_StudentID">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="HistoryLogin" EntitySet="HistoryLogin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Image_AspNetUsers_OwnerID" Association="Self.FK_Image_AspNetUsers_OwnerID">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Image" EntitySet="Image" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

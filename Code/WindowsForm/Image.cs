@@ -31,7 +31,9 @@ namespace WindowsForm
         public string Pic7 { get; set; }
         public string Pic8 { get; set; }
         public string Pic9 { get; set; }
+        public string OwnerID { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contact> Contacts { get; set; }
     }
