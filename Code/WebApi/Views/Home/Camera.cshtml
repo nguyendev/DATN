@@ -1,0 +1,88 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="stuff, to, help, search, engines, not" name="keywords">
+    <meta content="What this page is about." name="description">
+    <meta content="Display Webcam Stream" name="title">
+    <title>Display Webcam Stream</title>
+
+    <style>
+        #container {
+            margin: 0px auto;
+            width: 500px;
+            height: 375px;
+            border: 10px #333 solid;
+        }
+
+        #videoElement {
+            width: 500px;
+            height: 375px;
+            background-color: #666;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+        <video autoplay="true" id="videoElement"></video>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+
+            var video = document.querySelector("#videoElement");
+
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia({ video: true }, handleVideo, videoError);
+            }
+
+            function handleVideo(stream) {
+                video.src = window.URL.createObjectURL(stream);
+                captureImage();
+            }
+
+            function videoError(e) {
+                // do something
+            }
+
+            function captureImage() {
+                var scale = 1;
+                var canvas = document.createElement("canvas");
+                canvas.width = video.videoWidth * scale;
+                canvas.height = video.videoHeight * scale;
+                canvas.getContext('2d')
+                    .drawImage(video, 0, 0, canvas.width, canvas.height);
+                var img = document.createElement("img");
+                img.src = canvas.toDataURL();
+                upload_file_with_ajax(img);
+            };
+
+            function upload_file_with_ajax(file) {
+                var formData = new FormData();
+                formData.append('file', file);
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("Preview")',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    dataType: "json",
+                    success: function (data) {
+                        alert("Success!");
+                    },
+                    error: function (data){
+                        alert("Error!");
+                    }
+                });
+            }
+            setInterval(captureImage, 100);
+    </script>
+</body>
+</html>
